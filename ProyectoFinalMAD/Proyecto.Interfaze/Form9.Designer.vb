@@ -60,7 +60,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(555, 417)
+        Me.ClientSize = New System.Drawing.Size(546, 405)
         Me.Controls.Add(Me.BTN_LISTEMPLEADOS_IMPRIMIR)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
