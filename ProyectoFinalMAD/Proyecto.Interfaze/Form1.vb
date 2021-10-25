@@ -1,3 +1,3 @@
-﻿Public Class Form1
+﻿Public Class FORM_INICIO_SESION
 
 End Class

@@ -1,0 +1,3 @@
+﻿Public Class FORM_INICIO_SESION_EMPLEADO
+
+End Class
