@@ -14,3 +14,20 @@ C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.dll
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.xml
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Tienda.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Tienda.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Tienda.xml
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Datos.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Entidades.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Datos.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Datos.xml
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Entidades.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\bin\Debug\Proyecto_Entidades.xml
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.vbprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.Resources.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.vbproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.vbproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.vbproj.CopyComplete
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.xml
+C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto_Tienda\obj\Debug\Proyecto_Tienda.pdb

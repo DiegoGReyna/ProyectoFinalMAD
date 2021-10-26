@@ -53,9 +53,9 @@ Public Class Conexion_A_sqlServer
     End Property
     Public Sub New()
         Me.BaseDeDatos = "Proyecto_MAD"
-        Me.Servidor = "DIEGO\SQLEXPRESS"
+        Me.Servidor = "DESKTOP-FGJUFL8\SQLEXPRESS"
         Me.Usuario = "sa"
-        Me.PassWord = "uciopA5D"
+        Me.PassWord = "zim11223344"
         Me.conexion = New SqlConnection(CreacionCadenaConexion)
 
     End Sub
