@@ -17,6 +17,7 @@ SELECT E.Id_Empleado AS Empleado,P.CodigoProducto AS codigoProducto , P.Nombre a
 GO
 
 
+
 --Buscar Producto
 
 CREATE PROC Producto_Buscar
