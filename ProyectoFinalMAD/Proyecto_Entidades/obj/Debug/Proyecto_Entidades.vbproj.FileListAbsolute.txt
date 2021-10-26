@@ -1,0 +1,9 @@
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\bin\Debug\Proyecto_Entidades.dll
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\bin\Debug\Proyecto_Entidades.pdb
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\bin\Debug\Proyecto_Entidades.xml
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\obj\Debug\Proyecto_Entidades.vbprojAssemblyReference.cache
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\obj\Debug\Proyecto_Entidades.Resources.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\obj\Debug\Proyecto_Entidades.vbproj.GenerateResource.cache
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\obj\Debug\Proyecto_Entidades.dll
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\obj\Debug\Proyecto_Entidades.xml
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Entidades\obj\Debug\Proyecto_Entidades.pdb

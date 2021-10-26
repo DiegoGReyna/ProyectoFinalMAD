@@ -1,0 +1,13 @@
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\bin\Debug\Proyecto_Datos.dll
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\bin\Debug\Proyecto_Datos.pdb
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\bin\Debug\Proyecto_Datos.xml
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\bin\Debug\Proyecto_Entidades.dll
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\bin\Debug\Proyecto_Entidades.pdb
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\bin\Debug\Proyecto_Entidades.xml
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\obj\Debug\Proyecto_Datos.vbprojAssemblyReference.cache
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\obj\Debug\Proyecto_Datos.Resources.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\obj\Debug\Proyecto_Datos.vbproj.GenerateResource.cache
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\obj\Debug\Proyecto_Datos.vbproj.CopyComplete
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\obj\Debug\Proyecto_Datos.dll
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\obj\Debug\Proyecto_Datos.xml
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto_Datos\obj\Debug\Proyecto_Datos.pdb

@@ -5,7 +5,7 @@
 #End Region
 
 #Region "Propiedades"
-    Public Property Id_CategoriaProducto1 As Integer
+    Public Property Id_CategoriaProducto_Categoria As Integer
         Get
             Return Id_CategoriaProducto
         End Get
@@ -14,7 +14,7 @@
         End Set
     End Property
 
-    Public Property Nombre1 As String
+    Public Property Nombre_Categoria As String
         Get
             Return Nombre
         End Get
