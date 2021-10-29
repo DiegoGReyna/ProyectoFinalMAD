@@ -42,5 +42,8 @@ GO
 		WHERE  Id_CategoriaProducto=@Id_CategoriaProducto
 	GO
 
-
+	CREATE PROC Categoria_ComboBox
+		AS
+		SELECT Id_CategoriaProducto,Nombre FROM PRODUCTO_CATEGORIA
+	GO
 

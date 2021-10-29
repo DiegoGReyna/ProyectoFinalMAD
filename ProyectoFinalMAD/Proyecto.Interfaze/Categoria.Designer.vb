@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Categoria
+Partial Class FrmCategoria
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -224,7 +224,7 @@ Partial Class Categoria
         Me.TextBox_Categoria_Nombre.Size = New System.Drawing.Size(348, 20)
         Me.TextBox_Categoria_Nombre.TabIndex = 0
         '
-        'Categoria
+        'FrmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -232,7 +232,7 @@ Partial Class Categoria
         Me.ClientSize = New System.Drawing.Size(834, 462)
         Me.Controls.Add(Me.TabControlGeneral_Categoria)
         Me.MinimumSize = New System.Drawing.Size(850, 100)
-        Me.Name = "Categoria"
+        Me.Name = "FrmCategoria"
         Me.Text = "Categoria"
         Me.TabControlGeneral_Categoria.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

@@ -25,7 +25,6 @@ C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\bin\Debug\Proyecto_Tienda.xml
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\bin\Debug\Proyecto_Datos.pdb
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\bin\Debug\Proyecto_Datos.xml
-C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.Categoria.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto_Interfaze.vbproj.CopyComplete
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.exe
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.xml
@@ -63,3 +62,5 @@ C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto.Interf
 C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.exe
 C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.xml
 C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.pdb
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.MDIParent_MenuPrincipal_Empleado.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FrmCategoria.resources

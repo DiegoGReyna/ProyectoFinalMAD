@@ -14,6 +14,19 @@ Public Class Tienda_Categoria
             Return Nothing
         End Try
     End Function
+
+    Public Function ComboBoxCategorias() As DataTable
+        Try
+            Dim Datos As New Datos_Categoria
+            Dim Tabla As New DataTable
+            Tabla = Datos.ComboBoxCategorias()
+            Return Tabla
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
     Public Function BuscarCategoria(categori_A_abuscar As String) As DataTable
         Try
             Dim Datos As New Datos_Categoria

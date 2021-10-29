@@ -7,7 +7,7 @@ Go
 CREATE PROC Producto_Mostrar
 AS
 SELECT E.Id_Empleado AS Empleado,P.CodigoProducto AS codigoProducto , P.Nombre as NombreProducto,
-	C.Nombre as Categoria,P.Precio As Precio , P.Descuento As Descuento , p.Stock as Stock , p.Descripciopn as Descripcion
+	C.Nombre as Categoria,P.Precio As Precio , P.Descuento As Descuento , P.Stock as Stock , P.Descripciopn as Descripcion,P.Estado as Estado
 	FROM PRODUCTO P 
 	INNER JOIN PRODUCTO_CATEGORIA C 
 	ON P.Id_Categoria=C.Id_CategoriaProducto
@@ -19,19 +19,19 @@ GO
 
 
 --Buscar Producto
-
 CREATE PROC Producto_Buscar
 	@valor	VARCHAR(50)
+	
 AS
 SELECT E.Id_Empleado AS Empleado,P.CodigoProducto AS codigoProducto , P.Nombre as NombreProducto,
-	C.Nombre as Categoria,P.Precio As Precio , P.Descuento As Descuento , p.Stock as Stock , p.Descripciopn as Descripcion
+	C.Nombre as Categoria,P.Precio As Precio , P.Descuento As Descuento , P.Stock as Stock , P.Descripciopn as Descripcion,P.Estado as Estado
 	FROM PRODUCTO P 
 	INNER JOIN PRODUCTO_CATEGORIA C 
 	ON P.Id_Categoria=C.Id_CategoriaProducto
 	INNER JOIN EMPLEADO E
 	ON E.Id_Empleado=P.Id_Empleado
-	WHERE P.Nombre LIKE '&' +@valor+'&' OR P.Descripciopn LIKE '&'+@valor+'&'
-	ORDER BY P.CodigoProducto ASC
+	WHERE P.Nombre LIKE '%' +@valor+'%' OR P.Descripciopn LIKE '%'+@valor+'%'
+	ORDER BY P.Nombre ASC
 GO
 
 --Agregar Producto

@@ -11,7 +11,7 @@
     Private Descuento As Decimal
 #End Region
 #Region "Propiedades Productos"
-    Public Property ID_CodigoProducto1 As Integer
+    Public Property ID_CodigoProducto_ As Integer
         Get
             Return ID_CodigoProducto
         End Get
@@ -20,7 +20,7 @@
         End Set
     End Property
 
-    Public Property ID_Categoria1 As Integer
+    Public Property ID_Categoria_ As Integer
         Get
             Return ID_Categoria
         End Get
@@ -29,7 +29,7 @@
         End Set
     End Property
 
-    Public Property ID_Empleado1 As Integer
+    Public Property ID_Empleado_ As Integer
         Get
             Return ID_Empleado
         End Get
@@ -38,7 +38,7 @@
         End Set
     End Property
 
-    Public Property Nombre1 As String
+    Public Property Nombre_ As String
         Get
             Return Nombre
         End Get
@@ -47,7 +47,7 @@
         End Set
     End Property
 
-    Public Property Descripcion1 As String
+    Public Property Descripcion_ As String
         Get
             Return Descripcion
         End Get
@@ -56,7 +56,7 @@
         End Set
     End Property
 
-    Public Property Stock1 As Integer
+    Public Property Stock_ As Integer
         Get
             Return Stock
         End Get
@@ -65,7 +65,7 @@
         End Set
     End Property
 
-    Public Property Precio1 As Decimal
+    Public Property Precio_ As Decimal
         Get
             Return Precio
         End Get
@@ -74,7 +74,7 @@
         End Set
     End Property
 
-    Public Property Estado1 As Boolean
+    Public Property Estado_ As Boolean
         Get
             Return Estado
         End Get
@@ -83,7 +83,7 @@
         End Set
     End Property
 
-    Public Property Descuento1 As Decimal
+    Public Property Descuento_ As Decimal
         Get
             Return Descuento
         End Get

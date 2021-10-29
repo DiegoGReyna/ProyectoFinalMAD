@@ -91,10 +91,16 @@
     <Compile Include="Form10.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form11.Designer.vb">
-      <DependentUpon>Form11.vb</DependentUpon>
+    <Compile Include="MDIParent_MenuPrincipalEmpleado.Designer.vb">
+      <DependentUpon>MDIParent_MenuPrincipalEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form11.vb">
+    <Compile Include="MDIParent_MenuPrincipalEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos.Designer.vb">
+      <DependentUpon>Productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.vb">
@@ -171,8 +177,11 @@
     <EmbeddedResource Include="Form10.resx">
       <DependentUpon>Form10.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form11.resx">
-      <DependentUpon>Form11.vb</DependentUpon>
+    <EmbeddedResource Include="MDIParent_MenuPrincipalEmpleado.resx">
+      <DependentUpon>MDIParent_MenuPrincipalEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>

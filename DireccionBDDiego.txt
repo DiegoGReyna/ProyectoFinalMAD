@@ -1,0 +1,8 @@
+Public Sub New()
+        Me.BaseDeDatos = "Proyecto_MAD"
+        Me.Servidor = "DIEGO\SQLEXPRESS"
+        Me.Usuario = "sa"
+        Me.PassWord = "uciopA5D"
+        Me.conexion = New SqlConnection(CreacionCadenaConexion)
+
+    End Sub

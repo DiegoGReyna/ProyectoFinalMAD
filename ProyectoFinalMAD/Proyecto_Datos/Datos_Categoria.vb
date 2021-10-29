@@ -21,6 +21,25 @@ Public Class Datos_Categoria
 
         End Try
     End Function
+
+    Public Function ComboBoxCategorias() As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
+            Dim Comando As New SqlCommand("Categoria_ComboBox", MyBase.conexion)
+            Comando.CommandType = CommandType.StoredProcedure
+            MyBase.conexion.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conexion.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+    End Function
+
     Public Function BuscarCategoria(categori_A_abuscar As String) As DataTable
         Try
             Dim Resultado As SqlDataReader
@@ -40,7 +59,7 @@ Public Class Datos_Categoria
 
         End Try
     End Function
-    Public Function Insertar(categoria_A_insertar As CategoriaDeProducto)
+    Public Sub Insertar(categoria_A_insertar As CategoriaDeProducto)
         Try
 
             'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
@@ -56,8 +75,8 @@ Public Class Datos_Categoria
 
         End Try
 
-    End Function
-    Public Function Editar(categoria_A_Editar As CategoriaDeProducto)
+    End Sub
+    Public Sub Editar(categoria_A_Editar As CategoriaDeProducto)
         Try
             'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
             Dim Comando As New SqlCommand("Categoria_Editar", MyBase.conexion)
@@ -73,8 +92,8 @@ Public Class Datos_Categoria
 
         End Try
 
-    End Function
-    Public Function Eliminar(Id As String)
+    End Sub
+    Public Sub Eliminar(Id As String)
         Try
             'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
             Dim Comando As New SqlCommand("Categoria_Eliminar", MyBase.conexion)
@@ -88,6 +107,6 @@ Public Class Datos_Categoria
             Throw ex
 
         End Try
-    End Function
+    End Sub
 
 End Class

@@ -1,4 +1,4 @@
-﻿Public Class Categoria
+﻿Public Class FrmCategoria
     Private Sub Formato()
         DataGridView_ListaCategoria.Columns(0).Visible = False
         DataGridView_ListaCategoria.Columns(0).Width = 80
