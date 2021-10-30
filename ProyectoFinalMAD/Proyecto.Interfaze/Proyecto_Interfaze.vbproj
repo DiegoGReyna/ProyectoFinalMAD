@@ -91,6 +91,12 @@
     <Compile Include="Form10.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MDIParent_MenuPrincipalAdministrador.Designer.vb">
+      <DependentUpon>MDIParent_MenuPrincipalAdministrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent_MenuPrincipalAdministrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MDIParent_MenuPrincipalEmpleado.Designer.vb">
       <DependentUpon>MDIParent_MenuPrincipalEmpleado.vb</DependentUpon>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form10.resx">
       <DependentUpon>Form10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent_MenuPrincipalAdministrador.resx">
+      <DependentUpon>MDIParent_MenuPrincipalAdministrador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent_MenuPrincipalEmpleado.resx">
       <DependentUpon>MDIParent_MenuPrincipalEmpleado.vb</DependentUpon>

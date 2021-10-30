@@ -1,0 +1,29 @@
+USE Proyecto_MAD;
+
+----Usar views?? FALTA CREAR VIEWS 
+--Mostrar Productos
+
+	CREATE PROCEDURE Empleado_Mostrar
+	
+	AS
+	BEGIN
+
+	SELECT        EMPLEADO.Id_USUARIO, EMPLEADO.Id_Empleado, EMPLEADO.Usuario, EMPLEADO.RFC,EMPLEADO.Es_Administrador, USUARIOS.Nombre, USUARIOS.Apellido_Paterno 'Apellido paterno', 
+				  USUARIOS.Apellido_Materno 'Apellido ', USUARIOS.Contrasena 'Contraseña', USUARIOS.Fecha_Nacimiento 'Fecha de Nacimiento', USUARIOS.USUARIO_ACTIVO, DIRECCION_ESTADO.Nombre 'Estado', DIRECCION_MUNICIPIO.Nombre 'Municipio', 
+				  DIRECCION_COLONIA.Nombre 'Colonia', DIRECCION_USUARIOS.CodigoPostal , DIRECCION_USUARIOS.Calle, DIRECCION_USUARIOS.NUMERO_CASA, USUARIOS.CURP, 
+				  USUARIOS.Fecha_UltimaModificacion
+	FROM		  DIRECCION_COLONIA 
+				  INNER JOIN DIRECCION_USUARIOS 
+				  ON DIRECCION_COLONIA.CodigoPostal = DIRECCION_USUARIOS.CodigoPostal 
+				  INNER JOIN DIRECCION_ESTADO 
+				  ON DIRECCION_USUARIOS.Id_Estado_Usuarios = DIRECCION_ESTADO.Id_Estado 
+				  INNER JOIN DIRECCION_MUNICIPIO 
+				  ON DIRECCION_USUARIOS.Id_Municipio_Usuarios = DIRECCION_MUNICIPIO.Id_Municipio 
+				  INNER JOIN USUARIOS 
+				  ON DIRECCION_USUARIOS.Id_Direccion_Usuarios = USUARIOS.Id_DIRECCION_USUARIOS 
+				  INNER JOIN EMPLEADO 
+				  ON USUARIOS.Id_Usuario = EMPLEADO.Id_USUARIO
+				  WHERE USUARIOS.USUARIO_ACTIVO=1
+	END
+	
+GO

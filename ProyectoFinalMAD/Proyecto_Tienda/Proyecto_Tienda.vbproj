@@ -80,6 +80,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Tienda_Categoria.vb" />
+    <Compile Include="Tienda_Empleado.vb" />
     <Compile Include="Tienda_Producto.vb" />
   </ItemGroup>
   <ItemGroup>

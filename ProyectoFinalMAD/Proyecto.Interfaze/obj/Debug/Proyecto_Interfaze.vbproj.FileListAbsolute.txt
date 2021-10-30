@@ -64,3 +64,4 @@ C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto.Interf
 C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.pdb
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.MDIParent_MenuPrincipal_Empleado.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FrmCategoria.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.MDIParent_MenuPrincipalAdministrador.resources
