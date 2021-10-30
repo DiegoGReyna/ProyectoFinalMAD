@@ -19,6 +19,9 @@
         DataGridView_ListaEmpleados.Columns(15).Width = 100
         DataGridView_ListaEmpleados.Columns(16).Width = 100
         DataGridView_ListaEmpleados.Columns(17).Width = 100
+        DataGridView_ListaEmpleados.Columns(18).Width = 100
+        DataGridView_ListaEmpleados.Columns(19).Width = 100
+        DataGridView_ListaEmpleados.Columns(20).Width = 100
 
         DataGridView_ListaEmpleados.Columns.Item("SeleccionarEmpleado").Visible = False
 

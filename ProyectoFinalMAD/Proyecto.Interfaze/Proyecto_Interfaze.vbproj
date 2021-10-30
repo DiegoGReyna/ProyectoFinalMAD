@@ -151,10 +151,10 @@
     <Compile Include="Form8.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form9.Designer.vb">
-      <DependentUpon>Form9.vb</DependentUpon>
+    <Compile Include="ListaEmpleados.Designer.vb">
+      <DependentUpon>ListaEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form9.vb">
+    <Compile Include="ListaEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -213,8 +213,8 @@
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.vb</DependentUpon>
+    <EmbeddedResource Include="ListaEmpleados.resx">
+      <DependentUpon>ListaEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

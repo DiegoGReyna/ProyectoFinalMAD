@@ -13,6 +13,7 @@ Public Class Empleado
     Private _CURP As String
     Private _Id_Estado As Integer
     Private _Id_Municipio As Integer
+    Private _Id_Colonia As Integer
     Private _CodigoPostal As Integer
     Private _Colonia As Integer
     Private _FechaModificacion As Date
@@ -132,6 +133,15 @@ Public Class Empleado
         End Get
         Set(value As Integer)
             _Id_Municipio = value
+        End Set
+    End Property
+
+    Public Property Id_Colonia As Integer
+        Get
+            Return _Id_Colonia
+        End Get
+        Set(value As Integer)
+            _Id_Colonia = value
         End Set
     End Property
 
