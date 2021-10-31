@@ -37,6 +37,18 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+    Private Sub CargarComboBoxSucursales()
+        Try
+            Dim NewTienda As New Proyecto_Tienda.Tienda_Sucursal
+            ComboBox_ListaEmpleado_SucursalDondeTrabaja.DataSource = NewTienda.ComboBoxCategorias
+            ComboBox_ListaEmpleado_SucursalDondeTrabaja.ValueMember = "Id_Sucursal"
+            ComboBox_ListaEmpleado_SucursalDondeTrabaja.DisplayMember = "Nombre"
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+    End Sub
 
     Private Sub BTN_LISTEMPLEADOS_IMPRIMIR_Click(sender As Object, e As EventArgs) Handles BTN_LISTEMPLEADOS_IMPRIMIR.Click
 
@@ -48,6 +60,45 @@
 
     Private Sub FORM_LISTA_EMPLEADO_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Mostrar()
+        Me.CargarComboBoxSucursales()
+
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles ListaEmpleados.Click
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox_ListaEmpleado_Direccion.Enter
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label_ListaEmpleados_Estado.Click
+
+    End Sub
+
+    Private Sub Label_ListaEmpleados_Nombre_Click(sender As Object, e As EventArgs) Handles Label_ListaEmpleados_Nombre.Click
+
+    End Sub
+
+    Private Sub TextBox_ListaEmpleado_UsuarioNombre_TextChanged(sender As Object, e As EventArgs) Handles TextBox_ListaEmpleado_UsuarioNombre.TextChanged
+
+    End Sub
+
+    Private Sub Label_ListaEmpleados_ApellidoMaterno_Click(sender As Object, e As EventArgs) Handles Label_ListaEmpleados_ApellidoMaterno.Click
+
+    End Sub
+
+    Private Sub TextBox_ListaEmpleado_usuarioApellidoMaterno_TextChanged(sender As Object, e As EventArgs) Handles TextBox_ListaEmpleado_usuarioApellidoMaterno.TextChanged
+
+    End Sub
+
+    Private Sub Button_ListaEmpleado_Agregar_Click(sender As Object, e As EventArgs) Handles Button_ListaEmpleado_Agregar.Click
+        If Me.ValidateChildren = True And TextBox_ListaEmpleado_DireccionEstado.Text <> "" Then
+            If TextBox_ListaEmpleado_DireccionEstado.Text.Length > 5 Then
+                MsgBox("Tamaño maximo de estado")
+
+            End If
+        End If
 
     End Sub
 End Class

@@ -66,8 +66,10 @@
   <ItemGroup>
     <Compile Include="Conexion_A_sqlServer.vb" />
     <Compile Include="Datos_Categoria.vb" />
+    <Compile Include="Datos_DireccionEstado.vb" />
     <Compile Include="Datos_Empleado.vb" />
     <Compile Include="Datos_Productos.vb" />
+    <Compile Include="Datos_Sucursal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -80,8 +80,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Tienda_Categoria.vb" />
+    <Compile Include="Tienda_DireccionEstado.vb" />
     <Compile Include="Tienda_Empleado.vb" />
     <Compile Include="Tienda_Producto.vb" />
+    <Compile Include="Tienda_Sucursal.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

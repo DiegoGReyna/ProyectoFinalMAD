@@ -1,39 +1,42 @@
 ﻿
 Public Class Empleado
-    Private _ID_Empleado As Integer
-    Private _ID_Usuario As Integer
+    Private _Id_Empleado As Integer
+    Private Id_Usuario As Integer
     Private _Usuario As String
-    Private _RFC As String
-    Private _EsAdministrador As Boolean
     Private _Nombre As String
     Private _ApellidoPaterno As String
     Private _ApellidoMaterno As String
     Private _Contrasena As String
-    Private _FechaNacimiento As Date
+    Private _RFC As String
     Private _CURP As String
-    Private _Id_Estado As Integer
-    Private _Id_Municipio As Integer
-    Private _Id_Colonia As Integer
+    Private _FechaNacimienro As Date
+    Private _EsAdministrador As Boolean
+    Private _Estado As String
+    Private _Municipio As String
+    Private _Colonia As String
     Private _CodigoPostal As Integer
-    Private _Colonia As Integer
-    Private _FechaModificacion As Date
+    Private _Calle As String
+    Private _NumeroCasa As Integer
+    Private _ID_Sucursal As Integer
+    Private _FechaUltimaModificacion As String
     Private _Activo As Boolean
 
-    Public Property ID_Empleado As Integer
+
+    Public Property Id_Empleado As Integer
         Get
-            Return _ID_Empleado
+            Return _Id_Empleado
         End Get
         Set(value As Integer)
-            _ID_Empleado = value
+            _Id_Empleado = value
         End Set
     End Property
 
-    Public Property ID_Usuario As Integer
+    Public Property Id_Usuario1 As Integer
         Get
-            Return _ID_Usuario
+            Return Id_Usuario
         End Get
         Set(value As Integer)
-            _ID_Usuario = value
+            Id_Usuario = value
         End Set
     End Property
 
@@ -43,24 +46,6 @@ Public Class Empleado
         End Get
         Set(value As String)
             _Usuario = value
-        End Set
-    End Property
-
-    Public Property RFC As String
-        Get
-            Return _RFC
-        End Get
-        Set(value As String)
-            _RFC = value
-        End Set
-    End Property
-
-    Public Property EsAdministrador As Boolean
-        Get
-            Return _EsAdministrador
-        End Get
-        Set(value As Boolean)
-            _EsAdministrador = value
         End Set
     End Property
 
@@ -100,12 +85,12 @@ Public Class Empleado
         End Set
     End Property
 
-    Public Property FechaNacimiento As Date
+    Public Property RFC As String
         Get
-            Return _FechaNacimiento
+            Return _RFC
         End Get
-        Set(value As Date)
-            _FechaNacimiento = value
+        Set(value As String)
+            _RFC = value
         End Set
     End Property
 
@@ -118,30 +103,48 @@ Public Class Empleado
         End Set
     End Property
 
-    Public Property Id_Estado As Integer
+    Public Property FechaNacimienro As Date
         Get
-            Return _Id_Estado
+            Return _FechaNacimienro
         End Get
-        Set(value As Integer)
-            _Id_Estado = value
+        Set(value As Date)
+            _FechaNacimienro = value
         End Set
     End Property
 
-    Public Property Id_Municipio As Integer
+    Public Property EsAdministrador As Boolean
         Get
-            Return _Id_Municipio
+            Return _EsAdministrador
         End Get
-        Set(value As Integer)
-            _Id_Municipio = value
+        Set(value As Boolean)
+            _EsAdministrador = value
         End Set
     End Property
 
-    Public Property Id_Colonia As Integer
+    Public Property Estado As String
         Get
-            Return _Id_Colonia
+            Return _Estado
         End Get
-        Set(value As Integer)
-            _Id_Colonia = value
+        Set(value As String)
+            _Estado = value
+        End Set
+    End Property
+
+    Public Property Municipio As String
+        Get
+            Return _Municipio
+        End Get
+        Set(value As String)
+            _Municipio = value
+        End Set
+    End Property
+
+    Public Property Colonia As String
+        Get
+            Return _Colonia
+        End Get
+        Set(value As String)
+            _Colonia = value
         End Set
     End Property
 
@@ -154,21 +157,39 @@ Public Class Empleado
         End Set
     End Property
 
-    Public Property Colonia As Integer
+    Public Property Calle As String
         Get
-            Return _Colonia
+            Return _Calle
         End Get
-        Set(value As Integer)
-            _Colonia = value
+        Set(value As String)
+            _Calle = value
         End Set
     End Property
 
-    Public Property FechaModificacion As Date
+    Public Property NumeroCasa As Integer
         Get
-            Return _FechaModificacion
+            Return _NumeroCasa
         End Get
-        Set(value As Date)
-            _FechaModificacion = value
+        Set(value As Integer)
+            _NumeroCasa = value
+        End Set
+    End Property
+
+    Public Property ID_Sucursal As Integer
+        Get
+            Return _ID_Sucursal
+        End Get
+        Set(value As Integer)
+            _ID_Sucursal = value
+        End Set
+    End Property
+
+    Public Property FechaUltimaModificacion As String
+        Get
+            Return _FechaUltimaModificacion
+        End Get
+        Set(value As String)
+            _FechaUltimaModificacion = value
         End Set
     End Property
 
