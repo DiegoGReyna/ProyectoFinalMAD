@@ -33,6 +33,17 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Button_ListaEmpleados_Eliminar = New System.Windows.Forms.Button()
         Me.Seleccionar_Empleado = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TextBox_ListaEmpleados_IdDireccion = New System.Windows.Forms.TextBox()
+        Me.Label_ListaEmpleados_IdDireccion = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja = New System.Windows.Forms.ComboBox()
+        Me.Label_ListaEmpleado_Sucursal = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox_ListaEmpleado_EmpleadoRFC = New System.Windows.Forms.TextBox()
+        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario = New System.Windows.Forms.TextBox()
+        Me.CheckBox_ListaEmpleados_EsAdministrador = New System.Windows.Forms.CheckBox()
+        Me.Label_ListaEmpleados_RFC = New System.Windows.Forms.Label()
+        Me.Label_ListaEmpleados_NombreUsuario = New System.Windows.Forms.Label()
         Me.Label_ListaEmpleado_Empleados = New System.Windows.Forms.Label()
         Me.Label_ListaEmpleados_IdUsuario = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,7 +60,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.TextBox_ListaEmpleado_usuarioApellidoPaterno = New System.Windows.Forms.TextBox()
         Me.TextBox_ListaEmpleado_UsuarioNombre = New System.Windows.Forms.TextBox()
         Me.Label_ListaEmpleados_UsuarioCURP = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1_ListaEmpleados_ = New System.Windows.Forms.DateTimePicker()
         Me.Label_ListaEmpleados_FechaNacimiento = New System.Windows.Forms.Label()
         Me.Label_ListaEmpleados_Contrasena = New System.Windows.Forms.Label()
         Me.Label_ListaEmpleados_ApellidoMaterno = New System.Windows.Forms.Label()
@@ -68,30 +79,23 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Label_ListaEmpleados_Municipio = New System.Windows.Forms.Label()
         Me.TextBox_ListaEmpleado_DireccionEstado = New System.Windows.Forms.TextBox()
         Me.Label_ListaEmpleados_Estado = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label_ListaEmpleados_NombreUsuario = New System.Windows.Forms.Label()
-        Me.Label_ListaEmpleados_RFC = New System.Windows.Forms.Label()
-        Me.CheckBox_ListaEmpleados_EsAdministrador = New System.Windows.Forms.CheckBox()
-        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario = New System.Windows.Forms.TextBox()
-        Me.TextBox_ListaEmpleado_EmpleadoRFC = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label_ListaEmpleado_Sucursal = New System.Windows.Forms.Label()
-        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja = New System.Windows.Forms.ComboBox()
+        Me.TextBox_ListaEmpleados_TextAbuscar = New System.Windows.Forms.TextBox()
+        Me.Button_ListaEmpleados_Buscar = New System.Windows.Forms.Button()
         CType(Me.DataGridView_ListaEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl_ListaEmpleados.SuspendLayout()
         Me.ListaEmpleados.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.GroupBox_ListaEmpleado_Usuarios.SuspendLayout()
         Me.GroupBox_ListaEmpleado_Direccion.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 13)
+        Me.Label1.Location = New System.Drawing.Point(6, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(190, 24)
         Me.Label1.TabIndex = 0
@@ -99,7 +103,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'BTN_LISTEMPLEADOS_IMPRIMIR
         '
-        Me.BTN_LISTEMPLEADOS_IMPRIMIR.Location = New System.Drawing.Point(10, 437)
+        Me.BTN_LISTEMPLEADOS_IMPRIMIR.Location = New System.Drawing.Point(6, 455)
         Me.BTN_LISTEMPLEADOS_IMPRIMIR.Name = "BTN_LISTEMPLEADOS_IMPRIMIR"
         Me.BTN_LISTEMPLEADOS_IMPRIMIR.Size = New System.Drawing.Size(120, 61)
         Me.BTN_LISTEMPLEADOS_IMPRIMIR.TabIndex = 2
@@ -117,7 +121,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.DataGridView_ListaEmpleados.Name = "DataGridView_ListaEmpleados"
         Me.DataGridView_ListaEmpleados.ReadOnly = True
         Me.DataGridView_ListaEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView_ListaEmpleados.Size = New System.Drawing.Size(1088, 329)
+        Me.DataGridView_ListaEmpleados.Size = New System.Drawing.Size(1250, 329)
         Me.DataGridView_ListaEmpleados.TabIndex = 3
         '
         'SeleccionarEmpleado
@@ -130,14 +134,16 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         Me.TabControl_ListaEmpleados.Controls.Add(Me.ListaEmpleados)
         Me.TabControl_ListaEmpleados.Controls.Add(Me.TabPage2)
-        Me.TabControl_ListaEmpleados.Location = New System.Drawing.Point(22, 30)
+        Me.TabControl_ListaEmpleados.Location = New System.Drawing.Point(12, 30)
         Me.TabControl_ListaEmpleados.Name = "TabControl_ListaEmpleados"
         Me.TabControl_ListaEmpleados.SelectedIndex = 0
-        Me.TabControl_ListaEmpleados.Size = New System.Drawing.Size(1112, 550)
+        Me.TabControl_ListaEmpleados.Size = New System.Drawing.Size(1284, 550)
         Me.TabControl_ListaEmpleados.TabIndex = 4
         '
         'ListaEmpleados
         '
+        Me.ListaEmpleados.Controls.Add(Me.Button_ListaEmpleados_Buscar)
+        Me.ListaEmpleados.Controls.Add(Me.TextBox_ListaEmpleados_TextAbuscar)
         Me.ListaEmpleados.Controls.Add(Me.Button_ListaEmpleados_Desactivar)
         Me.ListaEmpleados.Controls.Add(Me.Button_ListaEmpleados_Activar)
         Me.ListaEmpleados.Controls.Add(Me.Button_ListaEmpleados_Eliminar)
@@ -148,7 +154,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.ListaEmpleados.Location = New System.Drawing.Point(4, 24)
         Me.ListaEmpleados.Name = "ListaEmpleados"
         Me.ListaEmpleados.Padding = New System.Windows.Forms.Padding(3)
-        Me.ListaEmpleados.Size = New System.Drawing.Size(1104, 522)
+        Me.ListaEmpleados.Size = New System.Drawing.Size(1276, 522)
         Me.ListaEmpleados.TabIndex = 0
         Me.ListaEmpleados.Text = "ListaEmpleados"
         Me.ListaEmpleados.UseVisualStyleBackColor = True
@@ -161,6 +167,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Button_ListaEmpleados_Desactivar.TabIndex = 7
         Me.Button_ListaEmpleados_Desactivar.Text = "Desactivar"
         Me.Button_ListaEmpleados_Desactivar.UseVisualStyleBackColor = True
+        Me.Button_ListaEmpleados_Desactivar.Visible = False
         '
         'Button_ListaEmpleados_Activar
         '
@@ -170,6 +177,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Button_ListaEmpleados_Activar.TabIndex = 6
         Me.Button_ListaEmpleados_Activar.Text = "Activar"
         Me.Button_ListaEmpleados_Activar.UseVisualStyleBackColor = True
+        Me.Button_ListaEmpleados_Activar.Visible = False
         '
         'Button_ListaEmpleados_Eliminar
         '
@@ -179,6 +187,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Button_ListaEmpleados_Eliminar.TabIndex = 5
         Me.Button_ListaEmpleados_Eliminar.Text = "Eliminar"
         Me.Button_ListaEmpleados_Eliminar.UseVisualStyleBackColor = True
+        Me.Button_ListaEmpleados_Eliminar.Visible = False
         '
         'Seleccionar_Empleado
         '
@@ -192,6 +201,8 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.TextBox_ListaEmpleados_IdDireccion)
+        Me.TabPage2.Controls.Add(Me.Label_ListaEmpleados_IdDireccion)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Controls.Add(Me.Label_ListaEmpleado_Empleados)
@@ -208,15 +219,116 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1104, 522)
+        Me.TabPage2.Size = New System.Drawing.Size(1276, 522)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Edicion Y agregar empleados"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'TextBox_ListaEmpleados_IdDireccion
+        '
+        Me.TextBox_ListaEmpleados_IdDireccion.Location = New System.Drawing.Point(687, 24)
+        Me.TextBox_ListaEmpleados_IdDireccion.Name = "TextBox_ListaEmpleados_IdDireccion"
+        Me.TextBox_ListaEmpleados_IdDireccion.ReadOnly = True
+        Me.TextBox_ListaEmpleados_IdDireccion.Size = New System.Drawing.Size(127, 23)
+        Me.TextBox_ListaEmpleados_IdDireccion.TabIndex = 14
+        '
+        'Label_ListaEmpleados_IdDireccion
+        '
+        Me.Label_ListaEmpleados_IdDireccion.AutoSize = True
+        Me.Label_ListaEmpleados_IdDireccion.Location = New System.Drawing.Point(580, 27)
+        Me.Label_ListaEmpleados_IdDireccion.Name = "Label_ListaEmpleados_IdDireccion"
+        Me.Label_ListaEmpleados_IdDireccion.Size = New System.Drawing.Size(98, 15)
+        Me.Label_ListaEmpleados_IdDireccion.TabIndex = 13
+        Me.Label_ListaEmpleados_IdDireccion.Text = "Id Direccion "
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja)
+        Me.GroupBox2.Controls.Add(Me.Label_ListaEmpleado_Sucursal)
+        Me.GroupBox2.Location = New System.Drawing.Point(603, 280)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(599, 170)
+        Me.GroupBox2.TabIndex = 12
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Sucursal "
+        '
+        'ComboBox_ListaEmpleado_SucursalDondeTrabaja
+        '
+        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.FormattingEnabled = True
+        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.Location = New System.Drawing.Point(196, 56)
+        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.Name = "ComboBox_ListaEmpleado_SucursalDondeTrabaja"
+        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.Size = New System.Drawing.Size(354, 23)
+        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.TabIndex = 1
+        '
+        'Label_ListaEmpleado_Sucursal
+        '
+        Me.Label_ListaEmpleado_Sucursal.AutoSize = True
+        Me.Label_ListaEmpleado_Sucursal.Location = New System.Drawing.Point(26, 63)
+        Me.Label_ListaEmpleado_Sucursal.Name = "Label_ListaEmpleado_Sucursal"
+        Me.Label_ListaEmpleado_Sucursal.Size = New System.Drawing.Size(175, 15)
+        Me.Label_ListaEmpleado_Sucursal.TabIndex = 0
+        Me.Label_ListaEmpleado_Sucursal.Text = "Sucursal donde trabaja: "
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TextBox_ListaEmpleado_EmpleadoRFC)
+        Me.GroupBox1.Controls.Add(Me.TextBox_ListaEmpleado_EmpleadoNomUsuario)
+        Me.GroupBox1.Controls.Add(Me.CheckBox_ListaEmpleados_EsAdministrador)
+        Me.GroupBox1.Controls.Add(Me.Label_ListaEmpleados_RFC)
+        Me.GroupBox1.Controls.Add(Me.Label_ListaEmpleados_NombreUsuario)
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 280)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(546, 171)
+        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Datos de Empleado"
+        '
+        'TextBox_ListaEmpleado_EmpleadoRFC
+        '
+        Me.TextBox_ListaEmpleado_EmpleadoRFC.Location = New System.Drawing.Point(54, 95)
+        Me.TextBox_ListaEmpleado_EmpleadoRFC.Name = "TextBox_ListaEmpleado_EmpleadoRFC"
+        Me.TextBox_ListaEmpleado_EmpleadoRFC.Size = New System.Drawing.Size(261, 23)
+        Me.TextBox_ListaEmpleado_EmpleadoRFC.TabIndex = 5
+        '
+        'TextBox_ListaEmpleado_EmpleadoNomUsuario
+        '
+        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Location = New System.Drawing.Point(132, 33)
+        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Name = "TextBox_ListaEmpleado_EmpleadoNomUsuario"
+        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Size = New System.Drawing.Size(183, 23)
+        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.TabIndex = 4
+        '
+        'CheckBox_ListaEmpleados_EsAdministrador
+        '
+        Me.CheckBox_ListaEmpleados_EsAdministrador.AutoSize = True
+        Me.CheckBox_ListaEmpleados_EsAdministrador.Location = New System.Drawing.Point(362, 63)
+        Me.CheckBox_ListaEmpleados_EsAdministrador.Name = "CheckBox_ListaEmpleados_EsAdministrador"
+        Me.CheckBox_ListaEmpleados_EsAdministrador.Size = New System.Drawing.Size(145, 19)
+        Me.CheckBox_ListaEmpleados_EsAdministrador.TabIndex = 3
+        Me.CheckBox_ListaEmpleados_EsAdministrador.Text = "Es administrador?"
+        Me.CheckBox_ListaEmpleados_EsAdministrador.UseVisualStyleBackColor = True
+        '
+        'Label_ListaEmpleados_RFC
+        '
+        Me.Label_ListaEmpleados_RFC.AutoSize = True
+        Me.Label_ListaEmpleados_RFC.Location = New System.Drawing.Point(6, 95)
+        Me.Label_ListaEmpleados_RFC.Name = "Label_ListaEmpleados_RFC"
+        Me.Label_ListaEmpleados_RFC.Size = New System.Drawing.Size(42, 15)
+        Me.Label_ListaEmpleados_RFC.TabIndex = 1
+        Me.Label_ListaEmpleados_RFC.Text = "RFC: "
+        '
+        'Label_ListaEmpleados_NombreUsuario
+        '
+        Me.Label_ListaEmpleados_NombreUsuario.AutoSize = True
+        Me.Label_ListaEmpleados_NombreUsuario.Location = New System.Drawing.Point(6, 35)
+        Me.Label_ListaEmpleados_NombreUsuario.Name = "Label_ListaEmpleados_NombreUsuario"
+        Me.Label_ListaEmpleados_NombreUsuario.Size = New System.Drawing.Size(119, 15)
+        Me.Label_ListaEmpleados_NombreUsuario.TabIndex = 0
+        Me.Label_ListaEmpleados_NombreUsuario.Text = "Nombre usuario: "
+        '
         'Label_ListaEmpleado_Empleados
         '
         Me.Label_ListaEmpleado_Empleados.AutoSize = True
-        Me.Label_ListaEmpleado_Empleados.Location = New System.Drawing.Point(598, 16)
+        Me.Label_ListaEmpleado_Empleados.Location = New System.Drawing.Point(83, 27)
         Me.Label_ListaEmpleado_Empleados.Name = "Label_ListaEmpleado_Empleados"
         Me.Label_ListaEmpleado_Empleados.Size = New System.Drawing.Size(91, 15)
         Me.Label_ListaEmpleado_Empleados.TabIndex = 10
@@ -225,7 +337,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'Label_ListaEmpleados_IdUsuario
         '
         Me.Label_ListaEmpleados_IdUsuario.AutoSize = True
-        Me.Label_ListaEmpleados_IdUsuario.Location = New System.Drawing.Point(860, 16)
+        Me.Label_ListaEmpleados_IdUsuario.Location = New System.Drawing.Point(335, 27)
         Me.Label_ListaEmpleados_IdUsuario.Name = "Label_ListaEmpleados_IdUsuario"
         Me.Label_ListaEmpleados_IdUsuario.Size = New System.Drawing.Size(77, 15)
         Me.Label_ListaEmpleados_IdUsuario.TabIndex = 9
@@ -234,7 +346,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(261, 15)
+        Me.Label2.Location = New System.Drawing.Point(820, 27)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(182, 15)
         Me.Label2.TabIndex = 8
@@ -242,7 +354,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'TextBox_ListaEmpleado_FechaUltimaMod
         '
-        Me.TextBox_ListaEmpleado_FechaUltimaMod.Location = New System.Drawing.Point(449, 12)
+        Me.TextBox_ListaEmpleado_FechaUltimaMod.Location = New System.Drawing.Point(1008, 24)
         Me.TextBox_ListaEmpleado_FechaUltimaMod.Name = "TextBox_ListaEmpleado_FechaUltimaMod"
         Me.TextBox_ListaEmpleado_FechaUltimaMod.ReadOnly = True
         Me.TextBox_ListaEmpleado_FechaUltimaMod.Size = New System.Drawing.Size(145, 23)
@@ -250,7 +362,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'TextBoxTextBox_ListaEmpleado_IDUsuario
         '
-        Me.TextBoxTextBox_ListaEmpleado_IDUsuario.Location = New System.Drawing.Point(943, 13)
+        Me.TextBoxTextBox_ListaEmpleado_IDUsuario.Location = New System.Drawing.Point(418, 24)
         Me.TextBoxTextBox_ListaEmpleado_IDUsuario.Name = "TextBoxTextBox_ListaEmpleado_IDUsuario"
         Me.TextBoxTextBox_ListaEmpleado_IDUsuario.ReadOnly = True
         Me.TextBoxTextBox_ListaEmpleado_IDUsuario.Size = New System.Drawing.Size(145, 23)
@@ -258,7 +370,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'TextBox_ListaEmpleado_IDEmpleado
         '
-        Me.TextBox_ListaEmpleado_IDEmpleado.Location = New System.Drawing.Point(695, 13)
+        Me.TextBox_ListaEmpleado_IDEmpleado.Location = New System.Drawing.Point(180, 24)
         Me.TextBox_ListaEmpleado_IDEmpleado.Name = "TextBox_ListaEmpleado_IDEmpleado"
         Me.TextBox_ListaEmpleado_IDEmpleado.ReadOnly = True
         Me.TextBox_ListaEmpleado_IDEmpleado.Size = New System.Drawing.Size(145, 23)
@@ -266,7 +378,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'Button_ListaEmpleado_Editar
         '
-        Me.Button_ListaEmpleado_Editar.Location = New System.Drawing.Point(641, 457)
+        Me.Button_ListaEmpleado_Editar.Location = New System.Drawing.Point(492, 456)
         Me.Button_ListaEmpleado_Editar.Name = "Button_ListaEmpleado_Editar"
         Me.Button_ListaEmpleado_Editar.Size = New System.Drawing.Size(98, 45)
         Me.Button_ListaEmpleado_Editar.TabIndex = 4
@@ -275,7 +387,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'Button_ListaEmpleado_Cancelar
         '
-        Me.Button_ListaEmpleado_Cancelar.Location = New System.Drawing.Point(537, 457)
+        Me.Button_ListaEmpleado_Cancelar.Location = New System.Drawing.Point(596, 456)
         Me.Button_ListaEmpleado_Cancelar.Name = "Button_ListaEmpleado_Cancelar"
         Me.Button_ListaEmpleado_Cancelar.Size = New System.Drawing.Size(98, 45)
         Me.Button_ListaEmpleado_Cancelar.TabIndex = 3
@@ -284,7 +396,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'Button_ListaEmpleado_Agregar
         '
-        Me.Button_ListaEmpleado_Agregar.Location = New System.Drawing.Point(433, 457)
+        Me.Button_ListaEmpleado_Agregar.Location = New System.Drawing.Point(492, 456)
         Me.Button_ListaEmpleado_Agregar.Name = "Button_ListaEmpleado_Agregar"
         Me.Button_ListaEmpleado_Agregar.Size = New System.Drawing.Size(98, 45)
         Me.Button_ListaEmpleado_Agregar.TabIndex = 2
@@ -299,15 +411,15 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.TextBox_ListaEmpleado_usuarioApellidoPaterno)
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.TextBox_ListaEmpleado_UsuarioNombre)
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.Label_ListaEmpleados_UsuarioCURP)
-        Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.DateTimePicker1_ListaEmpleados_)
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.Label_ListaEmpleados_FechaNacimiento)
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.Label_ListaEmpleados_Contrasena)
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.Label_ListaEmpleados_ApellidoMaterno)
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.Label_ListaEmpleados_ApellidoPaterno)
         Me.GroupBox_ListaEmpleado_Usuarios.Controls.Add(Me.Label_ListaEmpleados_Nombre)
-        Me.GroupBox_ListaEmpleado_Usuarios.Location = New System.Drawing.Point(558, 45)
+        Me.GroupBox_ListaEmpleado_Usuarios.Location = New System.Drawing.Point(603, 63)
         Me.GroupBox_ListaEmpleado_Usuarios.Name = "GroupBox_ListaEmpleado_Usuarios"
-        Me.GroupBox_ListaEmpleado_Usuarios.Size = New System.Drawing.Size(540, 211)
+        Me.GroupBox_ListaEmpleado_Usuarios.Size = New System.Drawing.Size(599, 211)
         Me.GroupBox_ListaEmpleado_Usuarios.TabIndex = 1
         Me.GroupBox_ListaEmpleado_Usuarios.TabStop = False
         Me.GroupBox_ListaEmpleado_Usuarios.Text = "Datos de Usuario"
@@ -356,13 +468,14 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Label_ListaEmpleados_UsuarioCURP.TabIndex = 7
         Me.Label_ListaEmpleados_UsuarioCURP.Text = "CURP: "
         '
-        'DateTimePicker1
+        'DateTimePicker1_ListaEmpleados_
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(97, 171)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(199, 23)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.DateTimePicker1_ListaEmpleados_.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1_ListaEmpleados_.Location = New System.Drawing.Point(97, 171)
+        Me.DateTimePicker1_ListaEmpleados_.Name = "DateTimePicker1_ListaEmpleados_"
+        Me.DateTimePicker1_ListaEmpleados_.Size = New System.Drawing.Size(199, 23)
+        Me.DateTimePicker1_ListaEmpleados_.TabIndex = 6
+        Me.DateTimePicker1_ListaEmpleados_.Value = New Date(2021, 11, 18, 0, 0, 0, 0)
         '
         'Label_ListaEmpleados_FechaNacimiento
         '
@@ -423,7 +536,7 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.GroupBox_ListaEmpleado_Direccion.Controls.Add(Me.Label_ListaEmpleados_Municipio)
         Me.GroupBox_ListaEmpleado_Direccion.Controls.Add(Me.TextBox_ListaEmpleado_DireccionEstado)
         Me.GroupBox_ListaEmpleado_Direccion.Controls.Add(Me.Label_ListaEmpleados_Estado)
-        Me.GroupBox_ListaEmpleado_Direccion.Location = New System.Drawing.Point(6, 45)
+        Me.GroupBox_ListaEmpleado_Direccion.Location = New System.Drawing.Point(32, 63)
         Me.GroupBox_ListaEmpleado_Direccion.Name = "GroupBox_ListaEmpleado_Direccion"
         Me.GroupBox_ListaEmpleado_Direccion.Size = New System.Drawing.Size(546, 211)
         Me.GroupBox_ListaEmpleado_Direccion.TabIndex = 0
@@ -526,96 +639,28 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Label_ListaEmpleados_Estado.TabIndex = 0
         Me.Label_ListaEmpleados_Estado.Text = "Estado: "
         '
-        'GroupBox1
+        'TextBox_ListaEmpleados_TextAbuscar
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox_ListaEmpleado_EmpleadoRFC)
-        Me.GroupBox1.Controls.Add(Me.TextBox_ListaEmpleado_EmpleadoNomUsuario)
-        Me.GroupBox1.Controls.Add(Me.CheckBox_ListaEmpleados_EsAdministrador)
-        Me.GroupBox1.Controls.Add(Me.Label_ListaEmpleados_RFC)
-        Me.GroupBox1.Controls.Add(Me.Label_ListaEmpleados_NombreUsuario)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 262)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(546, 171)
-        Me.GroupBox1.TabIndex = 11
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Datos de Empleado"
+        Me.TextBox_ListaEmpleados_TextAbuscar.Location = New System.Drawing.Point(465, 22)
+        Me.TextBox_ListaEmpleados_TextAbuscar.Name = "TextBox_ListaEmpleados_TextAbuscar"
+        Me.TextBox_ListaEmpleados_TextAbuscar.Size = New System.Drawing.Size(423, 23)
+        Me.TextBox_ListaEmpleados_TextAbuscar.TabIndex = 8
         '
-        'Label_ListaEmpleados_NombreUsuario
+        'Button_ListaEmpleados_Buscar
         '
-        Me.Label_ListaEmpleados_NombreUsuario.AutoSize = True
-        Me.Label_ListaEmpleados_NombreUsuario.Location = New System.Drawing.Point(6, 35)
-        Me.Label_ListaEmpleados_NombreUsuario.Name = "Label_ListaEmpleados_NombreUsuario"
-        Me.Label_ListaEmpleados_NombreUsuario.Size = New System.Drawing.Size(119, 15)
-        Me.Label_ListaEmpleados_NombreUsuario.TabIndex = 0
-        Me.Label_ListaEmpleados_NombreUsuario.Text = "Nombre usuario: "
-        '
-        'Label_ListaEmpleados_RFC
-        '
-        Me.Label_ListaEmpleados_RFC.AutoSize = True
-        Me.Label_ListaEmpleados_RFC.Location = New System.Drawing.Point(6, 95)
-        Me.Label_ListaEmpleados_RFC.Name = "Label_ListaEmpleados_RFC"
-        Me.Label_ListaEmpleados_RFC.Size = New System.Drawing.Size(42, 15)
-        Me.Label_ListaEmpleados_RFC.TabIndex = 1
-        Me.Label_ListaEmpleados_RFC.Text = "RFC: "
-        '
-        'CheckBox_ListaEmpleados_EsAdministrador
-        '
-        Me.CheckBox_ListaEmpleados_EsAdministrador.AutoSize = True
-        Me.CheckBox_ListaEmpleados_EsAdministrador.Location = New System.Drawing.Point(362, 63)
-        Me.CheckBox_ListaEmpleados_EsAdministrador.Name = "CheckBox_ListaEmpleados_EsAdministrador"
-        Me.CheckBox_ListaEmpleados_EsAdministrador.Size = New System.Drawing.Size(145, 19)
-        Me.CheckBox_ListaEmpleados_EsAdministrador.TabIndex = 3
-        Me.CheckBox_ListaEmpleados_EsAdministrador.Text = "Es administrador?"
-        Me.CheckBox_ListaEmpleados_EsAdministrador.UseVisualStyleBackColor = True
-        '
-        'TextBox_ListaEmpleado_EmpleadoNomUsuario
-        '
-        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Location = New System.Drawing.Point(132, 33)
-        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Name = "TextBox_ListaEmpleado_EmpleadoNomUsuario"
-        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Size = New System.Drawing.Size(183, 23)
-        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.TabIndex = 4
-        '
-        'TextBox_ListaEmpleado_EmpleadoRFC
-        '
-        Me.TextBox_ListaEmpleado_EmpleadoRFC.Location = New System.Drawing.Point(54, 95)
-        Me.TextBox_ListaEmpleado_EmpleadoRFC.Name = "TextBox_ListaEmpleado_EmpleadoRFC"
-        Me.TextBox_ListaEmpleado_EmpleadoRFC.Size = New System.Drawing.Size(261, 23)
-        Me.TextBox_ListaEmpleado_EmpleadoRFC.TabIndex = 5
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja)
-        Me.GroupBox2.Controls.Add(Me.Label_ListaEmpleado_Sucursal)
-        Me.GroupBox2.Location = New System.Drawing.Point(558, 262)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(540, 170)
-        Me.GroupBox2.TabIndex = 12
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Sucursal "
-        '
-        'Label_ListaEmpleado_Sucursal
-        '
-        Me.Label_ListaEmpleado_Sucursal.AutoSize = True
-        Me.Label_ListaEmpleado_Sucursal.Location = New System.Drawing.Point(26, 63)
-        Me.Label_ListaEmpleado_Sucursal.Name = "Label_ListaEmpleado_Sucursal"
-        Me.Label_ListaEmpleado_Sucursal.Size = New System.Drawing.Size(175, 15)
-        Me.Label_ListaEmpleado_Sucursal.TabIndex = 0
-        Me.Label_ListaEmpleado_Sucursal.Text = "Sucursal donde trabaja: "
-        '
-        'ComboBox_ListaEmpleado_SucursalDondeTrabaja
-        '
-        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.FormattingEnabled = True
-        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.Location = New System.Drawing.Point(196, 56)
-        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.Name = "ComboBox_ListaEmpleado_SucursalDondeTrabaja"
-        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.Size = New System.Drawing.Size(257, 23)
-        Me.ComboBox_ListaEmpleado_SucursalDondeTrabaja.TabIndex = 1
+        Me.Button_ListaEmpleados_Buscar.Location = New System.Drawing.Point(303, 22)
+        Me.Button_ListaEmpleados_Buscar.Name = "Button_ListaEmpleados_Buscar"
+        Me.Button_ListaEmpleados_Buscar.Size = New System.Drawing.Size(98, 24)
+        Me.Button_ListaEmpleados_Buscar.TabIndex = 9
+        Me.Button_ListaEmpleados_Buscar.Text = "Buscar"
+        Me.Button_ListaEmpleados_Buscar.UseVisualStyleBackColor = True
         '
         'FORM_LISTA_EMPLEADO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1143, 590)
+        Me.ClientSize = New System.Drawing.Size(1308, 590)
         Me.Controls.Add(Me.TabControl_ListaEmpleados)
         Me.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "FORM_LISTA_EMPLEADO"
@@ -626,14 +671,14 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.ListaEmpleados.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox_ListaEmpleado_Usuarios.ResumeLayout(False)
         Me.GroupBox_ListaEmpleado_Usuarios.PerformLayout()
         Me.GroupBox_ListaEmpleado_Direccion.ResumeLayout(False)
         Me.GroupBox_ListaEmpleado_Direccion.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -667,7 +712,7 @@ Partial Class FORM_LISTA_EMPLEADO
     Friend WithEvents TextBox_ListaEmpleado_usuarioApellidoPaterno As TextBox
     Friend WithEvents TextBox_ListaEmpleado_UsuarioNombre As TextBox
     Friend WithEvents Label_ListaEmpleados_UsuarioCURP As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePicker1_ListaEmpleados_ As DateTimePicker
     Friend WithEvents Label_ListaEmpleados_FechaNacimiento As Label
     Friend WithEvents Label_ListaEmpleados_Contrasena As Label
     Friend WithEvents Label_ListaEmpleados_ApellidoMaterno As Label
@@ -693,4 +738,8 @@ Partial Class FORM_LISTA_EMPLEADO
     Friend WithEvents CheckBox_ListaEmpleados_EsAdministrador As CheckBox
     Friend WithEvents Label_ListaEmpleados_RFC As Label
     Friend WithEvents Label_ListaEmpleados_NombreUsuario As Label
+    Friend WithEvents TextBox_ListaEmpleados_IdDireccion As TextBox
+    Friend WithEvents Label_ListaEmpleados_IdDireccion As Label
+    Friend WithEvents Button_ListaEmpleados_Buscar As Button
+    Friend WithEvents TextBox_ListaEmpleados_TextAbuscar As TextBox
 End Class

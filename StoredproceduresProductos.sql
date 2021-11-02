@@ -70,14 +70,14 @@ GO
 		DELETE FROM PRODUCTO
 		WHERE CodigoProducto=@Id_CodigoProducto
 	GO
---Activar Producto
+--Desactivar Producto
 	CREATE PROC Producto_Desactivar
 		@Id_CodigoProducto INT
 	AS
 		UPDATE PRODUCTO SET Estado=0
 		WHERE CodigoProducto=@Id_CodigoProducto  
 	GO
---Desactivar Producto
+--Activar Producto
 	CREATE PROC Producto_Activar
 		@Id_CodigoProducto INT
 	AS

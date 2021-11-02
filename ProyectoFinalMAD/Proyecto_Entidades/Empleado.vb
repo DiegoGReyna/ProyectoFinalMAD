@@ -1,7 +1,9 @@
 ﻿
 Public Class Empleado
     Private _Id_Empleado As Integer
-    Private Id_Usuario As Integer
+    Private _Id_Usuario As Integer
+    Private _Id_DireccionUsuario As Integer
+    Private _ID_Sucursal As Integer
     Private _Usuario As String
     Private _Nombre As String
     Private _ApellidoPaterno As String
@@ -17,10 +19,8 @@ Public Class Empleado
     Private _CodigoPostal As Integer
     Private _Calle As String
     Private _NumeroCasa As Integer
-    Private _ID_Sucursal As Integer
-    Private _FechaUltimaModificacion As String
+    Private _FechaUltimaModificacion As Date
     Private _Activo As Boolean
-
 
     Public Property Id_Empleado As Integer
         Get
@@ -31,12 +31,30 @@ Public Class Empleado
         End Set
     End Property
 
-    Public Property Id_Usuario1 As Integer
+    Public Property Id_Usuario As Integer
         Get
-            Return Id_Usuario
+            Return _Id_Usuario
         End Get
         Set(value As Integer)
-            Id_Usuario = value
+            _Id_Usuario = value
+        End Set
+    End Property
+
+    Public Property Id_DireccionUsuario As Integer
+        Get
+            Return _Id_DireccionUsuario
+        End Get
+        Set(value As Integer)
+            _Id_DireccionUsuario = value
+        End Set
+    End Property
+
+    Public Property ID_Sucursal As Integer
+        Get
+            Return _ID_Sucursal
+        End Get
+        Set(value As Integer)
+            _ID_Sucursal = value
         End Set
     End Property
 
@@ -175,20 +193,11 @@ Public Class Empleado
         End Set
     End Property
 
-    Public Property ID_Sucursal As Integer
-        Get
-            Return _ID_Sucursal
-        End Get
-        Set(value As Integer)
-            _ID_Sucursal = value
-        End Set
-    End Property
-
-    Public Property FechaUltimaModificacion As String
+    Public Property FechaUltimaModificacion As Date
         Get
             Return _FechaUltimaModificacion
         End Get
-        Set(value As String)
+        Set(value As Date)
             _FechaUltimaModificacion = value
         End Set
     End Property
