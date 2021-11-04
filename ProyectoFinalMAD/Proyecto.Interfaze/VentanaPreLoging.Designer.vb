@@ -42,18 +42,18 @@ Partial Class FORM_INICIO_SESION
         '
         'BTN_CLIENTE
         '
-        Me.BTN_CLIENTE.Location = New System.Drawing.Point(210, 177)
+        Me.BTN_CLIENTE.Location = New System.Drawing.Point(210, 190)
         Me.BTN_CLIENTE.Name = "BTN_CLIENTE"
-        Me.BTN_CLIENTE.Size = New System.Drawing.Size(127, 52)
+        Me.BTN_CLIENTE.Size = New System.Drawing.Size(127, 39)
         Me.BTN_CLIENTE.TabIndex = 1
         Me.BTN_CLIENTE.Text = "CLIENTE"
         Me.BTN_CLIENTE.UseVisualStyleBackColor = True
         '
         'BTN_EMPLEADO
         '
-        Me.BTN_EMPLEADO.Location = New System.Drawing.Point(409, 177)
+        Me.BTN_EMPLEADO.Location = New System.Drawing.Point(417, 190)
         Me.BTN_EMPLEADO.Name = "BTN_EMPLEADO"
-        Me.BTN_EMPLEADO.Size = New System.Drawing.Size(127, 52)
+        Me.BTN_EMPLEADO.Size = New System.Drawing.Size(127, 39)
         Me.BTN_EMPLEADO.TabIndex = 2
         Me.BTN_EMPLEADO.Text = "EMPLEADO"
         Me.BTN_EMPLEADO.UseVisualStyleBackColor = True
@@ -72,7 +72,7 @@ Partial Class FORM_INICIO_SESION
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.ClientSize = New System.Drawing.Size(756, 321)
+        Me.ClientSize = New System.Drawing.Size(756, 355)
         Me.Controls.Add(Me.LAB_SLOGAN)
         Me.Controls.Add(Me.BTN_EMPLEADO)
         Me.Controls.Add(Me.BTN_CLIENTE)

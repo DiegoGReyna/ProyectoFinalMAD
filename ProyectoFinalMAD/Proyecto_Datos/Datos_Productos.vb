@@ -1,5 +1,6 @@
 ﻿Imports Proyecto_Entidades
 Imports System.Data.SqlClient
+
 Public Class Datos_Productos
     Inherits Conexion_A_sqlServer
     Public Function ListaProducto() As DataTable

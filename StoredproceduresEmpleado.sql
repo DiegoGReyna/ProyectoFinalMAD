@@ -82,7 +82,7 @@ go
 	END
 		GO
 
-		CREATE PROC PR_Empleado_Editar
+	CREATE PROC PR_Empleado_Editar
 		@Id_Empleado int,
 		@Id_Usuario int,
 		@Id_Direccion Int,
@@ -148,8 +148,7 @@ CREATE PROC Usuario_Desactivar
 		WHERE Id_Usuario= @Id_Usuario  
 	GO
 
-	FK_USUARIOS_Id_DIRECCION_USUARIOS
-	go
+	
 
 	--Eliminar Empleado
 	CREATE PROC PR_Empleado_Eliminar

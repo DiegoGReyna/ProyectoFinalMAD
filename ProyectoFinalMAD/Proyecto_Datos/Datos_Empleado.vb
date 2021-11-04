@@ -40,9 +40,9 @@ Public Class Datos_Empleado
             Comando.Parameters.Add("@Estado", SqlDbType.VarChar).Value = Empleado_A_insertar.Estado
             Comando.Parameters.Add("@Municipio", SqlDbType.VarChar).Value = Empleado_A_insertar.Municipio
             Comando.Parameters.Add("@Colonia", SqlDbType.VarChar).Value = Empleado_A_insertar.Colonia
-            Comando.Parameters.Add("@CodigoPostal", SqlDbType.Int).Value = Empleado_A_insertar.CodigoPostal
+            Comando.Parameters.Add("@CodigoPostal", SqlDbType.VarChar).Value = Empleado_A_insertar.CodigoPostal
             Comando.Parameters.Add("@Calle", SqlDbType.VarChar).Value = Empleado_A_insertar.Calle
-            Comando.Parameters.Add("@NumeroCasa", SqlDbType.Int).Value = Empleado_A_insertar.NumeroCasa
+            Comando.Parameters.Add("@NumeroCasa", SqlDbType.VarChar).Value = Empleado_A_insertar.NumeroCasa
             Comando.Parameters.Add("@Id_Sucursal", SqlDbType.Int).Value = Empleado_A_insertar.ID_Sucursal
             Comando.Parameters.Add("@FechaUltimaModificacion", SqlDbType.DateTime).Value = Empleado_A_insertar.FechaUltimaModificacion
 

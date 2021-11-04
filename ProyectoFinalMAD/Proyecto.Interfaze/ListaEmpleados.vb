@@ -135,7 +135,7 @@
     End Sub
 
     Private Sub Button_ListaEmpleado_Agregar_Click(sender As Object, e As EventArgs) Handles Button_ListaEmpleado_Agregar.Click
-        Dim LenghEstado As Boolean
+
 
 
 

@@ -28,6 +28,8 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.SeleccionarEmpleado = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabControl_ListaEmpleados = New System.Windows.Forms.TabControl()
         Me.ListaEmpleados = New System.Windows.Forms.TabPage()
+        Me.Button_ListaEmpleados_Buscar = New System.Windows.Forms.Button()
+        Me.TextBox_ListaEmpleados_TextAbuscar = New System.Windows.Forms.TextBox()
         Me.Button_ListaEmpleados_Desactivar = New System.Windows.Forms.Button()
         Me.Button_ListaEmpleados_Activar = New System.Windows.Forms.Button()
         Me.Button_ListaEmpleados_Eliminar = New System.Windows.Forms.Button()
@@ -79,8 +81,6 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Label_ListaEmpleados_Municipio = New System.Windows.Forms.Label()
         Me.TextBox_ListaEmpleado_DireccionEstado = New System.Windows.Forms.TextBox()
         Me.Label_ListaEmpleados_Estado = New System.Windows.Forms.Label()
-        Me.TextBox_ListaEmpleados_TextAbuscar = New System.Windows.Forms.TextBox()
-        Me.Button_ListaEmpleados_Buscar = New System.Windows.Forms.Button()
         CType(Me.DataGridView_ListaEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl_ListaEmpleados.SuspendLayout()
         Me.ListaEmpleados.SuspendLayout()
@@ -158,6 +158,22 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.ListaEmpleados.TabIndex = 0
         Me.ListaEmpleados.Text = "ListaEmpleados"
         Me.ListaEmpleados.UseVisualStyleBackColor = True
+        '
+        'Button_ListaEmpleados_Buscar
+        '
+        Me.Button_ListaEmpleados_Buscar.Location = New System.Drawing.Point(303, 22)
+        Me.Button_ListaEmpleados_Buscar.Name = "Button_ListaEmpleados_Buscar"
+        Me.Button_ListaEmpleados_Buscar.Size = New System.Drawing.Size(98, 24)
+        Me.Button_ListaEmpleados_Buscar.TabIndex = 9
+        Me.Button_ListaEmpleados_Buscar.Text = "Buscar"
+        Me.Button_ListaEmpleados_Buscar.UseVisualStyleBackColor = True
+        '
+        'TextBox_ListaEmpleados_TextAbuscar
+        '
+        Me.TextBox_ListaEmpleados_TextAbuscar.Location = New System.Drawing.Point(465, 22)
+        Me.TextBox_ListaEmpleados_TextAbuscar.Name = "TextBox_ListaEmpleados_TextAbuscar"
+        Me.TextBox_ListaEmpleados_TextAbuscar.Size = New System.Drawing.Size(423, 23)
+        Me.TextBox_ListaEmpleados_TextAbuscar.TabIndex = 8
         '
         'Button_ListaEmpleados_Desactivar
         '
@@ -378,7 +394,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'Button_ListaEmpleado_Editar
         '
-        Me.Button_ListaEmpleado_Editar.Location = New System.Drawing.Point(492, 456)
+        Me.Button_ListaEmpleado_Editar.Location = New System.Drawing.Point(376, 457)
         Me.Button_ListaEmpleado_Editar.Name = "Button_ListaEmpleado_Editar"
         Me.Button_ListaEmpleado_Editar.Size = New System.Drawing.Size(98, 45)
         Me.Button_ListaEmpleado_Editar.TabIndex = 4
@@ -396,7 +412,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'Button_ListaEmpleado_Agregar
         '
-        Me.Button_ListaEmpleado_Agregar.Location = New System.Drawing.Point(492, 456)
+        Me.Button_ListaEmpleado_Agregar.Location = New System.Drawing.Point(480, 457)
         Me.Button_ListaEmpleado_Agregar.Name = "Button_ListaEmpleado_Agregar"
         Me.Button_ListaEmpleado_Agregar.Size = New System.Drawing.Size(98, 45)
         Me.Button_ListaEmpleado_Agregar.TabIndex = 2
@@ -638,22 +654,6 @@ Partial Class FORM_LISTA_EMPLEADO
         Me.Label_ListaEmpleados_Estado.Size = New System.Drawing.Size(63, 15)
         Me.Label_ListaEmpleados_Estado.TabIndex = 0
         Me.Label_ListaEmpleados_Estado.Text = "Estado: "
-        '
-        'TextBox_ListaEmpleados_TextAbuscar
-        '
-        Me.TextBox_ListaEmpleados_TextAbuscar.Location = New System.Drawing.Point(465, 22)
-        Me.TextBox_ListaEmpleados_TextAbuscar.Name = "TextBox_ListaEmpleados_TextAbuscar"
-        Me.TextBox_ListaEmpleados_TextAbuscar.Size = New System.Drawing.Size(423, 23)
-        Me.TextBox_ListaEmpleados_TextAbuscar.TabIndex = 8
-        '
-        'Button_ListaEmpleados_Buscar
-        '
-        Me.Button_ListaEmpleados_Buscar.Location = New System.Drawing.Point(303, 22)
-        Me.Button_ListaEmpleados_Buscar.Name = "Button_ListaEmpleados_Buscar"
-        Me.Button_ListaEmpleados_Buscar.Size = New System.Drawing.Size(98, 24)
-        Me.Button_ListaEmpleados_Buscar.TabIndex = 9
-        Me.Button_ListaEmpleados_Buscar.Text = "Buscar"
-        Me.Button_ListaEmpleados_Buscar.UseVisualStyleBackColor = True
         '
         'FORM_LISTA_EMPLEADO
         '

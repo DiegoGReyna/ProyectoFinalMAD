@@ -31,6 +31,7 @@ Partial Class FORM_INICIO_SESION_EMPLEADO
         Me.TXT_USUARIO = New System.Windows.Forms.TextBox()
         Me.TXT_CON_EMPLEADO = New System.Windows.Forms.TextBox()
         Me.LAB_SLOGAN = New System.Windows.Forms.Label()
+        Me.Button_InicioSesionEmpleado_reregresar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,7 +47,7 @@ Partial Class FORM_INICIO_SESION_EMPLEADO
         '
         'BTN_ACEPTAR_EMPLEADO
         '
-        Me.BTN_ACEPTAR_EMPLEADO.Location = New System.Drawing.Point(320, 233)
+        Me.BTN_ACEPTAR_EMPLEADO.Location = New System.Drawing.Point(346, 267)
         Me.BTN_ACEPTAR_EMPLEADO.Name = "BTN_ACEPTAR_EMPLEADO"
         Me.BTN_ACEPTAR_EMPLEADO.Size = New System.Drawing.Size(111, 47)
         Me.BTN_ACEPTAR_EMPLEADO.TabIndex = 8
@@ -55,7 +56,7 @@ Partial Class FORM_INICIO_SESION_EMPLEADO
         '
         'BTN_REC_CONTRA_EMPLEADO
         '
-        Me.BTN_REC_CONTRA_EMPLEADO.Location = New System.Drawing.Point(275, 286)
+        Me.BTN_REC_CONTRA_EMPLEADO.Location = New System.Drawing.Point(309, 320)
         Me.BTN_REC_CONTRA_EMPLEADO.Name = "BTN_REC_CONTRA_EMPLEADO"
         Me.BTN_REC_CONTRA_EMPLEADO.Size = New System.Drawing.Size(189, 50)
         Me.BTN_REC_CONTRA_EMPLEADO.TabIndex = 9
@@ -65,50 +66,64 @@ Partial Class FORM_INICIO_SESION_EMPLEADO
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(238, 141)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label1.Location = New System.Drawing.Point(213, 168)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 15)
+        Me.Label1.Size = New System.Drawing.Size(79, 24)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Usuario:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(217, 184)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label2.Location = New System.Drawing.Point(183, 209)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 15)
+        Me.Label2.Size = New System.Drawing.Size(111, 24)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Contraseña:"
         '
         'TXT_USUARIO
         '
-        Me.TXT_USUARIO.Location = New System.Drawing.Point(308, 141)
+        Me.TXT_USUARIO.Location = New System.Drawing.Point(309, 167)
         Me.TXT_USUARIO.Name = "TXT_USUARIO"
-        Me.TXT_USUARIO.Size = New System.Drawing.Size(178, 23)
+        Me.TXT_USUARIO.Size = New System.Drawing.Size(189, 23)
         Me.TXT_USUARIO.TabIndex = 12
         '
         'TXT_CON_EMPLEADO
         '
-        Me.TXT_CON_EMPLEADO.Location = New System.Drawing.Point(308, 185)
+        Me.TXT_CON_EMPLEADO.Location = New System.Drawing.Point(309, 211)
         Me.TXT_CON_EMPLEADO.Name = "TXT_CON_EMPLEADO"
-        Me.TXT_CON_EMPLEADO.Size = New System.Drawing.Size(178, 23)
+        Me.TXT_CON_EMPLEADO.Size = New System.Drawing.Size(189, 23)
         Me.TXT_CON_EMPLEADO.TabIndex = 13
         '
         'LAB_SLOGAN
         '
         Me.LAB_SLOGAN.AutoSize = True
-        Me.LAB_SLOGAN.Location = New System.Drawing.Point(226, 359)
+        Me.LAB_SLOGAN.Location = New System.Drawing.Point(260, 399)
         Me.LAB_SLOGAN.Name = "LAB_SLOGAN"
         Me.LAB_SLOGAN.Size = New System.Drawing.Size(294, 15)
         Me.LAB_SLOGAN.TabIndex = 14
         Me.LAB_SLOGAN.Text = "YOU HAVE NO IDEA WHAT´S IN-STORE FOR YOU!"
+        '
+        'Button_InicioSesionEmpleado_reregresar
+        '
+        Me.Button_InicioSesionEmpleado_reregresar.Font = New System.Drawing.Font("Consolas", 10.0!)
+        Me.Button_InicioSesionEmpleado_reregresar.Location = New System.Drawing.Point(12, 400)
+        Me.Button_InicioSesionEmpleado_reregresar.Name = "Button_InicioSesionEmpleado_reregresar"
+        Me.Button_InicioSesionEmpleado_reregresar.Size = New System.Drawing.Size(77, 26)
+        Me.Button_InicioSesionEmpleado_reregresar.TabIndex = 15
+        Me.Button_InicioSesionEmpleado_reregresar.Text = "Atras"
+        Me.Button_InicioSesionEmpleado_reregresar.UseVisualStyleBackColor = True
         '
         'FORM_INICIO_SESION_EMPLEADO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.ClientSize = New System.Drawing.Size(750, 390)
+        Me.ClientSize = New System.Drawing.Size(815, 438)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Button_InicioSesionEmpleado_reregresar)
         Me.Controls.Add(Me.LAB_SLOGAN)
         Me.Controls.Add(Me.TXT_CON_EMPLEADO)
         Me.Controls.Add(Me.TXT_USUARIO)
@@ -134,4 +149,5 @@ Partial Class FORM_INICIO_SESION_EMPLEADO
     Friend WithEvents TXT_USUARIO As TextBox
     Friend WithEvents TXT_CON_EMPLEADO As TextBox
     Friend WithEvents LAB_SLOGAN As Label
+    Friend WithEvents Button_InicioSesionEmpleado_reregresar As Button
 End Class

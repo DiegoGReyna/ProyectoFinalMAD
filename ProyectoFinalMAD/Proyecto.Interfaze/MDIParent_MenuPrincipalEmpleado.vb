@@ -96,4 +96,8 @@ Public Class MDIParent_MenuPrincipal_Empleado
         VentanaCategoria.MdiParent = Me
         VentanaCategoria.Show()
     End Sub
+
+    Private Sub MDIParent_MenuPrincipal_Empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -1,69 +1,68 @@
-﻿
-Public Class Empleado
-    Private _Id_Empleado As Integer
+﻿Public Class Cliente
     Private _Id_Usuario As Integer
-    Private _Id_DireccionUsuario As Integer
-    Private _ID_Sucursal As Integer
-    Private _Usuario As String
+    Private _Id_Cliente As Integer
+    Private _Id_Carrito As Integer
+    Private _Id_Direccion As Integer
+    Private _CorreoElectronico As String
+    Private _NumCelular As String
     Private _Nombre As String
     Private _ApellidoPaterno As String
     Private _ApellidoMaterno As String
     Private _Contrasena As String
-    Private _RFC As String
     Private _CURP As String
-    Private _FechaNacimienro As Date
-    Private _EsAdministrador As Boolean
+    Private _FechaNacimiento As Date
+    Private _FechaCreacion As Date
     Private _Estado As String
     Private _Municipio As String
+    Private _Activo As Boolean
     Private _Colonia As String
     Private _CodigoPostal As String
     Private _Calle As String
     Private _NumeroCasa As String
     Private _FechaUltimaModificacion As Date
-    Private _Activo As Boolean
 
-    Public Property Id_Empleado As Integer
+    Public Property Id_Cliente As Integer
         Get
-            Return _Id_Empleado
+            Return _Id_Cliente
         End Get
         Set(value As Integer)
-            _Id_Empleado = value
+            _Id_Cliente = value
         End Set
     End Property
 
-    Public Property Id_Usuario As Integer
+    Public Property Id_Carrito As Integer
         Get
-            Return _Id_Usuario
+            Return _Id_Carrito
         End Get
         Set(value As Integer)
-            _Id_Usuario = value
+            _Id_Carrito = value
         End Set
     End Property
 
-    Public Property Id_DireccionUsuario As Integer
+    Public Property Id_Direccion As Integer
         Get
-            Return _Id_DireccionUsuario
+            Return _Id_Direccion
         End Get
         Set(value As Integer)
-            _Id_DireccionUsuario = value
+            _Id_Direccion = value
         End Set
     End Property
 
-    Public Property ID_Sucursal As Integer
+    Public Property CorreoElectronico As String
         Get
-            Return _ID_Sucursal
-        End Get
-        Set(value As Integer)
-            _ID_Sucursal = value
-        End Set
-    End Property
-
-    Public Property Usuario As String
-        Get
-            Return _Usuario
+            Return _CorreoElectronico
         End Get
         Set(value As String)
-            _Usuario = value
+            _CorreoElectronico = value
+        End Set
+    End Property
+
+    Public Property NumCelular As String
+        Get
+            Return _NumCelular
+        End Get
+        Set(value As String)
+            _NumCelular = value
         End Set
     End Property
 
@@ -103,15 +102,6 @@ Public Class Empleado
         End Set
     End Property
 
-    Public Property RFC As String
-        Get
-            Return _RFC
-        End Get
-        Set(value As String)
-            _RFC = value
-        End Set
-    End Property
-
     Public Property CURP As String
         Get
             Return _CURP
@@ -121,21 +111,21 @@ Public Class Empleado
         End Set
     End Property
 
-    Public Property FechaNacimienro As Date
+    Public Property FechaNacimiento As Date
         Get
-            Return _FechaNacimienro
+            Return _FechaNacimiento
         End Get
         Set(value As Date)
-            _FechaNacimienro = value
+            _FechaNacimiento = value
         End Set
     End Property
 
-    Public Property EsAdministrador As Boolean
+    Public Property FechaCreacion As Date
         Get
-            Return _EsAdministrador
+            Return _FechaCreacion
         End Get
-        Set(value As Boolean)
-            _EsAdministrador = value
+        Set(value As Date)
+            _FechaCreacion = value
         End Set
     End Property
 
@@ -199,6 +189,15 @@ Public Class Empleado
         End Get
         Set(value As Date)
             _FechaUltimaModificacion = value
+        End Set
+    End Property
+
+    Public Property Id_Usuario As Integer
+        Get
+            Return _Id_Usuario
+        End Get
+        Set(value As Integer)
+            _Id_Usuario = value
         End Set
     End Property
 

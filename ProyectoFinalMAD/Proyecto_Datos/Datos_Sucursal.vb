@@ -1,5 +1,6 @@
 ﻿Imports Proyecto_Entidades
 Imports System.Data.SqlClient
+
 Public Class Datos_Sucursal
     Inherits Conexion_A_sqlServer
 

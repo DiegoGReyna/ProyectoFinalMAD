@@ -2,9 +2,7 @@ C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_INICIO_SESION.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_LISTA_SUCURSALES.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_LISTA_PRODUCTOS.resources
-C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_INICIO_SESION_CLIENTE.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_INICIO_SESION_EMPLEADO.resources
-C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_USUARIO.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_SUCURSAL.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_PRODUCTO.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_COMPRAS.resources
@@ -65,3 +63,5 @@ C:\Users\user\Documents\GitHub\ProyectoFinalMAD\ProyectoFinalMAD\Proyecto.Interf
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.MDIParent_MenuPrincipal_Empleado.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FrmCategoria.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.MDIParent_MenuPrincipalAdministrador.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.FORM_CrearCliente.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.LoginClientes.resources

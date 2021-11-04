@@ -31,41 +31,45 @@ Partial Class FORM_INICIO_SESION_CLIENTE
         Me.TXT_CONTRACLIENTE = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LAB_SLOGAN = New System.Windows.Forms.Label()
+        Me.Button_LogingEmpleado_RegresarLoging = New System.Windows.Forms.Button()
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(151, 142)
+        Me.Label1.Font = New System.Drawing.Font("Consolas", 14.0!)
+        Me.Label1.Location = New System.Drawing.Point(127, 143)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 15)
+        Me.Label1.Size = New System.Drawing.Size(80, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Correo:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(123, 196)
+        Me.Label2.Font = New System.Drawing.Font("Consolas", 14.0!)
+        Me.Label2.Location = New System.Drawing.Point(87, 194)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 15)
+        Me.Label2.Size = New System.Drawing.Size(120, 22)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña:"
         '
         'BTN_ACEPTARCLIENTE
         '
-        Me.BTN_ACEPTARCLIENTE.Location = New System.Drawing.Point(331, 239)
+        Me.BTN_ACEPTARCLIENTE.Location = New System.Drawing.Point(331, 270)
         Me.BTN_ACEPTARCLIENTE.Name = "BTN_ACEPTARCLIENTE"
-        Me.BTN_ACEPTARCLIENTE.Size = New System.Drawing.Size(112, 62)
+        Me.BTN_ACEPTARCLIENTE.Size = New System.Drawing.Size(112, 31)
         Me.BTN_ACEPTARCLIENTE.TabIndex = 2
         Me.BTN_ACEPTARCLIENTE.Text = "ACEPTAR"
         Me.BTN_ACEPTARCLIENTE.UseVisualStyleBackColor = True
         '
         'BTN_REC_CONTRA_CLIENTE
         '
-        Me.BTN_REC_CONTRA_CLIENTE.Location = New System.Drawing.Point(291, 319)
+        Me.BTN_REC_CONTRA_CLIENTE.Location = New System.Drawing.Point(291, 307)
         Me.BTN_REC_CONTRA_CLIENTE.Name = "BTN_REC_CONTRA_CLIENTE"
-        Me.BTN_REC_CONTRA_CLIENTE.Size = New System.Drawing.Size(197, 62)
+        Me.BTN_REC_CONTRA_CLIENTE.Size = New System.Drawing.Size(197, 42)
         Me.BTN_REC_CONTRA_CLIENTE.TabIndex = 3
         Me.BTN_REC_CONTRA_CLIENTE.Text = "RECORDAR CONTRASEÑA"
         Me.BTN_REC_CONTRA_CLIENTE.UseVisualStyleBackColor = True
@@ -103,12 +107,35 @@ Partial Class FORM_INICIO_SESION_CLIENTE
         Me.LAB_SLOGAN.TabIndex = 7
         Me.LAB_SLOGAN.Text = "YOU HAVE NO IDEA WHAT´S IN-STORE FOR YOU!"
         '
+        'Button_LogingEmpleado_RegresarLoging
+        '
+        Me.Button_LogingEmpleado_RegresarLoging.Location = New System.Drawing.Point(12, 392)
+        Me.Button_LogingEmpleado_RegresarLoging.Name = "Button_LogingEmpleado_RegresarLoging"
+        Me.Button_LogingEmpleado_RegresarLoging.Size = New System.Drawing.Size(85, 23)
+        Me.Button_LogingEmpleado_RegresarLoging.TabIndex = 8
+        Me.Button_LogingEmpleado_RegresarLoging.Text = "Atras"
+        Me.Button_LogingEmpleado_RegresarLoging.UseVisualStyleBackColor = True
+        '
+        'LinkLabel_LoginCliente_CrearCuentaCliente
+        '
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.AutoSize = True
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.Location = New System.Drawing.Point(304, 363)
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.Name = "LinkLabel_LoginCliente_CrearCuentaCliente"
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.Size = New System.Drawing.Size(171, 19)
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.TabIndex = 9
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.TabStop = True
+        Me.LinkLabel_LoginCliente_CrearCuentaCliente.Text = "¿No tienes cuenta?"
+        '
         'FORM_INICIO_SESION_CLIENTE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkTurquoise
         Me.ClientSize = New System.Drawing.Size(751, 427)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.LinkLabel_LoginCliente_CrearCuentaCliente)
+        Me.Controls.Add(Me.Button_LogingEmpleado_RegresarLoging)
         Me.Controls.Add(Me.LAB_SLOGAN)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TXT_CONTRACLIENTE)
@@ -118,6 +145,7 @@ Partial Class FORM_INICIO_SESION_CLIENTE
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "FORM_INICIO_SESION_CLIENTE"
         Me.Text = "INICIO SESION CLIENTE"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -134,4 +162,6 @@ Partial Class FORM_INICIO_SESION_CLIENTE
     Friend WithEvents TXT_CONTRACLIENTE As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LAB_SLOGAN As Label
+    Friend WithEvents Button_LogingEmpleado_RegresarLoging As Button
+    Friend WithEvents LinkLabel_LoginCliente_CrearCuentaCliente As LinkLabel
 End Class

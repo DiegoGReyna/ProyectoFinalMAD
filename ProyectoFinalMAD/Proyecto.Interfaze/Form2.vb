@@ -1,3 +1,0 @@
-﻿Public Class FORM_INICIO_SESION_CLIENTE
-
-End Class

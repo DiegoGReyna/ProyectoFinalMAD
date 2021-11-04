@@ -79,10 +79,16 @@
     <Compile Include="Categoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="LoginClientes.Designer.vb">
+      <DependentUpon>LoginClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="LoginClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPreLoging.Designer.vb">
+      <DependentUpon>VentanaPreLoging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPreLoging.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form10.Designer.vb">
@@ -109,22 +115,16 @@
     <Compile Include="Productos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="LoginEmpleado.Designer.vb">
+      <DependentUpon>LoginEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="LoginEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="CrearCliente.Designer.vb">
+      <DependentUpon>CrearCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.vb">
+    <Compile Include="CrearCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form5.Designer.vb">
@@ -145,10 +145,10 @@
     <Compile Include="Form7.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.vb">
-      <DependentUpon>Form8.vb</DependentUpon>
+    <Compile Include="HorarioCliente.Designer.vb">
+      <DependentUpon>HorarioCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form8.vb">
+    <Compile Include="HorarioCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListaEmpleados.Designer.vb">
@@ -177,8 +177,11 @@
     <EmbeddedResource Include="Categoria.resx">
       <DependentUpon>Categoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="LoginClientes.resx">
+      <DependentUpon>LoginClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPreLoging.resx">
+      <DependentUpon>VentanaPreLoging.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form10.resx">
       <DependentUpon>Form10.vb</DependentUpon>
@@ -192,14 +195,11 @@
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="LoginEmpleado.resx">
+      <DependentUpon>LoginEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <EmbeddedResource Include="CrearCliente.resx">
+      <DependentUpon>CrearCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.vb</DependentUpon>
@@ -210,8 +210,8 @@
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.vb</DependentUpon>
+    <EmbeddedResource Include="HorarioCliente.resx">
+      <DependentUpon>HorarioCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaEmpleados.resx">
       <DependentUpon>ListaEmpleados.vb</DependentUpon>
