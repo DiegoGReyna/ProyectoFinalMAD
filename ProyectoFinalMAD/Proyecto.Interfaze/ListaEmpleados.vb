@@ -172,7 +172,7 @@
 
             NewEmpleado.ID_Sucursal = ComboBox_ListaEmpleado_SucursalDondeTrabaja.SelectedValue
 
-
+            NewEmpleado.FechaCreacion = Today
             NewEmpleado.FechaUltimaModificacion = Today
 
             If (Newtienda.Insertar(NewEmpleado)) Then

@@ -45,6 +45,7 @@ Public Class Datos_Empleado
             Comando.Parameters.Add("@NumeroCasa", SqlDbType.VarChar).Value = Empleado_A_insertar.NumeroCasa
             Comando.Parameters.Add("@Id_Sucursal", SqlDbType.Int).Value = Empleado_A_insertar.ID_Sucursal
             Comando.Parameters.Add("@FechaUltimaModificacion", SqlDbType.DateTime).Value = Empleado_A_insertar.FechaUltimaModificacion
+            Comando.Parameters.Add("@FechaCreacion", SqlDbType.DateTime).Value = Empleado_A_insertar.FechaCreacion
 
             MyBase.conexion.Open()
             Comando.ExecuteNonQuery()
@@ -75,10 +76,11 @@ Public Class Datos_Empleado
             Comando.Parameters.Add("@Estado", SqlDbType.VarChar).Value = Empleado_A_Editar.Estado
             Comando.Parameters.Add("@Municipio", SqlDbType.VarChar).Value = Empleado_A_Editar.Municipio
             Comando.Parameters.Add("@Colonia", SqlDbType.VarChar).Value = Empleado_A_Editar.Colonia
-            Comando.Parameters.Add("@CodigoPostal", SqlDbType.Int).Value = Empleado_A_Editar.CodigoPostal
+            Comando.Parameters.Add("@CodigoPostal", SqlDbType.VarChar).Value = Empleado_A_Editar.CodigoPostal
             Comando.Parameters.Add("@Calle", SqlDbType.VarChar).Value = Empleado_A_Editar.Calle
-            Comando.Parameters.Add("@NumeroCasa", SqlDbType.Int).Value = Empleado_A_Editar.NumeroCasa
+            Comando.Parameters.Add("@NumeroCasa", SqlDbType.VarChar).Value = Empleado_A_Editar.NumeroCasa
             Comando.Parameters.Add("@FechaUltimaModificacion", SqlDbType.DateTime).Value = Empleado_A_Editar.FechaUltimaModificacion
+
             Comando.Parameters.Add("@Id_Direccion", SqlDbType.Int).Value = Empleado_A_Editar.Id_DireccionUsuario
             Comando.Parameters.Add("@Id_Usuario", SqlDbType.Int).Value = Empleado_A_Editar.Id_Usuario
             Comando.Parameters.Add("@Id_Empleado", SqlDbType.Int).Value = Empleado_A_Editar.Id_Empleado
@@ -152,6 +154,47 @@ Public Class Datos_Empleado
             Comando.CommandType = CommandType.StoredProcedure
             'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
             Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Empleado_A_abuscar
+            MyBase.conexion.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conexion.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+    End Function
+
+    Public Function logingEmpleado(Usuario As String, Contrasena As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
+            Dim Comando As New SqlCommand("PR_Login_Empleado", MyBase.conexion)
+            Comando.CommandType = CommandType.StoredProcedure
+            'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
+            Comando.Parameters.Add("@Usuario", SqlDbType.VarChar).Value = Usuario
+            Comando.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = Contrasena
+            MyBase.conexion.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conexion.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+    End Function
+
+    Public Function DesactivarEmpleado(Usuario As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
+            Dim Comando As New SqlCommand("PR_Buscar_Desactivar_Empleado", MyBase.conexion)
+            Comando.CommandType = CommandType.StoredProcedure
+            'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
+            Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Usuario
             MyBase.conexion.Open()
             Resultado = Comando.ExecuteReader()
             Tabla.Load(Resultado)

@@ -43,7 +43,7 @@ go
 		@Nombre VARCHAR(50),
 		@ApellidoPaterno VARCHAR(50),
 		@ApellidoMaterno VARCHAR(50),
-		@Contrasena VARCHAR(50),
+		@Contrasena VARCHAR(60),
 		@RFC VARCHAR(50),
 		@CURP VARCHAR(50),
 		@FechaNacimiento DATETIME,
@@ -51,11 +51,12 @@ go
 		@Estado VARCHAR(50),
 		@Municipio VARCHAR(50),
 		@Colonia VARCHAR(50),
-		@CodigoPostal int,
+		@CodigoPostal VARCHAR(60),
 		@Calle VARCHAR(50),
-		@NumeroCasa int,
+		@NumeroCasa VARCHAR(60),
 		@Id_Sucursal int,
-		@FechaUltimaModificacion DATETIME
+		@FechaUltimaModificacion DATETIME,
+		@FechaCreacion DATETIME
 		
 	AS
 	BEGIN
@@ -67,8 +68,8 @@ go
 		VALUES(@Estado,@Municipio,@Colonia,@CodigoPostal,@Calle,@NumeroCasa)
 		SELECT @idDireccion =SCOPE_IDENTITY()
 
-		INSERT INTO USUARIOS(Id_DIRECCION_USUARIOS,Nombre,Apellido_Paterno,Apellido_Materno,Contrasena,Fecha_Nacimiento,CURP,Fecha_UltimaModificacion)
-		VALUES(@idDireccion,@Nombre,@ApellidoPaterno,@ApellidoMaterno,@Contrasena,@FechaNacimiento,@CURP,@FechaNacimiento)
+		INSERT INTO USUARIOS(Id_DIRECCION_USUARIOS,Nombre,Apellido_Paterno,Apellido_Materno,Contrasena,Fecha_Nacimiento,CURP,Fecha_UltimaModificacion,Fecha_Creacion)
+		VALUES(@idDireccion,@Nombre,@ApellidoPaterno,@ApellidoMaterno,@Contrasena,@FechaNacimiento,@CURP,@FechaNacimiento,@FechaCreacion)
 		SELECT @idUsuario =SCOPE_IDENTITY()
 
 		INSERT INTO EMPLEADO(Id_USUARIO,Usuario,RFC,Es_Administrador)
@@ -98,9 +99,9 @@ go
 		@Estado VARCHAR(50),
 		@Municipio VARCHAR(50),
 		@Colonia VARCHAR(50),
-		@CodigoPostal int,
+		@CodigoPostal VARCHAR(60),
 		@Calle VARCHAR(50),
-		@NumeroCasa int,
+		@NumeroCasa VARCHAR(60),
 		@Id_Sucursal int,
 		@FechaUltimaModificacion DATETIME
 	AS
@@ -170,3 +171,40 @@ CREATE PROC Usuario_Desactivar
 		WHERE Id_Direccion_Usuarios=@Id_Direccion
 
 	GO
+
+
+	CREATE PROC PR_EmpleadoHorario_Asignar
+		@Id_Empleado int,
+		@FechaDeRegistro VARCHAR(100),
+		@RegistroEntrada VARCHAR(50),
+		@RegistroSalida VARCHAR(50),
+		@HorasTrabajadas VARCHAR(50)
+
+
+	AS
+		INSERT INTO DatosEmpleado_Horario(Id_Empleado,FECHA,Registro_Entrada,Registro_Salida,Horas_Trabajadas) 
+		VALUES(@Id_Empleado,@FechaDeRegistro,@RegistroEntrada,@RegistroSalida,@HorasTrabajadas)
+	
+	GO
+
+	CREATE PROC PR_Mostrar_HorarioEmpleado
+		@Id_Empleado int
+	As
+		SELECT Id_Horario'Id horario',FECHA 'Fecha',Registro_Entrada 'Hora de entrada',Registro_Salida 'Hora de salida',Horas_Trabajadas 'Total de horas trabajadas'
+		FROM DatosEmpleado_Horario
+		WHERE  Id_Horario = @Id_Empleado
+
+
+	GO
+	--------Recuerda hacer la view de esta madre diego >:(
+	CREATE PROC PR_Mostrar_HorarioAdministrador
+		@Id_Empleado int
+	As
+		SELECT Id_Horario'Id horario',FECHA 'Fecha',Registro_Entrada 'Hora de entrada',Registro_Salida 'Hora de salida',Horas_Trabajadas 'Total de horas trabajadas'
+		FROM DatosEmpleado_Horario
+		WHERE  Id_Horario = @Id_Empleado
+
+
+	GO
+
+

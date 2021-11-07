@@ -85,6 +85,18 @@
     <Compile Include="LoginClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RecordarContraCliente.Designer.vb">
+      <DependentUpon>RecordarContraCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecordarContraCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordarContraEmpleado.Designer.vb">
+      <DependentUpon>RecordarContraEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecordarContraEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VentanaPreLoging.Designer.vb">
       <DependentUpon>VentanaPreLoging.vb</DependentUpon>
     </Compile>
@@ -179,6 +191,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginClientes.resx">
       <DependentUpon>LoginClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordarContraCliente.resx">
+      <DependentUpon>RecordarContraCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordarContraEmpleado.resx">
+      <DependentUpon>RecordarContraEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPreLoging.resx">
       <DependentUpon>VentanaPreLoging.vb</DependentUpon>

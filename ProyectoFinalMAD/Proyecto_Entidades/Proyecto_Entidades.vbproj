@@ -85,6 +85,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Producto.vb" />
+    <Compile Include="RegistroHoras.vb" />
     <Compile Include="Sucursal.vb" />
   </ItemGroup>
   <ItemGroup>

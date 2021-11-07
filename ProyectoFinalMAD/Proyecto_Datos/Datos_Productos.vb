@@ -65,7 +65,7 @@ Public Class Datos_Productos
     Public Sub Editar(Producto_A_Editar As Producto)
         Try
             'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
-            Dim Comando As New SqlCommand("Producto_Editar", MyBase.conexion)
+            Dim Comando As New SqlCommand("PR_Producto_Editar", MyBase.conexion)
             Comando.CommandType = CommandType.StoredProcedure
             MyBase.conexion.Open()
             'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 

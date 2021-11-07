@@ -48,7 +48,7 @@ GO
 		VALUES(@Id_Empleado,@Nombre,@Id_Categoria,@Descripcion,@Stock,@Precio,@Descuento)
 	GO
 --Editar Producto
-	CREATE PROC Producto_Editar
+	CREATE PROC PR_Producto_Editar
 		@Id_CodigoProducto INT,
 		@Id_Empleado INT,
 		@Nombre VARCHAR(50),
@@ -60,7 +60,7 @@ GO
 	AS
 		UPDATE PRODUCTO SET Id_Empleado=@Id_Empleado,Nombre=@Nombre,
 		Id_Categoria=@Id_Categoria,@Descripcion=Descripciopn,@Stock=Stock,
-		@Precio=Precio,@Descuento=Descuento
+		Precio=@Precio,Descuento=@Descuento
 		WHERE CodigoProducto=@Id_CodigoProducto 		
 	GO
 --Eliminar Producto

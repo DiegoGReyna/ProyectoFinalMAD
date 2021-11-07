@@ -20,6 +20,7 @@ Public Class Empleado
     Private _Calle As String
     Private _NumeroCasa As String
     Private _FechaUltimaModificacion As Date
+    Private _FechaCreacion As Date
     Private _Activo As Boolean
 
     Public Property Id_Empleado As Integer
@@ -208,6 +209,15 @@ Public Class Empleado
         End Get
         Set(value As Boolean)
             _Activo = value
+        End Set
+    End Property
+
+    Public Property FechaCreacion As Date
+        Get
+            Return _FechaCreacion
+        End Get
+        Set(value As Date)
+            _FechaCreacion = value
         End Set
     End Property
 End Class

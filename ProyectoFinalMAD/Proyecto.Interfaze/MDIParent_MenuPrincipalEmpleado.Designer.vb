@@ -59,6 +59,10 @@ Partial Class MDIParent_MenuPrincipal_Empleado
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListaDeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListaDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -67,7 +71,7 @@ Partial Class MDIParent_MenuPrincipal_Empleado
         'MenuStrip
         '
         Me.MenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.ProductosYCategoriasToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.ProductosYCategoriasToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.ClientesToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -207,13 +211,13 @@ Partial Class MDIParent_MenuPrincipal_Empleado
         'ProductoToolStripMenuItem
         '
         Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProductoToolStripMenuItem.Text = "Productos"
         '
         'CategoriaToolStripMenuItem
         '
         Me.CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
-        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CategoriaToolStripMenuItem.Text = "Categorias"
         '
         'ToolStrip
@@ -304,6 +308,32 @@ Partial Class MDIParent_MenuPrincipal_Empleado
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListaDeEmpleadosToolStripMenuItem})
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        '
+        'ListaDeEmpleadosToolStripMenuItem
+        '
+        Me.ListaDeEmpleadosToolStripMenuItem.Name = "ListaDeEmpleadosToolStripMenuItem"
+        Me.ListaDeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados"
+        '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListaDeClientesToolStripMenuItem})
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        '
+        'ListaDeClientesToolStripMenuItem
+        '
+        Me.ListaDeClientesToolStripMenuItem.Name = "ListaDeClientesToolStripMenuItem"
+        Me.ListaDeClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListaDeClientesToolStripMenuItem.Text = "Lista de clientes"
+        '
         'MDIParent_MenuPrincipal_Empleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -361,4 +391,8 @@ Partial Class MDIParent_MenuPrincipal_Empleado
     Friend WithEvents ProductosYCategoriasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoriaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListaDeEmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListaDeClientesToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -100,4 +100,15 @@ Public Class MDIParent_MenuPrincipal_Empleado
     Private Sub MDIParent_MenuPrincipal_Empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub ListaDeEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDeEmpleadosToolStripMenuItem.Click
+        Dim VentanaListaEmpleados As New FORM_LISTA_EMPLEADO
+        VentanaListaEmpleados.MdiParent = Me
+        VentanaListaEmpleados.Show()
+
+    End Sub
+
+    Private Sub ListaDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDeClientesToolStripMenuItem.Click
+
+    End Sub
 End Class

@@ -70,6 +70,7 @@
     <Compile Include="Datos_DireccionEstado.vb" />
     <Compile Include="Datos_Empleado.vb" />
     <Compile Include="Datos_Productos.vb" />
+    <Compile Include="Datos_RegistroHoras.vb" />
     <Compile Include="Datos_Sucursal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
