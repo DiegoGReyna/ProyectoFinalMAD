@@ -135,11 +135,6 @@
     End Sub
 
     Private Sub Button_ListaEmpleado_Agregar_Click(sender As Object, e As EventArgs) Handles Button_ListaEmpleado_Agregar.Click
-
-
-
-
-
         If TextBox_ListaEmpleado_DireccionEstado.Text.Length > 5 Then
             MsgBox("Tamaño maximo de estado")
 

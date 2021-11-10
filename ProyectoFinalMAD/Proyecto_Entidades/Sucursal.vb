@@ -7,8 +7,8 @@
     Private _Municipio As String
     Private _Colonia As String
     Private _Calle As String
-    Private _NumeroDomecilio As Integer
-    Private _CodigoPostal As Integer
+    Private _NumeroDomecilio As String
+    Private _CodigoPostal As String
 
     Public Property Id_sUCURSAL As Integer
         Get
@@ -82,20 +82,20 @@
         End Set
     End Property
 
-    Public Property NumeroDomecilio As Integer
+    Public Property NumeroDomecilio As String
         Get
             Return _NumeroDomecilio
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _NumeroDomecilio = value
         End Set
     End Property
 
-    Public Property CodigoPostal As Integer
+    Public Property CodigoPostal As String
         Get
             Return _CodigoPostal
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _CodigoPostal = value
         End Set
     End Property

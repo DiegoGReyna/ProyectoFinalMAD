@@ -133,4 +133,16 @@ Public Class Tienda_Empleado
         End Try
     End Function
 
+    Public Function ComboBoxEmpleado() As DataTable
+        Try
+            Dim Datos As New Datos_Empleado
+            Dim Tabla As New DataTable
+            Tabla = Datos.ComboBoxEmpleados()
+            Return Tabla
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
 End Class

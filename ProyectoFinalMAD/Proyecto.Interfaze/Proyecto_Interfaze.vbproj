@@ -139,10 +139,10 @@
     <Compile Include="CrearCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.vb">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <Compile Include="Sucursales.Designer.vb">
+      <DependentUpon>Sucursales.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form5.vb">
+    <Compile Include="Sucursales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form6.Designer.vb">
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="CrearCliente.resx">
       <DependentUpon>CrearCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <EmbeddedResource Include="Sucursales.resx">
+      <DependentUpon>Sucursales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.vb</DependentUpon>

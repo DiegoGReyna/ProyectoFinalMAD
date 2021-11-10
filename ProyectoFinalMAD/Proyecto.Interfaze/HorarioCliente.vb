@@ -77,8 +77,8 @@
 
             If (Newtienda.Insertar(NewRegistroHorario)) Then
                 MsgBox("El Horario registrado correctamente", vbOKOnly, "Ingreso Exitoso")
-                '' Me.Hide()
-                ''MDIParent_MenuPrincipal_Empleado.Show()
+                Me.Hide()
+                MDIParent_MenuPrincipal_Empleado.Show()
 
             Else
                 MsgBox("El horario no se a podido ingresar", vbOKOnly + vbCritical, "Error al ingresar")

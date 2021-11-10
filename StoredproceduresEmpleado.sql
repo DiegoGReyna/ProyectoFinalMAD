@@ -4,14 +4,21 @@ USE Proyecto_MAD;
 --Mostrar Productos
 
 go
-			 
+	select * from USUARIOS
+	go		 
+		
+		
+		
+		
+		
+		
 			  
 CREATE VIEW Ver_Empleado_Usuario_Direccion_Sucursal
 as
 	SELECT EMPLEADO.Id_Empleado 'ID de empleado',USUARIOS.Id_Usuario 'ID de usuario',USUARIOS.Id_DIRECCION_USUARIOS'ID Direccion',EMPLEADO.Usuario 'Usuario',USUARIOS.Nombre 'Nombre',USUARIOS.Apellido_Paterno 'Apellido paterno',USUARIOS.Apellido_Materno 'Apellido Materno',
 		   USUARIOS.Contrasena 'Contraseña',EMPLEADO.RFC 'RFC',USUARIOS.CURP 'CURP',USUARIOS.Fecha_Nacimiento 'Fecha de Nacimiento',EMPLEADO.Es_Administrador 'Administrador',DIRECCION_USUARIOS.Estado 'Estado',DIRECCION_USUARIOS.Municipio 'Municipio', 
 		   DIRECCION_USUARIOS.Colonia 'Colonia',DIRECCION_USUARIOS.CodigoPostal 'Codigo postal',DIRECCION_USUARIOS.Calle 'calle',DIRECCION_USUARIOS.NUMERO_CASA 'Numero casa',SUCURSAL.Nombre 'Sucursal donde Trabaja', 
-		   USUARIOS.Fecha_UltimaModificacion 'Fecha Ultima Modificacion',USUARIOS.USUARIO_ACTIVO 'Activo'
+		   USUARIOS.Fecha_UltimaModificacion 'Fecha Ultima Modificacion',USUARIOS.USUARIO_ACTIVO 'Activo',USUARIOS.Estado_CuentaUsuario'Estado de la cuenta'
 	FROM   EMPLEADO_SUCURSAL 
 		INNER JOIN EMPLEADO 
 		ON EMPLEADO_SUCURSAL.Id_Empleado = EMPLEADO.Id_Empleado 
@@ -23,6 +30,25 @@ as
 		ON USUARIOS.Id_DIRECCION_USUARIOS = DIRECCION_USUARIOS.Id_Direccion_Usuarios
 	
 Go
+
+CREATE VIEW Ver_Empleados_Usuario
+as
+	SELECT      EMPLEADO.Id_Empleado 'ID de empleado',USUARIOS.Id_Usuario 'ID de usuario' ,DIRECCION_USUARIOS.Id_Direccion_Usuarios 'ID Direccion',EMPLEADO.Usuario 'Usuario',USUARIOS.Nombre 'Nombre',USUARIOS.Apellido_Paterno 'Apellido paterno', 
+                USUARIOS.Apellido_Materno'Apellido Materno',USUARIOS.Contrasena 'Contraseña',EMPLEADO.RFC'RFC',USUARIOS.CURP'CURP',USUARIOS.Fecha_Nacimiento'Fecha de Nacimiento',EMPLEADO.Es_Administrador'Administrador',DIRECCION_USUARIOS.Estado'Estado',DIRECCION_USUARIOS.Municipio'Municipio', 
+                DIRECCION_USUARIOS.Colonia'Colonia',DIRECCION_USUARIOS.CodigoPostal'Codigo postal',DIRECCION_USUARIOS.Calle'calle',DIRECCION_USUARIOS.NUMERO_CASA'Numero casa' ,USUARIOS.Fecha_UltimaModificacion, 
+                USUARIOS.Fecha_Creacion,USUARIOS.USUARIO_ACTIVO'Activo', USUARIOS.Estado_CuentaUsuario'Estado de la cuenta'
+	FROM        EMPLEADO 
+				INNER JOIN  USUARIOS 
+				ON EMPLEADO.Id_USUARIO = USUARIOS.Id_Usuario 
+				INNER JOIN  DIRECCION_USUARIOS 
+				ON USUARIOS.Id_DIRECCION_USUARIOS = DIRECCION_USUARIOS.Id_Direccion_Usuarios
+go
+
+
+
+
+
+
 
 
 CREATE PROCEDURE PR_Mostrar_Empleados
@@ -208,3 +234,8 @@ CREATE PROC Usuario_Desactivar
 	GO
 
 
+	CREATE PROC PR_Empleados_ComboBox
+		AS
+		SELECT [ID de empleado],[Nombre],[Apellido paterno],[Apellido Materno],CONCAT([Nombre], ' ', [Apellido paterno],' ',[Apellido Materno]) full_name FROM Ver_Empleados_Usuario ,Ver_Sucursal_Encargado
+		WHERE [Estado de la cuenta]=1 and [Id empleado encargado] <> [ID de empleado]
+	GO
