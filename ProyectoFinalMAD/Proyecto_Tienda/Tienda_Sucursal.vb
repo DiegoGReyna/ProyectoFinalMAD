@@ -73,4 +73,16 @@ Public Class Tienda_Sucursal
 
     End Function
 
+    Public Function CargarComboBoxSucursal() As DataTable
+        Try
+            Dim Datos As New Datos_Sucursal
+            Dim Tabla As New DataTable
+            Tabla = Datos.CargarComboBoxSucursal()
+            Return Tabla
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
 End Class

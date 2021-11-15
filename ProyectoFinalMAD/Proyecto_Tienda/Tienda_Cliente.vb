@@ -22,11 +22,23 @@ Public Class Tienda_Cliente
             If (Tabla.Rows.Count > 0) Then
                 Cliente.Id_Cliente = Tabla.Rows(0).Item(0).ToString
                 Cliente.Id_Usuario = Tabla.Rows(0).Item(1).ToString
-                Cliente.CorreoElectronico = Tabla.Rows(0).Item(2).ToString
-                Cliente.Nombre = Tabla.Rows(0).Item(4).ToString
-                Cliente.ApellidoPaterno = Tabla.Rows(0).Item(5).ToString
-                Cliente.ApellidoMaterno = Tabla.Rows(0).Item(6).ToString
-                Cliente.Activo = Tabla.Rows(0).Item(7).ToString
+                Cliente.Id_Direccion = Tabla.Rows(0).Item(2).ToString
+                Cliente.Id_Carrito = Tabla.Rows(0).Item(3).ToString
+                Cliente.CorreoElectronico = Tabla.Rows(0).Item(4).ToString
+                Cliente.NumCelular = Tabla.Rows(0).Item(5).ToString
+                Cliente.Contrasena = Tabla.Rows(0).Item(6).ToString
+                Cliente.Nombre = Tabla.Rows(0).Item(7).ToString
+                Cliente.ApellidoPaterno = Tabla.Rows(0).Item(8).ToString
+                Cliente.ApellidoMaterno = Tabla.Rows(0).Item(9).ToString
+                Cliente.DireccionCompleta = Tabla.Rows(0).Item(10).ToString
+                Cliente.Estado = Tabla.Rows(0).Item(11).ToString
+                Cliente.Municipio = Tabla.Rows(0).Item(12).ToString
+                Cliente.Colonia = Tabla.Rows(0).Item(13).ToString
+                Cliente.CodigoPostal = Tabla.Rows(0).Item(14).ToString
+                Cliente.Calle = Tabla.Rows(0).Item(15).ToString
+                Cliente.NumeroCasa = Tabla.Rows(0).Item(16).ToString
+                Cliente.Activo = Tabla.Rows(0).Item(17).ToString
+
                 Return Cliente
             Else
                 Return Nothing

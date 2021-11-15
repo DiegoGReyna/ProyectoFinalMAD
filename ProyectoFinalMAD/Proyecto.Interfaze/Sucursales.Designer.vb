@@ -47,7 +47,7 @@ Partial Class FORM_SUCURSAL
         Me.Button_ListaSucursales_CargaMasiva = New System.Windows.Forms.Button()
         Me.Button_ListaEmpleados_Desactivar = New System.Windows.Forms.Button()
         Me.Button_ListaEmpleados_Activar = New System.Windows.Forms.Button()
-        Me.Button_ListaEmpleados_Eliminar = New System.Windows.Forms.Button()
+        Me.Button_ListaSucursal_Eliminar = New System.Windows.Forms.Button()
         Me.Seleccionar_ListaSucursal_Empleado = New System.Windows.Forms.CheckBox()
         Me.BTN_LISTEMPLEADOS_IMPRIMIR = New System.Windows.Forms.Button()
         Me.Button_ListaSucursal_Buscar = New System.Windows.Forms.Button()
@@ -171,7 +171,7 @@ Partial Class FORM_SUCURSAL
         '
         'BTN_ListaSucursal_ACEPTAR
         '
-        Me.BTN_ListaSucursal_ACEPTAR.Location = New System.Drawing.Point(333, 424)
+        Me.BTN_ListaSucursal_ACEPTAR.Location = New System.Drawing.Point(381, 424)
         Me.BTN_ListaSucursal_ACEPTAR.Name = "BTN_ListaSucursal_ACEPTAR"
         Me.BTN_ListaSucursal_ACEPTAR.Size = New System.Drawing.Size(116, 53)
         Me.BTN_ListaSucursal_ACEPTAR.TabIndex = 11
@@ -256,7 +256,7 @@ Partial Class FORM_SUCURSAL
         Me.TabPage1.Controls.Add(Me.Button_ListaSucursales_CargaMasiva)
         Me.TabPage1.Controls.Add(Me.Button_ListaEmpleados_Desactivar)
         Me.TabPage1.Controls.Add(Me.Button_ListaEmpleados_Activar)
-        Me.TabPage1.Controls.Add(Me.Button_ListaEmpleados_Eliminar)
+        Me.TabPage1.Controls.Add(Me.Button_ListaSucursal_Eliminar)
         Me.TabPage1.Controls.Add(Me.Seleccionar_ListaSucursal_Empleado)
         Me.TabPage1.Controls.Add(Me.BTN_LISTEMPLEADOS_IMPRIMIR)
         Me.TabPage1.Controls.Add(Me.Button_ListaSucursal_Buscar)
@@ -300,15 +300,15 @@ Partial Class FORM_SUCURSAL
         Me.Button_ListaEmpleados_Activar.UseVisualStyleBackColor = True
         Me.Button_ListaEmpleados_Activar.Visible = False
         '
-        'Button_ListaEmpleados_Eliminar
+        'Button_ListaSucursal_Eliminar
         '
-        Me.Button_ListaEmpleados_Eliminar.Location = New System.Drawing.Point(145, 441)
-        Me.Button_ListaEmpleados_Eliminar.Name = "Button_ListaEmpleados_Eliminar"
-        Me.Button_ListaEmpleados_Eliminar.Size = New System.Drawing.Size(75, 23)
-        Me.Button_ListaEmpleados_Eliminar.TabIndex = 30
-        Me.Button_ListaEmpleados_Eliminar.Text = "Eliminar"
-        Me.Button_ListaEmpleados_Eliminar.UseVisualStyleBackColor = True
-        Me.Button_ListaEmpleados_Eliminar.Visible = False
+        Me.Button_ListaSucursal_Eliminar.Location = New System.Drawing.Point(145, 441)
+        Me.Button_ListaSucursal_Eliminar.Name = "Button_ListaSucursal_Eliminar"
+        Me.Button_ListaSucursal_Eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.Button_ListaSucursal_Eliminar.TabIndex = 30
+        Me.Button_ListaSucursal_Eliminar.Text = "Eliminar"
+        Me.Button_ListaSucursal_Eliminar.UseVisualStyleBackColor = True
+        Me.Button_ListaSucursal_Eliminar.Visible = False
         '
         'Seleccionar_ListaSucursal_Empleado
         '
@@ -374,7 +374,7 @@ Partial Class FORM_SUCURSAL
         '
         'BTN_ListaSucursal_Cancelar
         '
-        Me.BTN_ListaSucursal_Cancelar.Location = New System.Drawing.Point(590, 424)
+        Me.BTN_ListaSucursal_Cancelar.Location = New System.Drawing.Point(534, 424)
         Me.BTN_ListaSucursal_Cancelar.Name = "BTN_ListaSucursal_Cancelar"
         Me.BTN_ListaSucursal_Cancelar.Size = New System.Drawing.Size(116, 53)
         Me.BTN_ListaSucursal_Cancelar.TabIndex = 28
@@ -383,7 +383,7 @@ Partial Class FORM_SUCURSAL
         '
         'BTN_ListaSucursal_Editar
         '
-        Me.BTN_ListaSucursal_Editar.Location = New System.Drawing.Point(459, 424)
+        Me.BTN_ListaSucursal_Editar.Location = New System.Drawing.Point(381, 424)
         Me.BTN_ListaSucursal_Editar.Name = "BTN_ListaSucursal_Editar"
         Me.BTN_ListaSucursal_Editar.Size = New System.Drawing.Size(116, 53)
         Me.BTN_ListaSucursal_Editar.TabIndex = 27
@@ -414,12 +414,12 @@ Partial Class FORM_SUCURSAL
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Location = New System.Drawing.Point(493, 95)
+        Me.GroupBox2.Location = New System.Drawing.Point(493, 90)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(540, 273)
+        Me.GroupBox2.Size = New System.Drawing.Size(540, 278)
         Me.GroupBox2.TabIndex = 25
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.GroupBox2.Text = "Direccion"
         '
         'TextBox_ListaSucursal_DirecccionMunicipio
         '
@@ -445,10 +445,10 @@ Partial Class FORM_SUCURSAL
         Me.GroupBox1.Controls.Add(Me.TXT_SUC_NUM)
         Me.GroupBox1.Location = New System.Drawing.Point(25, 90)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(448, 273)
+        Me.GroupBox1.Size = New System.Drawing.Size(462, 278)
         Me.GroupBox1.TabIndex = 24
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.GroupBox1.Text = "Datos sucursal"
         '
         'ComboBox_ListaSucursal_Encargado
         '
@@ -510,7 +510,7 @@ Partial Class FORM_SUCURSAL
     Friend WithEvents Button_ListaSucursales_CargaMasiva As Button
     Friend WithEvents Button_ListaEmpleados_Desactivar As Button
     Friend WithEvents Button_ListaEmpleados_Activar As Button
-    Friend WithEvents Button_ListaEmpleados_Eliminar As Button
+    Friend WithEvents Button_ListaSucursal_Eliminar As Button
     Friend WithEvents Seleccionar_ListaSucursal_Empleado As CheckBox
     Friend WithEvents BTN_LISTEMPLEADOS_IMPRIMIR As Button
     Friend WithEvents GroupBox1 As GroupBox

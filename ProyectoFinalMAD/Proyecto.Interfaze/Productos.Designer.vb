@@ -36,6 +36,8 @@ Partial Class FORM_LISTA_PRODUCTOS
         Me.DataGridView_Productos = New System.Windows.Forms.DataGridView()
         Me.Seleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ComboBox_Producto_Sucursal = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Button_Producto_Editar = New System.Windows.Forms.Button()
         Me.Button_Producto_CargaMasiva = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -85,10 +87,10 @@ Partial Class FORM_LISTA_PRODUCTOS
         '
         Me.TabControl_Productos.Controls.Add(Me.TabPage1)
         Me.TabControl_Productos.Controls.Add(Me.TabPage2)
-        Me.TabControl_Productos.Location = New System.Drawing.Point(12, 36)
+        Me.TabControl_Productos.Location = New System.Drawing.Point(27, 26)
         Me.TabControl_Productos.Name = "TabControl_Productos"
         Me.TabControl_Productos.SelectedIndex = 0
-        Me.TabControl_Productos.Size = New System.Drawing.Size(1268, 551)
+        Me.TabControl_Productos.Size = New System.Drawing.Size(1247, 551)
         Me.TabControl_Productos.TabIndex = 3
         '
         'TabPage1
@@ -106,7 +108,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1260, 523)
+        Me.TabPage1.Size = New System.Drawing.Size(1239, 523)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Lista Productos"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -114,7 +116,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label_Productos_TotalProductos
         '
         Me.Label_Productos_TotalProductos.AutoSize = True
-        Me.Label_Productos_TotalProductos.Location = New System.Drawing.Point(680, 415)
+        Me.Label_Productos_TotalProductos.Location = New System.Drawing.Point(912, 406)
         Me.Label_Productos_TotalProductos.Name = "Label_Productos_TotalProductos"
         Me.Label_Productos_TotalProductos.Size = New System.Drawing.Size(42, 15)
         Me.Label_Productos_TotalProductos.TabIndex = 12
@@ -180,11 +182,11 @@ Partial Class FORM_LISTA_PRODUCTOS
         Me.DataGridView_Productos.AllowUserToOrderColumns = True
         Me.DataGridView_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_Productos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Seleccionar})
-        Me.DataGridView_Productos.Location = New System.Drawing.Point(6, 63)
+        Me.DataGridView_Productos.Location = New System.Drawing.Point(19, 63)
         Me.DataGridView_Productos.Name = "DataGridView_Productos"
         Me.DataGridView_Productos.ReadOnly = True
         Me.DataGridView_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView_Productos.Size = New System.Drawing.Size(1248, 329)
+        Me.DataGridView_Productos.Size = New System.Drawing.Size(1205, 329)
         Me.DataGridView_Productos.TabIndex = 3
         '
         'Seleccionar
@@ -195,6 +197,8 @@ Partial Class FORM_LISTA_PRODUCTOS
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.ComboBox_Producto_Sucursal)
+        Me.TabPage2.Controls.Add(Me.Label10)
         Me.TabPage2.Controls.Add(Me.Button_Producto_Editar)
         Me.TabPage2.Controls.Add(Me.Button_Producto_CargaMasiva)
         Me.TabPage2.Controls.Add(Me.Label9)
@@ -218,14 +222,31 @@ Partial Class FORM_LISTA_PRODUCTOS
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1260, 523)
+        Me.TabPage2.Size = New System.Drawing.Size(1239, 523)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Creacion y edicion de producto"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'ComboBox_Producto_Sucursal
+        '
+        Me.ComboBox_Producto_Sucursal.FormattingEnabled = True
+        Me.ComboBox_Producto_Sucursal.Location = New System.Drawing.Point(332, 303)
+        Me.ComboBox_Producto_Sucursal.Name = "ComboBox_Producto_Sucursal"
+        Me.ComboBox_Producto_Sucursal.Size = New System.Drawing.Size(394, 23)
+        Me.ComboBox_Producto_Sucursal.TabIndex = 21
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(234, 303)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(84, 15)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "Sucursal(*)"
+        '
         'Button_Producto_Editar
         '
-        Me.Button_Producto_Editar.Location = New System.Drawing.Point(309, 372)
+        Me.Button_Producto_Editar.Location = New System.Drawing.Point(270, 451)
         Me.Button_Producto_Editar.Name = "Button_Producto_Editar"
         Me.Button_Producto_Editar.Size = New System.Drawing.Size(105, 40)
         Me.Button_Producto_Editar.TabIndex = 19
@@ -234,7 +255,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         '
         'Button_Producto_CargaMasiva
         '
-        Me.Button_Producto_CargaMasiva.Location = New System.Drawing.Point(24, 408)
+        Me.Button_Producto_CargaMasiva.Location = New System.Drawing.Point(10, 473)
         Me.Button_Producto_CargaMasiva.Name = "Button_Producto_CargaMasiva"
         Me.Button_Producto_CargaMasiva.Size = New System.Drawing.Size(121, 44)
         Me.Button_Producto_CargaMasiva.TabIndex = 18
@@ -244,7 +265,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(695, 128)
+        Me.Label9.Location = New System.Drawing.Point(512, 54)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(84, 15)
         Me.Label9.TabIndex = 17
@@ -253,7 +274,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(695, 63)
+        Me.Label8.Location = New System.Drawing.Point(233, 51)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(84, 15)
         Me.Label8.TabIndex = 16
@@ -261,7 +282,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         '
         'TextBox_Producto_IdProducto
         '
-        Me.TextBox_Producto_IdProducto.Location = New System.Drawing.Point(785, 125)
+        Me.TextBox_Producto_IdProducto.Location = New System.Drawing.Point(602, 51)
         Me.TextBox_Producto_IdProducto.Name = "TextBox_Producto_IdProducto"
         Me.TextBox_Producto_IdProducto.ReadOnly = True
         Me.TextBox_Producto_IdProducto.Size = New System.Drawing.Size(117, 23)
@@ -269,36 +290,36 @@ Partial Class FORM_LISTA_PRODUCTOS
         '
         'TextBox_Producto_IdEmpleado
         '
-        Me.TextBox_Producto_IdEmpleado.Location = New System.Drawing.Point(785, 60)
+        Me.TextBox_Producto_IdEmpleado.Location = New System.Drawing.Point(332, 51)
         Me.TextBox_Producto_IdEmpleado.Name = "TextBox_Producto_IdEmpleado"
         Me.TextBox_Producto_IdEmpleado.Size = New System.Drawing.Size(117, 23)
         Me.TextBox_Producto_IdEmpleado.TabIndex = 14
         '
         'TextBox_Producto_Descripcion
         '
-        Me.TextBox_Producto_Descripcion.Location = New System.Drawing.Point(250, 265)
+        Me.TextBox_Producto_Descripcion.Location = New System.Drawing.Point(332, 344)
         Me.TextBox_Producto_Descripcion.Multiline = True
         Me.TextBox_Producto_Descripcion.Name = "TextBox_Producto_Descripcion"
-        Me.TextBox_Producto_Descripcion.Size = New System.Drawing.Size(387, 87)
+        Me.TextBox_Producto_Descripcion.Size = New System.Drawing.Size(394, 87)
         Me.TextBox_Producto_Descripcion.TabIndex = 13
         '
         'TextBox_Producto_Descuento
         '
-        Me.TextBox_Producto_Descuento.Location = New System.Drawing.Point(250, 228)
+        Me.TextBox_Producto_Descuento.Location = New System.Drawing.Point(332, 262)
         Me.TextBox_Producto_Descuento.Name = "TextBox_Producto_Descuento"
-        Me.TextBox_Producto_Descuento.Size = New System.Drawing.Size(164, 23)
+        Me.TextBox_Producto_Descuento.Size = New System.Drawing.Size(171, 23)
         Me.TextBox_Producto_Descuento.TabIndex = 12
         '
         'TextBox_Producto_Stock
         '
-        Me.TextBox_Producto_Stock.Location = New System.Drawing.Point(484, 187)
+        Me.TextBox_Producto_Stock.Location = New System.Drawing.Point(573, 209)
         Me.TextBox_Producto_Stock.Name = "TextBox_Producto_Stock"
         Me.TextBox_Producto_Stock.Size = New System.Drawing.Size(153, 23)
         Me.TextBox_Producto_Stock.TabIndex = 11
         '
         'TextBox_Producto_Precio
         '
-        Me.TextBox_Producto_Precio.Location = New System.Drawing.Point(250, 187)
+        Me.TextBox_Producto_Precio.Location = New System.Drawing.Point(332, 209)
         Me.TextBox_Producto_Precio.Name = "TextBox_Producto_Precio"
         Me.TextBox_Producto_Precio.Size = New System.Drawing.Size(164, 23)
         Me.TextBox_Producto_Precio.TabIndex = 10
@@ -306,7 +327,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'ComboBox_Productos_Categorias
         '
         Me.ComboBox_Productos_Categorias.FormattingEnabled = True
-        Me.ComboBox_Productos_Categorias.Location = New System.Drawing.Point(250, 128)
+        Me.ComboBox_Productos_Categorias.Location = New System.Drawing.Point(332, 153)
         Me.ComboBox_Productos_Categorias.Name = "ComboBox_Productos_Categorias"
         Me.ComboBox_Productos_Categorias.Size = New System.Drawing.Size(387, 23)
         Me.ComboBox_Productos_Categorias.TabIndex = 9
@@ -314,7 +335,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(153, 231)
+        Me.Label7.Location = New System.Drawing.Point(235, 265)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(91, 15)
         Me.Label7.TabIndex = 8
@@ -323,7 +344,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(153, 190)
+        Me.Label6.Location = New System.Drawing.Point(235, 212)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 15)
         Me.Label6.TabIndex = 7
@@ -332,7 +353,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(420, 190)
+        Me.Label5.Location = New System.Drawing.Point(502, 212)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 15)
         Me.Label5.TabIndex = 6
@@ -341,7 +362,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(153, 131)
+        Me.Label4.Location = New System.Drawing.Point(235, 156)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(91, 15)
         Me.Label4.TabIndex = 5
@@ -350,7 +371,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(153, 268)
+        Me.Label3.Location = New System.Drawing.Point(242, 347)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 15)
         Me.Label3.TabIndex = 4
@@ -359,7 +380,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(153, 63)
+        Me.Label2.Location = New System.Drawing.Point(235, 97)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 15)
         Me.Label2.TabIndex = 3
@@ -367,14 +388,14 @@ Partial Class FORM_LISTA_PRODUCTOS
         '
         'TextBox_Producto_Nombre
         '
-        Me.TextBox_Producto_Nombre.Location = New System.Drawing.Point(250, 60)
+        Me.TextBox_Producto_Nombre.Location = New System.Drawing.Point(332, 94)
         Me.TextBox_Producto_Nombre.Name = "TextBox_Producto_Nombre"
         Me.TextBox_Producto_Nombre.Size = New System.Drawing.Size(387, 23)
         Me.TextBox_Producto_Nombre.TabIndex = 2
         '
         'Button_Producto_Cancelar
         '
-        Me.Button_Producto_Cancelar.Location = New System.Drawing.Point(484, 372)
+        Me.Button_Producto_Cancelar.Location = New System.Drawing.Point(573, 451)
         Me.Button_Producto_Cancelar.Name = "Button_Producto_Cancelar"
         Me.Button_Producto_Cancelar.Size = New System.Drawing.Size(105, 40)
         Me.Button_Producto_Cancelar.TabIndex = 1
@@ -383,7 +404,7 @@ Partial Class FORM_LISTA_PRODUCTOS
         '
         'Button_Producto_Insertar
         '
-        Me.Button_Producto_Insertar.Location = New System.Drawing.Point(309, 372)
+        Me.Button_Producto_Insertar.Location = New System.Drawing.Point(398, 451)
         Me.Button_Producto_Insertar.Name = "Button_Producto_Insertar"
         Me.Button_Producto_Insertar.Size = New System.Drawing.Size(105, 40)
         Me.Button_Producto_Insertar.TabIndex = 0
@@ -444,4 +465,6 @@ Partial Class FORM_LISTA_PRODUCTOS
     Friend WithEvents Button_Producto_Editar As Button
     Friend WithEvents Button_Producto_CargaMasiva As Button
     Friend WithEvents Label9 As Label
+    Friend WithEvents ComboBox_Producto_Sucursal As ComboBox
+    Friend WithEvents Label10 As Label
 End Class

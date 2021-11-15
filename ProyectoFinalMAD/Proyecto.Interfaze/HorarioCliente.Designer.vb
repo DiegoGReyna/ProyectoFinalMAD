@@ -140,6 +140,7 @@ Partial Class FORM_HORARIO
         '
         Me.Label_HorarioEmpleado.AutoSize = True
         Me.Label_HorarioEmpleado.Font = New System.Drawing.Font("Consolas", 20.0!)
+        Me.Label_HorarioEmpleado.ForeColor = System.Drawing.Color.White
         Me.Label_HorarioEmpleado.Location = New System.Drawing.Point(164, 79)
         Me.Label_HorarioEmpleado.Name = "Label_HorarioEmpleado"
         Me.Label_HorarioEmpleado.Size = New System.Drawing.Size(195, 32)
@@ -167,7 +168,7 @@ Partial Class FORM_HORARIO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(537, 416)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button_Horario_Atras)

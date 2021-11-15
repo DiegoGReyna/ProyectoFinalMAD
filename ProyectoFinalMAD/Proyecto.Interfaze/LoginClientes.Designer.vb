@@ -39,7 +39,7 @@ Partial Class LoginClientes
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(106, 41)
+        Me.PictureBox1.Location = New System.Drawing.Point(92, 42)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(588, 86)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -59,13 +59,16 @@ Partial Class LoginClientes
         '
         'Button_InicioSesionEmpleado_reregresar
         '
-        Me.Button_InicioSesionEmpleado_reregresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Button_InicioSesionEmpleado_reregresar.Location = New System.Drawing.Point(12, 415)
+        Me.Button_InicioSesionEmpleado_reregresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.Button_InicioSesionEmpleado_reregresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_InicioSesionEmpleado_reregresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Button_InicioSesionEmpleado_reregresar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Button_InicioSesionEmpleado_reregresar.Location = New System.Drawing.Point(12, 412)
         Me.Button_InicioSesionEmpleado_reregresar.Name = "Button_InicioSesionEmpleado_reregresar"
-        Me.Button_InicioSesionEmpleado_reregresar.Size = New System.Drawing.Size(75, 23)
+        Me.Button_InicioSesionEmpleado_reregresar.Size = New System.Drawing.Size(75, 26)
         Me.Button_InicioSesionEmpleado_reregresar.TabIndex = 33
         Me.Button_InicioSesionEmpleado_reregresar.Text = "Atras"
-        Me.Button_InicioSesionEmpleado_reregresar.UseVisualStyleBackColor = True
+        Me.Button_InicioSesionEmpleado_reregresar.UseVisualStyleBackColor = False
         '
         'LAB_SLOGAN
         '
@@ -78,14 +81,14 @@ Partial Class LoginClientes
         '
         'TXT_LoginEmpleado_Contrasena
         '
-        Me.TXT_LoginEmpleado_Contrasena.Location = New System.Drawing.Point(307, 203)
+        Me.TXT_LoginEmpleado_Contrasena.Location = New System.Drawing.Point(292, 203)
         Me.TXT_LoginEmpleado_Contrasena.Name = "TXT_LoginEmpleado_Contrasena"
         Me.TXT_LoginEmpleado_Contrasena.Size = New System.Drawing.Size(211, 20)
         Me.TXT_LoginEmpleado_Contrasena.TabIndex = 31
         '
         'TXT_LoginEmpleado_CorreoElectronico
         '
-        Me.TXT_LoginEmpleado_CorreoElectronico.Location = New System.Drawing.Point(307, 159)
+        Me.TXT_LoginEmpleado_CorreoElectronico.Location = New System.Drawing.Point(292, 159)
         Me.TXT_LoginEmpleado_CorreoElectronico.Name = "TXT_LoginEmpleado_CorreoElectronico"
         Me.TXT_LoginEmpleado_CorreoElectronico.Size = New System.Drawing.Size(211, 20)
         Me.TXT_LoginEmpleado_CorreoElectronico.TabIndex = 30
@@ -94,7 +97,8 @@ Partial Class LoginClientes
         '
         Me.Label_LoginEmpleado_Contrasena.AutoSize = True
         Me.Label_LoginEmpleado_Contrasena.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.Label_LoginEmpleado_Contrasena.Location = New System.Drawing.Point(190, 198)
+        Me.Label_LoginEmpleado_Contrasena.ForeColor = System.Drawing.Color.White
+        Me.Label_LoginEmpleado_Contrasena.Location = New System.Drawing.Point(175, 198)
         Me.Label_LoginEmpleado_Contrasena.Name = "Label_LoginEmpleado_Contrasena"
         Me.Label_LoginEmpleado_Contrasena.Size = New System.Drawing.Size(111, 24)
         Me.Label_LoginEmpleado_Contrasena.TabIndex = 29
@@ -104,7 +108,8 @@ Partial Class LoginClientes
         '
         Me.Label_LoginEmpleado_CorreoElectronico.AutoSize = True
         Me.Label_LoginEmpleado_CorreoElectronico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.Label_LoginEmpleado_CorreoElectronico.Location = New System.Drawing.Point(127, 155)
+        Me.Label_LoginEmpleado_CorreoElectronico.ForeColor = System.Drawing.Color.White
+        Me.Label_LoginEmpleado_CorreoElectronico.Location = New System.Drawing.Point(112, 155)
         Me.Label_LoginEmpleado_CorreoElectronico.Name = "Label_LoginEmpleado_CorreoElectronico"
         Me.Label_LoginEmpleado_CorreoElectronico.Size = New System.Drawing.Size(178, 24)
         Me.Label_LoginEmpleado_CorreoElectronico.TabIndex = 28
@@ -112,27 +117,35 @@ Partial Class LoginClientes
         '
         'BTN_REC_CONTRA_EMPLEADO
         '
-        Me.BTN_REC_CONTRA_EMPLEADO.Location = New System.Drawing.Point(311, 303)
+        Me.BTN_REC_CONTRA_EMPLEADO.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.BTN_REC_CONTRA_EMPLEADO.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BTN_REC_CONTRA_EMPLEADO.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BTN_REC_CONTRA_EMPLEADO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BTN_REC_CONTRA_EMPLEADO.Location = New System.Drawing.Point(292, 312)
         Me.BTN_REC_CONTRA_EMPLEADO.Name = "BTN_REC_CONTRA_EMPLEADO"
-        Me.BTN_REC_CONTRA_EMPLEADO.Size = New System.Drawing.Size(189, 50)
+        Me.BTN_REC_CONTRA_EMPLEADO.Size = New System.Drawing.Size(226, 43)
         Me.BTN_REC_CONTRA_EMPLEADO.TabIndex = 27
         Me.BTN_REC_CONTRA_EMPLEADO.Text = "RECORDAR CONTRASEÑA"
-        Me.BTN_REC_CONTRA_EMPLEADO.UseVisualStyleBackColor = True
+        Me.BTN_REC_CONTRA_EMPLEADO.UseVisualStyleBackColor = False
         '
         'BTN_ACEPTAR_EMPLEADO
         '
+        Me.BTN_ACEPTAR_EMPLEADO.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.BTN_ACEPTAR_EMPLEADO.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BTN_ACEPTAR_EMPLEADO.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.BTN_ACEPTAR_EMPLEADO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BTN_ACEPTAR_EMPLEADO.Location = New System.Drawing.Point(348, 250)
         Me.BTN_ACEPTAR_EMPLEADO.Name = "BTN_ACEPTAR_EMPLEADO"
         Me.BTN_ACEPTAR_EMPLEADO.Size = New System.Drawing.Size(111, 47)
         Me.BTN_ACEPTAR_EMPLEADO.TabIndex = 26
         Me.BTN_ACEPTAR_EMPLEADO.Text = "ACEPTAR"
-        Me.BTN_ACEPTAR_EMPLEADO.UseVisualStyleBackColor = True
+        Me.BTN_ACEPTAR_EMPLEADO.UseVisualStyleBackColor = False
         '
         'LoginClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)

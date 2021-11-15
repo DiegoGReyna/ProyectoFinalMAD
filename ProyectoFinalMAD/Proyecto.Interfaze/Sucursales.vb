@@ -86,6 +86,7 @@
             If (Newtienda.Insertar(NewSucursal)) Then
                 MsgBox("La nueva sucursal se ingreso correctamente", vbOKOnly, "Ingreso Exitoso")
                 Me.Mostrar()
+                TabControl_ListaSucursales.SelectedIndex = 0
             Else
                 MsgBox("No se a podido ingresar la nueva sucursal", vbOKOnly + vbCritical, "Error al ingresar")
             End If
@@ -177,13 +178,13 @@
     Private Sub Seleccionar_ListaSucursal_Empleado_CheckedChanged(sender As Object, e As EventArgs) Handles Seleccionar_ListaSucursal_Empleado.CheckedChanged
         If Seleccionar_ListaSucursal_Empleado.CheckState = CheckState.Checked Then
             DataGridView_ListaSucursal.Columns.Item("SeleccionarSucursal").Visible = True
-            Button_ListaEmpleados_Eliminar.Visible = True
+            Button_ListaSucursal_Eliminar.Visible = True
             Button_ListaEmpleados_Activar.Visible = True
             Button_ListaEmpleados_Desactivar.Visible = True
 
         Else
             DataGridView_ListaSucursal.Columns.Item("SeleccionarSucursal").Visible = False
-            Button_ListaEmpleados_Eliminar.Visible = False
+            Button_ListaSucursal_Eliminar.Visible = False
             Button_ListaEmpleados_Activar.Visible = False
             Button_ListaEmpleados_Desactivar.Visible = False
         End If
@@ -234,7 +235,13 @@
         TabControl_ListaSucursales.SelectedIndex = 0
     End Sub
 
-    Private Sub Button_ListaEmpleados_Eliminar_Click(sender As Object, e As EventArgs) Handles Button_ListaEmpleados_Eliminar.Click
+
+
+    Private Sub Button_ListaSucursal_Buscar_Click(sender As Object, e As EventArgs) Handles Button_ListaSucursal_Buscar.Click
+        Me.Buscar()
+    End Sub
+
+    Private Sub Button_ListaSucursal_Eliminar_Click(sender As Object, e As EventArgs) Handles Button_ListaSucursal_Eliminar.Click
         If (MsgBox("¿Deseas eliminar la sucursal seleccionada?", vbYesNo, "Eliminar sucursal") = vbYes) Then
             Try
                 Dim NewTienda As New Proyecto_Tienda.Tienda_Sucursal
@@ -252,10 +259,5 @@
                 MsgBox(ex.Message)
             End Try
         End If
-
-    End Sub
-
-    Private Sub Button_ListaSucursal_Buscar_Click(sender As Object, e As EventArgs) Handles Button_ListaSucursal_Buscar.Click
-        Me.Buscar()
     End Sub
 End Class

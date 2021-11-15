@@ -85,6 +85,12 @@
     <Compile Include="LoginClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MenuPrincipalCliente.Designer.vb">
+      <DependentUpon>MenuPrincipalCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipalCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RecordarContraCliente.Designer.vb">
       <DependentUpon>RecordarContraCliente.vb</DependentUpon>
     </Compile>
@@ -95,6 +101,12 @@
       <DependentUpon>RecordarContraEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="RecordarContraEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tienda.Designer.vb">
+      <DependentUpon>Tienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tienda.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanaPreLoging.Designer.vb">
@@ -192,11 +204,17 @@
     <EmbeddedResource Include="LoginClientes.resx">
       <DependentUpon>LoginClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipalCliente.resx">
+      <DependentUpon>MenuPrincipalCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecordarContraCliente.resx">
       <DependentUpon>RecordarContraCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecordarContraEmpleado.resx">
       <DependentUpon>RecordarContraEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tienda.resx">
+      <DependentUpon>Tienda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPreLoging.resx">
       <DependentUpon>VentanaPreLoging.vb</DependentUpon>

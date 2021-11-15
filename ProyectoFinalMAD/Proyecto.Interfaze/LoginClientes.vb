@@ -46,6 +46,21 @@ Public Class LoginClientes
 
                     Else
                         MsgBox("Iniciando sesion")
+                        Me.Hide()
+                        MenuPrincipalCliente.Id_Cliente1 = LoginCliente.Id_Cliente
+                        MenuPrincipalCliente.Id_Usuario1 = LoginCliente.Id_Usuario
+                        MenuPrincipalCliente.Id_Carrito1 = LoginCliente.Id_Carrito
+                        MenuPrincipalCliente.Id_Direccion1 = LoginCliente.Id_Direccion
+                        MenuPrincipalCliente.CorreoElectronico1 = LoginCliente.CorreoElectronico
+                        MenuPrincipalCliente.DireccionCompleta1 = LoginCliente.DireccionCompleta
+
+
+                        TXT_LoginEmpleado_CorreoElectronico.Text = ""
+                        TXT_LoginEmpleado_Contrasena.Text = ""
+
+                        MenuPrincipalCliente.Show()
+
+
                     End If
 
                 End If

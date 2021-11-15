@@ -12,6 +12,18 @@ Public Class Tienda_Producto
             Return Nothing
         End Try
     End Function
+
+    Public Function ListaProducto_Cliente() As DataTable
+        Try
+            Dim Datos As New Datos_Productos
+            Dim Tabla As New DataTable
+            Tabla = Datos.ListaProducto_Cliente()
+            Return Tabla
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
     Public Function BuscarProducto(Productos_A_abuscar As String) As DataTable
         Try
             Dim Datos As New Datos_Productos

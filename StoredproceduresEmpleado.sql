@@ -6,13 +6,7 @@ USE Proyecto_MAD;
 go
 	select * from USUARIOS
 	go		 
-		
-		
-		
-		
-		
-		
-			  
+				  
 CREATE VIEW Ver_Empleado_Usuario_Direccion_Sucursal
 as
 	SELECT EMPLEADO.Id_Empleado 'ID de empleado',USUARIOS.Id_Usuario 'ID de usuario',USUARIOS.Id_DIRECCION_USUARIOS'ID Direccion',EMPLEADO.Usuario 'Usuario',USUARIOS.Nombre 'Nombre',USUARIOS.Apellido_Paterno 'Apellido paterno',USUARIOS.Apellido_Materno 'Apellido Materno',
@@ -44,13 +38,6 @@ as
 				ON USUARIOS.Id_DIRECCION_USUARIOS = DIRECCION_USUARIOS.Id_Direccion_Usuarios
 go
 
-
-
-
-
-
-
-
 CREATE PROCEDURE PR_Mostrar_Empleados
 as
 BEGIN
@@ -61,8 +48,6 @@ FROM	Ver_Empleado_Usuario_Direccion_Sucursal
 END
 
 go
-
-
 
 	CREATE PROC PR_Empleado_Agregar
 		@Usuario VARCHAR(50),
@@ -174,9 +159,6 @@ CREATE PROC Usuario_Desactivar
 		UPDATE USUARIOS SET USUARIO_ACTIVO=1
 		WHERE Id_Usuario= @Id_Usuario  
 	GO
-
-	
-
 	--Eliminar Empleado
 	CREATE PROC PR_Empleado_Eliminar
 		@Id_Empleado int,
@@ -233,9 +215,9 @@ CREATE PROC Usuario_Desactivar
 
 	GO
 
-
+	----Modificar??
 	CREATE PROC PR_Empleados_ComboBox
 		AS
-		SELECT [ID de empleado],[Nombre],[Apellido paterno],[Apellido Materno],CONCAT([Nombre], ' ', [Apellido paterno],' ',[Apellido Materno]) full_name FROM Ver_Empleados_Usuario ,Ver_Sucursal_Encargado
-		WHERE [Estado de la cuenta]=1 and [Id empleado encargado] <> [ID de empleado]
+		SELECT [ID de empleado],[Nombre],[Apellido paterno],[Apellido Materno],CONCAT([Nombre], ' ', [Apellido paterno],' ',[Apellido Materno]) full_name FROM Ver_Empleados_Usuario
+		WHERE [Estado de la cuenta]=1
 	GO

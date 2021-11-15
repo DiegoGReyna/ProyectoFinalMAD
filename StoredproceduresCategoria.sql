@@ -47,3 +47,4 @@ GO
 		SELECT Id_CategoriaProducto,Nombre FROM PRODUCTO_CATEGORIA
 	GO
 
+	

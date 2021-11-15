@@ -20,6 +20,7 @@
     Private _Calle As String
     Private _NumeroCasa As String
     Private _FechaUltimaModificacion As Date
+    Private _DireccionCompleta As String
 
     Public Property Id_Cliente As Integer
         Get
@@ -207,6 +208,15 @@
         End Get
         Set(value As Boolean)
             _Activo = value
+        End Set
+    End Property
+
+    Public Property DireccionCompleta As String
+        Get
+            Return _DireccionCompleta
+        End Get
+        Set(value As String)
+            _DireccionCompleta = value
         End Set
     End Property
 End Class

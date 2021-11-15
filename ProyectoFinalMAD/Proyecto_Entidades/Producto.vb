@@ -1,95 +1,103 @@
 ﻿Public Class Producto
-#Region "Variables"
-    Private ID_CodigoProducto As Integer
-    Private ID_Categoria As Integer
-    Private ID_Empleado As Integer
-    Private Nombre As String
-    Private Descripcion As String
-    Private Stock As Integer
-    Private Precio As Decimal
-    Private Estado As Boolean
-    Private Descuento As Decimal
-#End Region
-#Region "Propiedades Productos"
-    Public Property ID_CodigoProducto_ As Integer
+
+    Private _ID_CodigoProducto As Integer
+    Private _ID_Categoria As Integer
+    Private _ID_Empleado As Integer
+    Private _ID_Sucursal As Integer
+    Private _Nombre As String
+    Private _Descripcion As String
+    Private _Stock As Integer
+    Private _Precio As Decimal
+    Private _Estado As Boolean
+    Private _Descuento As Decimal
+
+    Public Property ID_CodigoProducto As Integer
         Get
-            Return ID_CodigoProducto
+            Return _ID_CodigoProducto
         End Get
         Set(value As Integer)
-            ID_CodigoProducto = value
+            _ID_CodigoProducto = value
         End Set
     End Property
 
-    Public Property ID_Categoria_ As Integer
+    Public Property ID_Categoria As Integer
         Get
-            Return ID_Categoria
+            Return _ID_Categoria
         End Get
         Set(value As Integer)
-            ID_Categoria = value
+            _ID_Categoria = value
         End Set
     End Property
 
-    Public Property ID_Empleado_ As Integer
+    Public Property ID_Empleado As Integer
         Get
-            Return ID_Empleado
+            Return _ID_Empleado
         End Get
         Set(value As Integer)
-            ID_Empleado = value
+            _ID_Empleado = value
         End Set
     End Property
 
-    Public Property Nombre_ As String
+    Public Property ID_Sucursal As Integer
         Get
-            Return Nombre
+            Return _ID_Sucursal
+        End Get
+        Set(value As Integer)
+            _ID_Sucursal = value
+        End Set
+    End Property
+
+    Public Property Nombre As String
+        Get
+            Return _Nombre
         End Get
         Set(value As String)
-            Nombre = value
+            _Nombre = value
         End Set
     End Property
 
-    Public Property Descripcion_ As String
+    Public Property Descripcion As String
         Get
-            Return Descripcion
+            Return _Descripcion
         End Get
         Set(value As String)
-            Descripcion = value
+            _Descripcion = value
         End Set
     End Property
 
-    Public Property Stock_ As Integer
+    Public Property Stock As Integer
         Get
-            Return Stock
+            Return _Stock
         End Get
         Set(value As Integer)
-            Stock = value
+            _Stock = value
         End Set
     End Property
 
-    Public Property Precio_ As Decimal
+    Public Property Precio As Decimal
         Get
-            Return Precio
+            Return _Precio
         End Get
         Set(value As Decimal)
-            Precio = value
+            _Precio = value
         End Set
     End Property
 
-    Public Property Estado_ As Boolean
+    Public Property Estado As Boolean
         Get
-            Return Estado
+            Return _Estado
         End Get
         Set(value As Boolean)
-            Estado = value
+            _Estado = value
         End Set
     End Property
 
-    Public Property Descuento_ As Decimal
+    Public Property Descuento As Decimal
         Get
-            Return Descuento
+            Return _Descuento
         End Get
         Set(value As Decimal)
-            Descuento = value
+            _Descuento = value
         End Set
     End Property
-#End Region
 End Class

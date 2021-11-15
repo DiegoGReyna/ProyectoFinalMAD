@@ -4,8 +4,37 @@ GO
 ---STORED PROCEDURES COMPRAS
 ---Procesos COMPRAS
 
---Mostrar COMPRAS
+CREATE TYPE TYPE_DETALLE_INGRESO AS TABLE
+(Id_Articulo INT,
+Nombre VARCHAR(50),
+stock INT,
+Precio  DEC(12,2),
+cantidad INT,
+Descuento  DEC(12,2),
+TotalSinDescuento  DEC(12,2),
+ahorrado  DEC(12,2),
+TotalConDescuento  DEC(12,2)
 
+);
+GO
+
+Drop TYPE TYPE_DETALLE_INGRESO
+go
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------
 CREATE PROC COMPRAS_Mostrar
 AS
 SELECT 

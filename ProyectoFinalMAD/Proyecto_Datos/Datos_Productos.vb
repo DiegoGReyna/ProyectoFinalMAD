@@ -8,7 +8,25 @@ Public Class Datos_Productos
             Dim Resultado As SqlDataReader
             Dim Tabla As New DataTable
             'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
-            Dim Comando As New SqlCommand("Producto_Mostrar", MyBase.conexion)
+            Dim Comando As New SqlCommand("PR_Producto_Mostrar", MyBase.conexion)
+            Comando.CommandType = CommandType.StoredProcedure
+            MyBase.conexion.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conexion.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+    End Function
+
+    Public Function ListaProducto_Cliente() As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
+            Dim Comando As New SqlCommand("PR_Producto_Mostrar_A_Cliente", MyBase.conexion)
             Comando.CommandType = CommandType.StoredProcedure
             MyBase.conexion.Open()
             Resultado = Comando.ExecuteReader()
@@ -43,16 +61,18 @@ Public Class Datos_Productos
     Public Sub Insertar(Producto_A_insertar As Producto)
         Try
             'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
-            Dim Comando As New SqlCommand("Producto_Agregar", MyBase.conexion)
+            Dim Comando As New SqlCommand("PR_Producto_Agregar", MyBase.conexion)
             Comando.CommandType = CommandType.StoredProcedure
             'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
-            Comando.Parameters.Add("@Id_Empleado", SqlDbType.Int).Value = Producto_A_insertar.ID_Empleado_
-            Comando.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = Producto_A_insertar.Nombre_
-            Comando.Parameters.Add("@Id_Categoria", SqlDbType.Int).Value = Producto_A_insertar.ID_Categoria_
-            Comando.Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = Producto_A_insertar.Descripcion_
-            Comando.Parameters.Add("@Stock", SqlDbType.Int).Value = Producto_A_insertar.Stock_
-            Comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = Producto_A_insertar.Precio_
-            Comando.Parameters.Add("@Descuento", SqlDbType.Decimal).Value = Producto_A_insertar.Descuento_
+
+            Comando.Parameters.Add("@Id_Empleado", SqlDbType.Int).Value = Producto_A_insertar.ID_Empleado
+            Comando.Parameters.Add("@IdAlmacen", SqlDbType.Int).Value = Producto_A_insertar.ID_Sucursal
+            Comando.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = Producto_A_insertar.Nombre
+            Comando.Parameters.Add("@Id_Categoria", SqlDbType.Int).Value = Producto_A_insertar.ID_Categoria
+            Comando.Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = Producto_A_insertar.Descripcion
+            Comando.Parameters.Add("@Stock", SqlDbType.Int).Value = Producto_A_insertar.Stock
+            Comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = Producto_A_insertar.Precio
+            Comando.Parameters.Add("@Descuento", SqlDbType.Decimal).Value = Producto_A_insertar.Descuento
             MyBase.conexion.Open()
             Comando.ExecuteNonQuery()
             MyBase.conexion.Close()
@@ -69,14 +89,15 @@ Public Class Datos_Productos
             Comando.CommandType = CommandType.StoredProcedure
             MyBase.conexion.Open()
             'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
-            Comando.Parameters.Add("@Id_CodigoProducto", SqlDbType.Int).Value = Producto_A_Editar.ID_CodigoProducto_
-            Comando.Parameters.Add("@Id_Empleado", SqlDbType.Int).Value = Producto_A_Editar.ID_Empleado_
-            Comando.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = Producto_A_Editar.Nombre_
-            Comando.Parameters.Add("@Id_Categoria", SqlDbType.Int).Value = Producto_A_Editar.ID_Categoria_
-            Comando.Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = Producto_A_Editar.Descripcion_
-            Comando.Parameters.Add("@Stock", SqlDbType.Int).Value = Producto_A_Editar.Stock_
-            Comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = Producto_A_Editar.Precio_
-            Comando.Parameters.Add("@Descuento", SqlDbType.Decimal).Value = Producto_A_Editar.Descuento_
+            Comando.Parameters.Add("@Id_CodigoProducto", SqlDbType.Int).Value = Producto_A_Editar.ID_CodigoProducto
+            Comando.Parameters.Add("@Id_AlmacenSucursal", SqlDbType.Int).Value = Producto_A_Editar.ID_Sucursal
+            Comando.Parameters.Add("@Id_Empleado", SqlDbType.Int).Value = Producto_A_Editar.ID_Empleado
+            Comando.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = Producto_A_Editar.Nombre
+            Comando.Parameters.Add("@Id_Categoria", SqlDbType.Int).Value = Producto_A_Editar.ID_Categoria
+            Comando.Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = Producto_A_Editar.Descripcion
+            Comando.Parameters.Add("@Stock", SqlDbType.Int).Value = Producto_A_Editar.Stock
+            Comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = Producto_A_Editar.Precio
+            Comando.Parameters.Add("@Descuento", SqlDbType.Decimal).Value = Producto_A_Editar.Descuento
             Comando.ExecuteNonQuery()
             MyBase.conexion.Close()
         Catch ex As Exception

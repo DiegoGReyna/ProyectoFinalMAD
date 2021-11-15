@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="CategoriaDeProducto.vb" />
     <Compile Include="Cliente.vb" />
+    <Compile Include="ComprasPagoEnvio.vb" />
     <Compile Include="DireccionEstado.vb" />
     <Compile Include="DireccionMunicipio.vb" />
     <Compile Include="Empleado.vb" />

@@ -42,21 +42,29 @@ Partial Class FORM_INICIO_SESION
         '
         'BTN_CLIENTE
         '
+        Me.BTN_CLIENTE.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.BTN_CLIENTE.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BTN_CLIENTE.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.BTN_CLIENTE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BTN_CLIENTE.Location = New System.Drawing.Point(210, 190)
         Me.BTN_CLIENTE.Name = "BTN_CLIENTE"
         Me.BTN_CLIENTE.Size = New System.Drawing.Size(127, 39)
         Me.BTN_CLIENTE.TabIndex = 1
         Me.BTN_CLIENTE.Text = "CLIENTE"
-        Me.BTN_CLIENTE.UseVisualStyleBackColor = True
+        Me.BTN_CLIENTE.UseVisualStyleBackColor = False
         '
         'BTN_EMPLEADO
         '
+        Me.BTN_EMPLEADO.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.BTN_EMPLEADO.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BTN_EMPLEADO.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.BTN_EMPLEADO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BTN_EMPLEADO.Location = New System.Drawing.Point(417, 190)
         Me.BTN_EMPLEADO.Name = "BTN_EMPLEADO"
-        Me.BTN_EMPLEADO.Size = New System.Drawing.Size(127, 39)
+        Me.BTN_EMPLEADO.Size = New System.Drawing.Size(139, 39)
         Me.BTN_EMPLEADO.TabIndex = 2
         Me.BTN_EMPLEADO.Text = "EMPLEADO"
-        Me.BTN_EMPLEADO.UseVisualStyleBackColor = True
+        Me.BTN_EMPLEADO.UseVisualStyleBackColor = False
         '
         'LAB_SLOGAN
         '
@@ -71,8 +79,9 @@ Partial Class FORM_INICIO_SESION
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.ClientSize = New System.Drawing.Size(756, 355)
+        Me.AutoSize = True
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(774, 376)
         Me.Controls.Add(Me.LAB_SLOGAN)
         Me.Controls.Add(Me.BTN_EMPLEADO)
         Me.Controls.Add(Me.BTN_CLIENTE)

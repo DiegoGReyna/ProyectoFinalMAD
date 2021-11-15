@@ -111,4 +111,10 @@ Public Class MDIParent_MenuPrincipal_Empleado
     Private Sub ListaDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDeClientesToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub ListaDeSucursalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDeSucursalesToolStripMenuItem.Click
+        Dim VentanaListaSucursal As New FORM_SUCURSAL
+        VentanaListaSucursal.MdiParent = Me
+        VentanaListaSucursal.Show()
+    End Sub
 End Class

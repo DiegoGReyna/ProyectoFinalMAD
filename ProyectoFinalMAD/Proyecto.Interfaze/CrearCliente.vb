@@ -43,7 +43,7 @@
         End If
     End Sub
 
-    Private Sub BTN_USUARIO_LISTA_Click(sender As Object, e As EventArgs) Handles BTN_CrearCliente_LISTA.Click
+    Private Sub BTN_USUARIO_LISTA_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
@@ -74,6 +74,10 @@
     Private Sub Button_CrearCliente_Cancelar_Click(sender As Object, e As EventArgs) Handles Button_CrearCliente_Cancelar.Click
         Me.Hide()
         LoginClientes.Show()
+
+    End Sub
+
+    Private Sub Label_ListaEmpleados_FechaNacimiento_Click(sender As Object, e As EventArgs) Handles Label_ListaEmpleados_FechaNacimiento.Click
 
     End Sub
 End Class
