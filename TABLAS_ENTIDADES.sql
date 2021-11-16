@@ -128,9 +128,7 @@ CREATE TABLE PRODUCTO(
 );
 GO
 
-ALTER TABLE PRODUCTO
-ADD Activo BIT DEFAULT(1)NOT NULL
-go
+
 
 CREATE TABLE ALMACEN_PRODUCTOS(
 	Id_Almacen INT NOT NULL,
@@ -198,8 +196,7 @@ GO
 CREATE TABLE CARRITO(
 	Id_Carrito INT PRIMARY KEY IDENTITY NOT NULL,
 	Id_Cliente INT NOT NULL,
-	
-	
+	Carrito_Activo BIT DEFAULT(1)
 	CONSTRAINT FK_CARRITO_Id_Cliente
 	FOREIGN KEY(Id_Cliente) REFERENCES CLIENTE(Id_Cliente),
 	
@@ -207,19 +204,27 @@ CREATE TABLE CARRITO(
 
 );
 GO
+
 CREATE TABLE CARRITO_PRODUCTOS(
 	Id_Carrito_Productos INT PRIMARY KEY IDENTITY NOT NULL,
 	Id_Carrito INT NOT NULL,
+	Id_CodigoCompra INT NOT NULL,
 	CantidadProducto INT NOT NULL,
 	Id_Producto INT NOT NULL,
+	Precio  DEC(12,2)NOT NULL,
+	Descuento DEC(4,2)NOT NULL
 	CONSTRAINT FK_CARRITO_PRODUCTOS_Id_Carrito
 	FOREIGN KEY(Id_Carrito) REFERENCES CARRITO(Id_Carrito),
 
 	CONSTRAINT FK_CARRITO_PRODUCTOS_Id_Producto
 	FOREIGN KEY(Id_Producto) REFERENCES PRODUCTO(CodigoProducto),
 
+	CONSTRAINT FK_CARRITO_PRODUCTOS_Id_CompraFormaPagoEnvio
+	FOREIGN KEY(Id_CodigoCompra) REFERENCES COMPRAS_FORMA_DE_PAGOyENVIO(Id_CodigoDeBarras),
 );
 GO
+
+
 ------------------------------------------------------------
 ---TABLA COMPRAS----editar
 CREATE TABLE FORMA_DE_PAGO(
@@ -234,37 +239,36 @@ CREATE TABLE FORMA_DE_ENVIO(
 );
 GO
 
-
-CREATE TABLE COMPRAS(
-	CodigoDeBarras INT PRIMARY KEY IDENTITY NOT NULL,
-	Id_Carrito_Productos INT NOT NULL,
-	Total INT NOT NULL,
-	TotalAhorrado INT NOT NULL,
-	EstadoDepago BIT DEFAULT (0),
-	CONSTRAINT FK_COMPRAS_Id_Carrito
-	FOREIGN KEY(Id_Carrito_Productos) REFERENCES CARRITO_PRODUCTOS(Id_Carrito_Productos),
-
-
-);
-GO
+-------------------------------------------Tabla Eliminada---------------------------------------------------------
+CREATE TABLE COMPRAS(																			----
+	CodigoDeBarras INT PRIMARY KEY IDENTITY NOT NULL,											----
+	Id_Carrito_Productos INT NOT NULL,															----
+	Total DEC(12,2) NOT NULL,																	----
+	TotalSinDescuento DEC(12,2) NOT NULL,														----
+	TotalAhorrado DEC(12,2) NOT NULL,															----
+	EstadoDepago BIT DEFAULT (0),																----
+	CONSTRAINT FK_COMPRAS_Id_Carrito															----
+	FOREIGN KEY(Id_Carrito_Productos) REFERENCES CARRITO_PRODUCTOS(Id_Carrito_Productos),		----
+);																								----
+GO																								----
+----------------------------------------------------------------------------------------------------
 CREATE TABLE COMPRAS_FORMA_DE_PAGOyENVIO(
-	Id_Compras_FormaDePagoyEnvio INT PRIMARY KEY IDENTITY NOT NULL,
-	Id_Compras INT NOT NULL,
+	Id_CodigoDeBarras INT PRIMARY KEY IDENTITY NOT NULL,													
+	Total DEC(12,2) NOT NULL,																	
+	TotalSinDescuento DEC(12,2) NOT NULL,														
+	TotalAhorrado DEC(12,2) NOT NULL,
+	DireccionEntrega VARCHAR(250) NOT NULL,	
 	FechaCompras DATETIME DEFAULT GETDATE(),
+	EstadoDepago BIT DEFAULT (0),
 	Id_Forma_De_Pago INT NOT NULL,
 	Id_Forma_De_Envio INT NOT NULL
-	CONSTRAINT FK_COMPRAS_FORMA_DE_PAGOyENVIO_Id_Compras
-	FOREIGN KEY(Id_Compras) REFERENCES COMPRAS(CodigoDeBarras),
-
 	CONSTRAINT FK_COMPRAS_FORMA_DE_PAGOyENVIO_Id_Forma_De_Pago
 	FOREIGN KEY(Id_Forma_De_Pago) REFERENCES FORMA_DE_PAGO(Id_Forma_De_Pago),
-
 	CONSTRAINT FK_COMPRAS_FORMA_DE_PAGOyENVIO_Id_Forma_De_Envio
 	FOREIGN KEY(Id_Forma_De_Envio) REFERENCES FORMA_DE_ENVIO(Id_Forma_De_Envio),
 );
 GO
 -------------------------------------------------------------------------------------------------
-
 
 
 ---TABLA RECIBO

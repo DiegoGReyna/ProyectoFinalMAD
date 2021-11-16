@@ -73,6 +73,8 @@ Public Class Tienda_Sucursal
 
     End Function
 
+
+
     Public Function CargarComboBoxSucursal() As DataTable
         Try
             Dim Datos As New Datos_Sucursal
@@ -83,6 +85,27 @@ Public Class Tienda_Sucursal
             MsgBox(ex.Message)
             Return Nothing
         End Try
+    End Function
+
+    Public Function BuscarDirectionSucursal(Id_Sucursal As Integer) As Sucursal
+        Try
+            Dim Sucursal As New Sucursal
+            Dim Datos As New Datos_Sucursal
+            Dim Tabla As New DataTable
+            Tabla = Datos.BuscarDirectionSucursal(Id_Sucursal)
+            If (Tabla.Rows.Count > 0) Then
+
+                Sucursal.DireccionCompleta = Tabla.Rows(0).Item(9).ToString
+                Return Sucursal
+            Else
+                Return Nothing
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+
     End Function
 
 End Class

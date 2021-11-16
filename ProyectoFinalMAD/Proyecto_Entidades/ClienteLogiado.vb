@@ -1,4 +1,4 @@
-﻿Public Class Cliente
+﻿Public Class ClienteLogiado
     Private _Id_Usuario As Integer
     Private _Id_Cliente As Integer
     Private _Id_Carrito As Integer
@@ -21,7 +21,15 @@
     Private _NumeroCasa As String
     Private _FechaUltimaModificacion As Date
     Private _DireccionCompleta As String
-    Private _NombreCompleto As String
+
+    Public Property Id_Usuario As Integer
+        Get
+            Return _Id_Usuario
+        End Get
+        Set(value As Integer)
+            _Id_Usuario = value
+        End Set
+    End Property
 
     Public Property Id_Cliente As Integer
         Get
@@ -149,6 +157,15 @@
         End Set
     End Property
 
+    Public Property Activo As Boolean
+        Get
+            Return _Activo
+        End Get
+        Set(value As Boolean)
+            _Activo = value
+        End Set
+    End Property
+
     Public Property Colonia As String
         Get
             Return _Colonia
@@ -194,39 +211,12 @@
         End Set
     End Property
 
-    Public Property Id_Usuario As Integer
-        Get
-            Return _Id_Usuario
-        End Get
-        Set(value As Integer)
-            _Id_Usuario = value
-        End Set
-    End Property
-
-    Public Property Activo As Boolean
-        Get
-            Return _Activo
-        End Get
-        Set(value As Boolean)
-            _Activo = value
-        End Set
-    End Property
-
     Public Property DireccionCompleta As String
         Get
             Return _DireccionCompleta
         End Get
         Set(value As String)
             _DireccionCompleta = value
-        End Set
-    End Property
-
-    Public Property NombreCompleto As String
-        Get
-            Return _NombreCompleto
-        End Get
-        Set(value As String)
-            _NombreCompleto = value
         End Set
     End Property
 End Class

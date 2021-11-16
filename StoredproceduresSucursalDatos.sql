@@ -114,6 +114,7 @@ GO
 		UPDATE SUCURSAL SET Estado=1
 		WHERE Id_Sucursal = @Id_Sucursal
 	GO
+
 	CREATE VIEW Ver_Sucursal_Encargado
 as
 	SELECT        SUCURSAL.Id_Sucursal'Numero de sucursal', SUCURSAL.Nombre 'Nombre de la sucursal',SUCURSAL.Id_EmpleadoEncargado'Id empleado encargado', EMPLEADO.Usuario 'Usuario Empleado Encargado', 
@@ -145,4 +146,15 @@ GO
 		
 	GO
 
+
+	CREATE PROC PR_BuscarSucursalDireccion
+	@Id_Sucursal INT
+
+	AS
+	BEGIN
+		SELECT [Numero de sucursal],[Nombre de la sucursal],[Estado],[Municipio],[Colonia],[Calle],[Direcion numero],[Codigo postal],[Activo],CONCAT([Estado],',',[Municipio],',',[Codigo Postal],',',[Colonia],',',[Direcion numero],' ',[Calle]) [DireccionCompleta]
+		FROM Ver_Sucursal_Encargado
+		WHERE [Activo]=1 and [Numero de sucursal]=@Id_Sucursal
+	END
+	GO 
 

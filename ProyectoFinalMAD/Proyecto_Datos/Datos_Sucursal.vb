@@ -144,6 +144,24 @@ Public Class Datos_Sucursal
 
         End Try
     End Function
+    Public Function BuscarDirectionSucursal(Id_Sucursal As Integer) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
+            Dim Comando As New SqlCommand("PR_BuscarSucursalDireccion", MyBase.conexion)
+            Comando.CommandType = CommandType.StoredProcedure
+            'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
+            Comando.Parameters.Add("@Id_Sucursal", SqlDbType.Int).Value = Id_Sucursal
+            MyBase.conexion.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conexion.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
 
+        End Try
+    End Function
 
 End Class

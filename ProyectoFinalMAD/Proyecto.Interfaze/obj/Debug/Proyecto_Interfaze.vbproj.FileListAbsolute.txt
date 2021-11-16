@@ -69,3 +69,6 @@ C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.RecordarContraEmpleado.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.MenuPrincipalCliente.resources
 C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.Tienda.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\Proyecto.Interfaze.PagoYenvio.resources
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\RdlCompile.cache
+C:\Users\Super PC\Desktop\PoyectoFinalMAD\ProyectoMad\ProyectoFinalMAD\Proyecto.Interfaze\obj\Debug\RdlCompile.compiled

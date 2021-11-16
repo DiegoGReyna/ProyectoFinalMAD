@@ -67,8 +67,10 @@
     <Compile Include="Conexion_A_sqlServer.vb" />
     <Compile Include="Datos_Categoria.vb" />
     <Compile Include="Datos_Cliente.vb" />
+    <Compile Include="Datos_Comprar.vb" />
     <Compile Include="Datos_DireccionEstado.vb" />
     <Compile Include="Datos_Empleado.vb" />
+    <Compile Include="Datos_FormaDePagoEnvio.vb" />
     <Compile Include="Datos_Productos.vb" />
     <Compile Include="Datos_RegistroHoras.vb" />
     <Compile Include="Datos_Sucursal.vb" />

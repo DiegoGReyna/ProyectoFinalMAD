@@ -24,7 +24,8 @@ CREATE PROCEDURE PR_Login_Cliente
 	as
 BEGIN
 	SELECT	[Id Cliente],[Id Usuario],[Id Direccion],[Id Carrito],[Correo Electronico],[Celular],[Contraseña],[Nombre],[Apellido Paterno],[Apellido materno],
-			CONCAT([Estado],',',[Municipio],',',[Codigo Postal],',',[Colonia],',',[Numero domicilio],' ',[Calle]) [DireccionCompleta],[Estado],[Municipio],[Colonia],[Codigo Postal],[Calle],[Numero domicilio],[Activo]
+			CONCAT([Estado],',',[Municipio],',',[Codigo Postal],',',[Colonia],',',[Numero domicilio],' ',[Calle]) [DireccionCompleta],[Estado],[Municipio],
+			[Colonia],[Codigo Postal],[Calle],[Numero domicilio],CONCAT([Nombre],' ',[Apellido Paterno],' ',[Apellido materno])[Nombre Completo],[Activo]
 
 	FROM	Ver_Login_Usuario_Cliente
 	WHERE	[Correo Electronico]= @correo AND [Contraseña]= @contrasena

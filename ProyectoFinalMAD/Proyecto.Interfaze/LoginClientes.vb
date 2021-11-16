@@ -47,13 +47,18 @@ Public Class LoginClientes
                     Else
                         MsgBox("Iniciando sesion")
                         Me.Hide()
+                        Dim ClienteLogiado As New Proyecto_Entidades.ClienteLogiado
                         MenuPrincipalCliente.Id_Cliente1 = LoginCliente.Id_Cliente
                         MenuPrincipalCliente.Id_Usuario1 = LoginCliente.Id_Usuario
                         MenuPrincipalCliente.Id_Carrito1 = LoginCliente.Id_Carrito
                         MenuPrincipalCliente.Id_Direccion1 = LoginCliente.Id_Direccion
+
                         MenuPrincipalCliente.CorreoElectronico1 = LoginCliente.CorreoElectronico
                         MenuPrincipalCliente.DireccionCompleta1 = LoginCliente.DireccionCompleta
+                        MenuPrincipalCliente.NombreCompleto1 = LoginCliente.NombreCompleto
+                        MenuPrincipalCliente.NumCelular1 = LoginCliente.NumCelular
 
+                        ClienteLogiado.DireccionCompleta = LoginCliente.DireccionCompleta
 
                         TXT_LoginEmpleado_CorreoElectronico.Text = ""
                         TXT_LoginEmpleado_Contrasena.Text = ""

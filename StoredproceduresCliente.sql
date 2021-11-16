@@ -54,7 +54,6 @@ CREATE PROC PR_Clinte_Agregar
 	BEGIN
 		DECLARE @idDireccion int
 		DECLARE @idUsuario int 
-		DECLARE @idCliente int 
 
 		INSERT INTO DIRECCION_USUARIOS(Estado,Municipio,Colonia,CodigoPostal,Calle,NUMERO_CASA) 
 		VALUES(@Estado,@Municipio,@Colonia,@CodigoPostal,@Calle,@NumeroCasa)
@@ -66,10 +65,7 @@ CREATE PROC PR_Clinte_Agregar
 
 		INSERT INTO CLIENTE(Id_Usuario,CorreoElectronico,Celular)
 		VALUES(@idUsuario,@CorreoElectronico,@NumCelular)
-		SELECT @idCliente =SCOPE_IDENTITY()
-
-		INSERT INTO CARRITO(Id_Cliente)
-		VALUES(@idCliente)
+		
 
 
 	END	

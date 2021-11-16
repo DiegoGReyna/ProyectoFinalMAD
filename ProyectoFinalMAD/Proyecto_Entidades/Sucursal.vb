@@ -9,6 +9,7 @@
     Private _Calle As String
     Private _NumeroDomecilio As String
     Private _CodigoPostal As String
+    Private _DireccionCompleta As String
 
     Public Property Id_sUCURSAL As Integer
         Get
@@ -97,6 +98,15 @@
         End Get
         Set(value As String)
             _CodigoPostal = value
+        End Set
+    End Property
+
+    Public Property DireccionCompleta As String
+        Get
+            Return _DireccionCompleta
+        End Get
+        Set(value As String)
+            _DireccionCompleta = value
         End Set
     End Property
 End Class

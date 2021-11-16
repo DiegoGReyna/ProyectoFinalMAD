@@ -37,7 +37,8 @@ Public Class Tienda_Cliente
                 Cliente.CodigoPostal = Tabla.Rows(0).Item(14).ToString
                 Cliente.Calle = Tabla.Rows(0).Item(15).ToString
                 Cliente.NumeroCasa = Tabla.Rows(0).Item(16).ToString
-                Cliente.Activo = Tabla.Rows(0).Item(17).ToString
+                Cliente.NombreCompleto = Tabla.Rows(0).Item(17).ToString
+                Cliente.Activo = Tabla.Rows(0).Item(18).ToString
 
                 Return Cliente
             Else

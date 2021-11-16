@@ -66,10 +66,14 @@
   <ItemGroup>
     <Compile Include="CategoriaDeProducto.vb" />
     <Compile Include="Cliente.vb" />
+    <Compile Include="ClienteLogiado.vb" />
     <Compile Include="ComprasPagoEnvio.vb" />
+    <Compile Include="Compras_Y_ComprasFormaDepagoEnvio.vb" />
     <Compile Include="DireccionEstado.vb" />
     <Compile Include="DireccionMunicipio.vb" />
     <Compile Include="Empleado.vb" />
+    <Compile Include="FormaDeEnvio.vb" />
+    <Compile Include="FormaDePago.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

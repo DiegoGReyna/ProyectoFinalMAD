@@ -81,8 +81,10 @@
     </Compile>
     <Compile Include="Tienda_Categoria.vb" />
     <Compile Include="Tienda_Cliente.vb" />
+    <Compile Include="Tienda_Comprar.vb" />
     <Compile Include="Tienda_DireccionEstado.vb" />
     <Compile Include="Tienda_Empleado.vb" />
+    <Compile Include="Tienda_FormaDepago_Y_Envio.vb" />
     <Compile Include="Tienda_Producto.vb" />
     <Compile Include="Tienda_RegistroHoras.vb" />
     <Compile Include="Tienda_Sucursal.vb" />

@@ -91,6 +91,12 @@
     <Compile Include="MenuPrincipalCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PagoYenvio.Designer.vb">
+      <DependentUpon>PagoYenvio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PagoYenvio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RecordarContraCliente.Designer.vb">
       <DependentUpon>RecordarContraCliente.vb</DependentUpon>
     </Compile>
@@ -207,12 +213,16 @@
     <EmbeddedResource Include="MenuPrincipalCliente.resx">
       <DependentUpon>MenuPrincipalCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PagoYenvio.resx">
+      <DependentUpon>PagoYenvio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecordarContraCliente.resx">
       <DependentUpon>RecordarContraCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecordarContraEmpleado.resx">
       <DependentUpon>RecordarContraEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Carrito.rdlc" />
     <EmbeddedResource Include="Tienda.resx">
       <DependentUpon>Tienda.vb</DependentUpon>
     </EmbeddedResource>

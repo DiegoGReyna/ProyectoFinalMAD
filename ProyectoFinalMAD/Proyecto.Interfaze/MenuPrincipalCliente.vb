@@ -17,6 +17,7 @@
     Private Calle As String
     Private NumeroCasa As String
     Private Activo As String
+    Private NombreCompleto As String
 
     Public Property Id_Cliente1 As Integer
         Get
@@ -180,6 +181,15 @@
         End Set
     End Property
 
+    Public Property NombreCompleto1 As String
+        Get
+            Return NombreCompleto
+        End Get
+        Set(value As String)
+            NombreCompleto = value
+        End Set
+    End Property
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
     End Sub
@@ -216,6 +226,8 @@
         Tienda.Id_Carrito = Id_Carrito1
         Tienda.Id_Usuario = Id_Usuario1
         Tienda.Id_Direccion = Id_Direccion1
+        Tienda.NumCelular = NumCelular1
+        Tienda.NombreCompleto = NombreCompleto1
         Me.Hide()
         Tienda.Show()
     End Sub

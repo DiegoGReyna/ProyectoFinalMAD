@@ -18,20 +18,41 @@ TotalConDescuento  DEC(12,2)
 );
 GO
 
-Drop TYPE TYPE_DETALLE_INGRESO
-go
+CREATE PROC PR_RealizarCompra
+@IdCarritoProductos INT OUTPUT,
+@IdCodigoDebarrasCompras INT OUTPUT,
+@IdCliente INT,
+@IdFormaDePago INT,
+@IdFormaDeEnvio INT,
+@EstadoDePago BIT,
+@DireccionEntrega VARCHAR(250),
+@TotalConDescuento  DEC(12,2),
+@TotalAhorrado  DEC(12,2),
+@TotalSinDescuento  DEC(12,2),
+@productoCarrito TYPE_DETALLE_INGRESO READONLY
 
+AS	
+	DECLARE @IdCarrito int 
 
+	INSERT INTO CARRITO(Id_Cliente,Carrito_Activo)
+	VALUES(@IdCliente,'True')
+	SET @IdCarrito =SCOPE_IDENTITY()
 
+	INSERT INTO COMPRAS_FORMA_DE_PAGOyENVIO(TotalSinDescuento,TotalAhorrado,Total,DireccionEntrega,FechaCompras,EstadoDepago,Id_Forma_De_Pago,Id_Forma_De_Envio)
+	VALUES( @TotalSinDescuento,@TotalAhorrado,@TotalConDescuento,@DireccionEntrega,GETDATE(),@EstadoDePago,@IdFormaDePago,@IdFormaDeEnvio)
+	SET  @IdCodigoDebarrasCompras =@@IDENTITY;
 
+	INSERT CARRITO_PRODUCTOS(Id_CodigoCompra,Id_Carrito,CantidadProducto,Id_Producto,Precio,Descuento)
+	SELECT @IdCodigoDebarrasCompras,@IdCarrito,PR.cantidad,PR.Id_Articulo,PR.Precio,PR.Descuento
+	FROM @productoCarrito PR
+	SET @IdCarritoProductos=@@IDENTITY;
 
+	
 
+	UPDATE CARRITO SET Carrito_Activo='False'
+	WHERE Id_Carrito=@IdCarrito
 
-
-
-
-
-
+GO 
 
 
 -----------------------------------------------------------------
