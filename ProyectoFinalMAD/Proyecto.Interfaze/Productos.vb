@@ -104,7 +104,11 @@
         End Try
     End Sub
     Private Sub BTN_LISTPROD_IMPRIMIR_Click(sender As Object, e As EventArgs) Handles BTN_LISTPROD_IMPRIMIR.Click
+        Try
+            ReporteProductos.ShowDialog()
+        Catch ex As Exception
 
+        End Try
     End Sub
 
     Private Sub FORM_LISTA_PRODUCTOS_Load(sender As Object, e As EventArgs) Handles MyBase.Load

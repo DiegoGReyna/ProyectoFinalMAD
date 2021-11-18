@@ -24,6 +24,7 @@ Partial Class Tienda
     Private Sub InitializeComponent()
         Me.TabControl_Tienda = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
@@ -37,7 +38,6 @@ Partial Class Tienda
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button_Tienda_BuscarCategoria = New System.Windows.Forms.Button()
         Me.Tabla_Tienda_ListaProductos = New System.Windows.Forms.DataGridView()
-        Me.SeleccionarProductoTienda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Button_Carrito_EliminarSelect = New System.Windows.Forms.Button()
@@ -56,6 +56,10 @@ Partial Class Tienda
         Me.TextBox_PagoEnvio_CodigoDeBarras = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.TextBox_PagoEnvio_TotalSinDescuento = New System.Windows.Forms.TextBox()
+        Me.TextBox_PagoEnvio_ahorrar = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Button_PagoEnvio_SeleccionarSucursal = New System.Windows.Forms.Button()
         Me.Button_PagoEnvio_CancelarPagoEnvio = New System.Windows.Forms.Button()
         Me.Button_PagoEnvio_SeleccionarFormaEnvio = New System.Windows.Forms.Button()
@@ -79,13 +83,15 @@ Partial Class Tienda
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.DataGridView_HistorialRecivosCompras = New System.Windows.Forms.DataGridView()
+        Me.SeleccionarHistorialRecivos = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TextBox_Tienda__IdCarrito = New System.Windows.Forms.TextBox()
         Me.TextBox_Tienda_IdCliente = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox_PagoEnvio_ahorrar = New System.Windows.Forms.TextBox()
-        Me.TextBox_PagoEnvio_TotalSinDescuento = New System.Windows.Forms.TextBox()
+        Me.SeleccionarProductoTienda = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabControl_Tienda.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -98,7 +104,7 @@ Partial Class Tienda
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabPage4.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView_HistorialRecivosCompras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl_Tienda
@@ -115,7 +121,8 @@ Partial Class Tienda
         '
         'TabPage1
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(157, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.TabPage1.Controls.Add(Me.Label16)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Controls.Add(Me.Button_Tienda_Atras)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
@@ -128,6 +135,17 @@ Partial Class Tienda
         Me.TabPage1.Size = New System.Drawing.Size(1330, 674)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Tienda"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label16.Location = New System.Drawing.Point(29, 11)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(121, 37)
+        Me.Label16.TabIndex = 11
+        Me.Label16.Text = "Tienda"
         '
         'GroupBox1
         '
@@ -216,7 +234,7 @@ Partial Class Tienda
         '
         Me.Button_Tienda_Atras.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button_Tienda_Atras.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_Tienda_Atras.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button_Tienda_Atras.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button_Tienda_Atras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button_Tienda_Atras.Location = New System.Drawing.Point(30, 627)
         Me.Button_Tienda_Atras.Name = "Button_Tienda_Atras"
@@ -257,12 +275,6 @@ Partial Class Tienda
         Me.Tabla_Tienda_ListaProductos.Size = New System.Drawing.Size(1234, 293)
         Me.Tabla_Tienda_ListaProductos.TabIndex = 0
         '
-        'SeleccionarProductoTienda
-        '
-        Me.SeleccionarProductoTienda.HeaderText = "Seleccionar"
-        Me.SeleccionarProductoTienda.Name = "SeleccionarProductoTienda"
-        Me.SeleccionarProductoTienda.ReadOnly = True
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(429, 53)
@@ -274,7 +286,7 @@ Partial Class Tienda
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(157, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.TabPage2.Controls.Add(Me.Button_Carrito_EliminarSelect)
         Me.TabPage2.Controls.Add(Me.TextBox_Carrito_TotalApagar)
         Me.TabPage2.Controls.Add(Me.TextBox_Carrito_TotalAhorrado)
@@ -298,11 +310,11 @@ Partial Class Tienda
         '
         Me.Button_Carrito_EliminarSelect.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button_Carrito_EliminarSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_Carrito_EliminarSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button_Carrito_EliminarSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button_Carrito_EliminarSelect.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button_Carrito_EliminarSelect.Location = New System.Drawing.Point(22, 398)
         Me.Button_Carrito_EliminarSelect.Name = "Button_Carrito_EliminarSelect"
-        Me.Button_Carrito_EliminarSelect.Size = New System.Drawing.Size(212, 43)
+        Me.Button_Carrito_EliminarSelect.Size = New System.Drawing.Size(212, 32)
         Me.Button_Carrito_EliminarSelect.TabIndex = 12
         Me.Button_Carrito_EliminarSelect.Text = "Eliminar Seleccionado"
         Me.Button_Carrito_EliminarSelect.UseVisualStyleBackColor = False
@@ -347,7 +359,7 @@ Partial Class Tienda
         '
         Me.Button_Carrito_Pagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button_Carrito_Pagar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_Carrito_Pagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button_Carrito_Pagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button_Carrito_Pagar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button_Carrito_Pagar.Location = New System.Drawing.Point(1169, 581)
         Me.Button_Carrito_Pagar.Name = "Button_Carrito_Pagar"
@@ -359,10 +371,11 @@ Partial Class Tienda
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label3.Location = New System.Drawing.Point(33, 30)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 31)
+        Me.Label3.Size = New System.Drawing.Size(131, 37)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Carrito "
         '
@@ -370,11 +383,11 @@ Partial Class Tienda
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button3.Location = New System.Drawing.Point(22, 496)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(104, 43)
+        Me.Button3.Size = New System.Drawing.Size(104, 32)
         Me.Button3.TabIndex = 5
         Me.Button3.Text = "Imprimir "
         Me.Button3.UseVisualStyleBackColor = False
@@ -383,11 +396,11 @@ Partial Class Tienda
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button2.Location = New System.Drawing.Point(22, 447)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(164, 43)
+        Me.Button2.Size = New System.Drawing.Size(164, 32)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Eliminar todo"
         Me.Button2.UseVisualStyleBackColor = False
@@ -426,7 +439,7 @@ Partial Class Tienda
         '
         'TabPage3
         '
-        Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(157, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.TabPage3.Controls.Add(Me.TextBox_PagoEnvio_CodigoDeBarras)
         Me.TabPage3.Controls.Add(Me.Label11)
         Me.TabPage3.Controls.Add(Me.GroupBox5)
@@ -447,10 +460,11 @@ Partial Class Tienda
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!)
-        Me.Label11.Location = New System.Drawing.Point(32, 17)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label11.Location = New System.Drawing.Point(81, 11)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(356, 37)
+        Me.Label11.Size = New System.Drawing.Size(378, 37)
         Me.Label11.TabIndex = 10
         Me.Label11.Text = "Metodo de pago y envio"
         '
@@ -482,6 +496,44 @@ Partial Class Tienda
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "GroupBox5"
         '
+        'TextBox_PagoEnvio_TotalSinDescuento
+        '
+        Me.TextBox_PagoEnvio_TotalSinDescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.TextBox_PagoEnvio_TotalSinDescuento.Location = New System.Drawing.Point(761, 132)
+        Me.TextBox_PagoEnvio_TotalSinDescuento.Name = "TextBox_PagoEnvio_TotalSinDescuento"
+        Me.TextBox_PagoEnvio_TotalSinDescuento.ReadOnly = True
+        Me.TextBox_PagoEnvio_TotalSinDescuento.Size = New System.Drawing.Size(344, 26)
+        Me.TextBox_PagoEnvio_TotalSinDescuento.TabIndex = 27
+        '
+        'TextBox_PagoEnvio_ahorrar
+        '
+        Me.TextBox_PagoEnvio_ahorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.TextBox_PagoEnvio_ahorrar.Location = New System.Drawing.Point(761, 178)
+        Me.TextBox_PagoEnvio_ahorrar.Name = "TextBox_PagoEnvio_ahorrar"
+        Me.TextBox_PagoEnvio_ahorrar.ReadOnly = True
+        Me.TextBox_PagoEnvio_ahorrar.Size = New System.Drawing.Size(344, 26)
+        Me.TextBox_PagoEnvio_ahorrar.TabIndex = 26
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Label14.Location = New System.Drawing.Point(576, 131)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(193, 25)
+        Me.Label14.TabIndex = 25
+        Me.Label14.Text = "Total sin descuento: "
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Label13.Location = New System.Drawing.Point(619, 178)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(150, 25)
+        Me.Label13.TabIndex = 24
+        Me.Label13.Text = "Total a ahorrar: "
+        '
         'Button_PagoEnvio_SeleccionarSucursal
         '
         Me.Button_PagoEnvio_SeleccionarSucursal.Location = New System.Drawing.Point(738, 18)
@@ -496,7 +548,7 @@ Partial Class Tienda
         '
         Me.Button_PagoEnvio_CancelarPagoEnvio.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button_PagoEnvio_CancelarPagoEnvio.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_PagoEnvio_CancelarPagoEnvio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button_PagoEnvio_CancelarPagoEnvio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button_PagoEnvio_CancelarPagoEnvio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button_PagoEnvio_CancelarPagoEnvio.Location = New System.Drawing.Point(759, 273)
         Me.Button_PagoEnvio_CancelarPagoEnvio.Name = "Button_PagoEnvio_CancelarPagoEnvio"
@@ -543,7 +595,7 @@ Partial Class Tienda
         '
         Me.Button_PagoEnvio_Pendiente.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button_PagoEnvio_Pendiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_PagoEnvio_Pendiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button_PagoEnvio_Pendiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button_PagoEnvio_Pendiente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button_PagoEnvio_Pendiente.Location = New System.Drawing.Point(878, 273)
         Me.Button_PagoEnvio_Pendiente.Name = "Button_PagoEnvio_Pendiente"
@@ -576,7 +628,7 @@ Partial Class Tienda
         '
         Me.Button_PagoEnvio_Pagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Button_PagoEnvio_Pagar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_PagoEnvio_Pagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Button_PagoEnvio_Pagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Button_PagoEnvio_Pagar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.Button_PagoEnvio_Pagar.Location = New System.Drawing.Point(994, 271)
         Me.Button_PagoEnvio_Pagar.Name = "Button_PagoEnvio_Pagar"
@@ -710,25 +762,82 @@ Partial Class Tienda
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.DataGridView3)
+        Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.TabPage4.Controls.Add(Me.TextBox1)
+        Me.TabPage4.Controls.Add(Me.Button5)
+        Me.TabPage4.Controls.Add(Me.Button4)
+        Me.TabPage4.Controls.Add(Me.Label15)
+        Me.TabPage4.Controls.Add(Me.DataGridView_HistorialRecivosCompras)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(1330, 674)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Historial de resivos"
-        Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'DataGridView3
+        'TextBox1
         '
-        Me.DataGridView3.AllowUserToAddRows = False
-        Me.DataGridView3.AllowUserToDeleteRows = False
-        Me.DataGridView3.AllowUserToOrderColumns = True
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(20, 89)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.ReadOnly = True
-        Me.DataGridView3.Size = New System.Drawing.Size(1080, 291)
-        Me.DataGridView3.TabIndex = 0
+        Me.TextBox1.Location = New System.Drawing.Point(387, 52)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(556, 20)
+        Me.TextBox1.TabIndex = 15
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Button5.Location = New System.Drawing.Point(275, 52)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(106, 24)
+        Me.Button5.TabIndex = 14
+        Me.Button5.Text = "Buscar"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Button4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Button4.Location = New System.Drawing.Point(89, 473)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(164, 43)
+        Me.Button4.TabIndex = 13
+        Me.Button4.Text = "Imprimir PDF"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label15.Location = New System.Drawing.Point(82, 10)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(259, 37)
+        Me.Label15.TabIndex = 11
+        Me.Label15.Text = "Historial recivos"
+        '
+        'DataGridView_HistorialRecivosCompras
+        '
+        Me.DataGridView_HistorialRecivosCompras.AllowUserToAddRows = False
+        Me.DataGridView_HistorialRecivosCompras.AllowUserToDeleteRows = False
+        Me.DataGridView_HistorialRecivosCompras.AllowUserToOrderColumns = True
+        Me.DataGridView_HistorialRecivosCompras.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.DataGridView_HistorialRecivosCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView_HistorialRecivosCompras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SeleccionarHistorialRecivos})
+        Me.DataGridView_HistorialRecivosCompras.Location = New System.Drawing.Point(89, 87)
+        Me.DataGridView_HistorialRecivosCompras.Name = "DataGridView_HistorialRecivosCompras"
+        Me.DataGridView_HistorialRecivosCompras.ReadOnly = True
+        Me.DataGridView_HistorialRecivosCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView_HistorialRecivosCompras.Size = New System.Drawing.Size(1080, 364)
+        Me.DataGridView_HistorialRecivosCompras.TabIndex = 0
+        '
+        'SeleccionarHistorialRecivos
+        '
+        Me.SeleccionarHistorialRecivos.HeaderText = "Seleccionar"
+        Me.SeleccionarHistorialRecivos.Name = "SeleccionarHistorialRecivos"
+        Me.SeleccionarHistorialRecivos.ReadOnly = True
         '
         'TextBox_Tienda__IdCarrito
         '
@@ -746,43 +855,13 @@ Partial Class Tienda
         Me.TextBox_Tienda_IdCliente.Size = New System.Drawing.Size(100, 20)
         Me.TextBox_Tienda_IdCliente.TabIndex = 4
         '
-        'Label13
+        'SeleccionarProductoTienda
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label13.Location = New System.Drawing.Point(619, 178)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(150, 25)
-        Me.Label13.TabIndex = 24
-        Me.Label13.Text = "Total a ahorrar: "
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label14.Location = New System.Drawing.Point(576, 131)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(193, 25)
-        Me.Label14.TabIndex = 25
-        Me.Label14.Text = "Total sin descuento: "
-        '
-        'TextBox_PagoEnvio_ahorrar
-        '
-        Me.TextBox_PagoEnvio_ahorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox_PagoEnvio_ahorrar.Location = New System.Drawing.Point(761, 178)
-        Me.TextBox_PagoEnvio_ahorrar.Name = "TextBox_PagoEnvio_ahorrar"
-        Me.TextBox_PagoEnvio_ahorrar.ReadOnly = True
-        Me.TextBox_PagoEnvio_ahorrar.Size = New System.Drawing.Size(344, 26)
-        Me.TextBox_PagoEnvio_ahorrar.TabIndex = 26
-        '
-        'TextBox_PagoEnvio_TotalSinDescuento
-        '
-        Me.TextBox_PagoEnvio_TotalSinDescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox_PagoEnvio_TotalSinDescuento.Location = New System.Drawing.Point(761, 132)
-        Me.TextBox_PagoEnvio_TotalSinDescuento.Name = "TextBox_PagoEnvio_TotalSinDescuento"
-        Me.TextBox_PagoEnvio_TotalSinDescuento.ReadOnly = True
-        Me.TextBox_PagoEnvio_TotalSinDescuento.Size = New System.Drawing.Size(344, 26)
-        Me.TextBox_PagoEnvio_TotalSinDescuento.TabIndex = 27
+        Me.SeleccionarProductoTienda.HeaderText = "Seleccionar"
+        Me.SeleccionarProductoTienda.Name = "SeleccionarProductoTienda"
+        Me.SeleccionarProductoTienda.ReadOnly = True
+        Me.SeleccionarProductoTienda.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SeleccionarProductoTienda.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'Tienda
         '
@@ -798,6 +877,7 @@ Partial Class Tienda
         Me.Text = "Tienda"
         Me.TabControl_Tienda.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
@@ -813,7 +893,8 @@ Partial Class Tienda
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.PerformLayout()
+        CType(Me.DataGridView_HistorialRecivosCompras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -842,11 +923,10 @@ Partial Class Tienda
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridView_HistorialRecivosCompras As DataGridView
     Friend WithEvents TextBox_Tienda__IdCarrito As TextBox
     Friend WithEvents TextBox_Tienda_IdCliente As TextBox
     Friend WithEvents Button_Tienda_Atras As Button
-    Friend WithEvents SeleccionarProductoTienda As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents ComboBox3 As ComboBox
@@ -883,4 +963,11 @@ Partial Class Tienda
     Friend WithEvents TextBox_PagoEnvio_ahorrar As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents SeleccionarHistorialRecivos As DataGridViewCheckBoxColumn
+    Friend WithEvents SeleccionarProductoTienda As DataGridViewCheckBoxColumn
 End Class

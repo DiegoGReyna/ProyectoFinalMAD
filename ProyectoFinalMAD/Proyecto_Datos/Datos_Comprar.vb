@@ -41,5 +41,45 @@ Public Class Datos_Comprar
 
         End Try
 
+        Try
+
+            'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
+            Dim Comando As New SqlCommand("PR_ImprimirCarrito", MyBase.conexion)
+            Comando.CommandType = CommandType.StoredProcedure
+            'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
+
+
+            Comando.Parameters.Add("@productoCarrito", SqlDbType.Structured).Value = Carrito
+
+
+            MyBase.conexion.Open()
+            Comando.ExecuteNonQuery()
+            MyBase.conexion.Close()
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+
     End Sub
+
+    Public Function MostarHistorialCompras(IdCliente As Integer) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            'debemos de pasar el stored procedured y nuestra direccion de la conexion con la base de datos
+            Dim Comando As New SqlCommand("PR_Historial_Recivos", MyBase.conexion)
+            Comando.CommandType = CommandType.StoredProcedure
+            'Obtenemos las variables creadas en sql y lo igualamos al parametro que deseamos buscar 
+            Comando.Parameters.Add("@IdCliente", SqlDbType.Int).Value = IdCliente
+            MyBase.conexion.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conexion.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+    End Function
+
 End Class

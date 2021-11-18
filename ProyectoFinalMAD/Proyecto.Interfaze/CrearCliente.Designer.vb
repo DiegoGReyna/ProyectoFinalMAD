@@ -91,6 +91,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_Celular
         '
         Me.TextBox_CrearCliente_Celular.Location = New System.Drawing.Point(102, 95)
+        Me.TextBox_CrearCliente_Celular.MaxLength = 50
         Me.TextBox_CrearCliente_Celular.Name = "TextBox_CrearCliente_Celular"
         Me.TextBox_CrearCliente_Celular.Size = New System.Drawing.Size(382, 29)
         Me.TextBox_CrearCliente_Celular.TabIndex = 5
@@ -98,6 +99,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_ClienteCorreo
         '
         Me.TextBox_CrearCliente_ClienteCorreo.Location = New System.Drawing.Point(201, 39)
+        Me.TextBox_CrearCliente_ClienteCorreo.MaxLength = 50
         Me.TextBox_CrearCliente_ClienteCorreo.Name = "TextBox_CrearCliente_ClienteCorreo"
         Me.TextBox_CrearCliente_ClienteCorreo.Size = New System.Drawing.Size(283, 29)
         Me.TextBox_CrearCliente_ClienteCorreo.TabIndex = 4
@@ -156,6 +158,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_UsuarioCURP
         '
         Me.TextBox_CrearCliente_UsuarioCURP.Location = New System.Drawing.Point(434, 46)
+        Me.TextBox_CrearCliente_UsuarioCURP.MaxLength = 20
         Me.TextBox_CrearCliente_UsuarioCURP.Name = "TextBox_CrearCliente_UsuarioCURP"
         Me.TextBox_CrearCliente_UsuarioCURP.Size = New System.Drawing.Size(186, 29)
         Me.TextBox_CrearCliente_UsuarioCURP.TabIndex = 11
@@ -163,6 +166,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_usuarioApellidoMaterno
         '
         Me.TextBox_CrearCliente_usuarioApellidoMaterno.Location = New System.Drawing.Point(168, 122)
+        Me.TextBox_CrearCliente_usuarioApellidoMaterno.MaxLength = 50
         Me.TextBox_CrearCliente_usuarioApellidoMaterno.Name = "TextBox_CrearCliente_usuarioApellidoMaterno"
         Me.TextBox_CrearCliente_usuarioApellidoMaterno.Size = New System.Drawing.Size(159, 29)
         Me.TextBox_CrearCliente_usuarioApellidoMaterno.TabIndex = 10
@@ -170,6 +174,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_usuarioApellidoPaterno
         '
         Me.TextBox_CrearCliente_usuarioApellidoPaterno.Location = New System.Drawing.Point(168, 82)
+        Me.TextBox_CrearCliente_usuarioApellidoPaterno.MaxLength = 50
         Me.TextBox_CrearCliente_usuarioApellidoPaterno.Name = "TextBox_CrearCliente_usuarioApellidoPaterno"
         Me.TextBox_CrearCliente_usuarioApellidoPaterno.Size = New System.Drawing.Size(159, 29)
         Me.TextBox_CrearCliente_usuarioApellidoPaterno.TabIndex = 9
@@ -177,6 +182,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_UsuarioNombre
         '
         Me.TextBox_CrearCliente_UsuarioNombre.Location = New System.Drawing.Point(98, 46)
+        Me.TextBox_CrearCliente_UsuarioNombre.MaxLength = 50
         Me.TextBox_CrearCliente_UsuarioNombre.Name = "TextBox_CrearCliente_UsuarioNombre"
         Me.TextBox_CrearCliente_UsuarioNombre.Size = New System.Drawing.Size(229, 29)
         Me.TextBox_CrearCliente_UsuarioNombre.TabIndex = 8
@@ -288,6 +294,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_DireccionCalle
         '
         Me.TextBox_CrearCliente_DireccionCalle.Location = New System.Drawing.Point(375, 43)
+        Me.TextBox_CrearCliente_DireccionCalle.MaxLength = 150
         Me.TextBox_CrearCliente_DireccionCalle.Name = "TextBox_CrearCliente_DireccionCalle"
         Me.TextBox_CrearCliente_DireccionCalle.Size = New System.Drawing.Size(209, 29)
         Me.TextBox_CrearCliente_DireccionCalle.TabIndex = 10
@@ -295,6 +302,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_DireccionCodigoPostal
         '
         Me.TextBox_CrearCliente_DireccionCodigoPostal.Location = New System.Drawing.Point(137, 161)
+        Me.TextBox_CrearCliente_DireccionCodigoPostal.MaxLength = 60
         Me.TextBox_CrearCliente_DireccionCodigoPostal.Name = "TextBox_CrearCliente_DireccionCodigoPostal"
         Me.TextBox_CrearCliente_DireccionCodigoPostal.Size = New System.Drawing.Size(154, 29)
         Me.TextBox_CrearCliente_DireccionCodigoPostal.TabIndex = 9
@@ -302,6 +310,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_DireccionColonia
         '
         Me.TextBox_CrearCliente_DireccionColonia.Location = New System.Drawing.Point(85, 121)
+        Me.TextBox_CrearCliente_DireccionColonia.MaxLength = 60
         Me.TextBox_CrearCliente_DireccionColonia.Name = "TextBox_CrearCliente_DireccionColonia"
         Me.TextBox_CrearCliente_DireccionColonia.Size = New System.Drawing.Size(206, 29)
         Me.TextBox_CrearCliente_DireccionColonia.TabIndex = 8
@@ -351,6 +360,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_DireccionMunicipio
         '
         Me.TextBox_CrearCliente_DireccionMunicipio.Location = New System.Drawing.Point(109, 81)
+        Me.TextBox_CrearCliente_DireccionMunicipio.MaxLength = 60
         Me.TextBox_CrearCliente_DireccionMunicipio.Name = "TextBox_CrearCliente_DireccionMunicipio"
         Me.TextBox_CrearCliente_DireccionMunicipio.Size = New System.Drawing.Size(182, 29)
         Me.TextBox_CrearCliente_DireccionMunicipio.TabIndex = 3
@@ -368,6 +378,7 @@ Partial Class FORM_CrearCliente
         'TextBox_CrearCliente_DireccionEstado
         '
         Me.TextBox_CrearCliente_DireccionEstado.Location = New System.Drawing.Point(84, 43)
+        Me.TextBox_CrearCliente_DireccionEstado.MaxLength = 60
         Me.TextBox_CrearCliente_DireccionEstado.Name = "TextBox_CrearCliente_DireccionEstado"
         Me.TextBox_CrearCliente_DireccionEstado.Size = New System.Drawing.Size(207, 29)
         Me.TextBox_CrearCliente_DireccionEstado.TabIndex = 1

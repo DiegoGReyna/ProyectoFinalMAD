@@ -302,6 +302,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_EmpleadoRFC
         '
         Me.TextBox_ListaEmpleado_EmpleadoRFC.Location = New System.Drawing.Point(54, 95)
+        Me.TextBox_ListaEmpleado_EmpleadoRFC.MaxLength = 20
         Me.TextBox_ListaEmpleado_EmpleadoRFC.Name = "TextBox_ListaEmpleado_EmpleadoRFC"
         Me.TextBox_ListaEmpleado_EmpleadoRFC.Size = New System.Drawing.Size(261, 23)
         Me.TextBox_ListaEmpleado_EmpleadoRFC.TabIndex = 5
@@ -309,6 +310,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_EmpleadoNomUsuario
         '
         Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Location = New System.Drawing.Point(132, 33)
+        Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.MaxLength = 50
         Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Name = "TextBox_ListaEmpleado_EmpleadoNomUsuario"
         Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.Size = New System.Drawing.Size(183, 23)
         Me.TextBox_ListaEmpleado_EmpleadoNomUsuario.TabIndex = 4
@@ -394,7 +396,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'Button_ListaEmpleado_Editar
         '
-        Me.Button_ListaEmpleado_Editar.Location = New System.Drawing.Point(376, 457)
+        Me.Button_ListaEmpleado_Editar.Location = New System.Drawing.Point(480, 457)
         Me.Button_ListaEmpleado_Editar.Name = "Button_ListaEmpleado_Editar"
         Me.Button_ListaEmpleado_Editar.Size = New System.Drawing.Size(98, 45)
         Me.Button_ListaEmpleado_Editar.TabIndex = 4
@@ -403,7 +405,7 @@ Partial Class FORM_LISTA_EMPLEADO
         '
         'Button_ListaEmpleado_Cancelar
         '
-        Me.Button_ListaEmpleado_Cancelar.Location = New System.Drawing.Point(596, 456)
+        Me.Button_ListaEmpleado_Cancelar.Location = New System.Drawing.Point(596, 457)
         Me.Button_ListaEmpleado_Cancelar.Name = "Button_ListaEmpleado_Cancelar"
         Me.Button_ListaEmpleado_Cancelar.Size = New System.Drawing.Size(98, 45)
         Me.Button_ListaEmpleado_Cancelar.TabIndex = 3
@@ -443,6 +445,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_UsuarioContrasena
         '
         Me.TextBox_ListaEmpleado_UsuarioContrasena.Location = New System.Drawing.Point(385, 85)
+        Me.TextBox_ListaEmpleado_UsuarioContrasena.MaxLength = 60
         Me.TextBox_ListaEmpleado_UsuarioContrasena.Name = "TextBox_ListaEmpleado_UsuarioContrasena"
         Me.TextBox_ListaEmpleado_UsuarioContrasena.Size = New System.Drawing.Size(145, 23)
         Me.TextBox_ListaEmpleado_UsuarioContrasena.TabIndex = 12
@@ -450,6 +453,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_UsuarioCURP
         '
         Me.TextBox_ListaEmpleado_UsuarioCURP.Location = New System.Drawing.Point(344, 46)
+        Me.TextBox_ListaEmpleado_UsuarioCURP.MaxLength = 20
         Me.TextBox_ListaEmpleado_UsuarioCURP.Name = "TextBox_ListaEmpleado_UsuarioCURP"
         Me.TextBox_ListaEmpleado_UsuarioCURP.Size = New System.Drawing.Size(186, 23)
         Me.TextBox_ListaEmpleado_UsuarioCURP.TabIndex = 11
@@ -457,6 +461,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_usuarioApellidoMaterno
         '
         Me.TextBox_ListaEmpleado_usuarioApellidoMaterno.Location = New System.Drawing.Point(137, 121)
+        Me.TextBox_ListaEmpleado_usuarioApellidoMaterno.MaxLength = 50
         Me.TextBox_ListaEmpleado_usuarioApellidoMaterno.Name = "TextBox_ListaEmpleado_usuarioApellidoMaterno"
         Me.TextBox_ListaEmpleado_usuarioApellidoMaterno.Size = New System.Drawing.Size(159, 23)
         Me.TextBox_ListaEmpleado_usuarioApellidoMaterno.TabIndex = 10
@@ -464,6 +469,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_usuarioApellidoPaterno
         '
         Me.TextBox_ListaEmpleado_usuarioApellidoPaterno.Location = New System.Drawing.Point(137, 82)
+        Me.TextBox_ListaEmpleado_usuarioApellidoPaterno.MaxLength = 50
         Me.TextBox_ListaEmpleado_usuarioApellidoPaterno.Name = "TextBox_ListaEmpleado_usuarioApellidoPaterno"
         Me.TextBox_ListaEmpleado_usuarioApellidoPaterno.Size = New System.Drawing.Size(159, 23)
         Me.TextBox_ListaEmpleado_usuarioApellidoPaterno.TabIndex = 9
@@ -471,6 +477,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_UsuarioNombre
         '
         Me.TextBox_ListaEmpleado_UsuarioNombre.Location = New System.Drawing.Point(72, 46)
+        Me.TextBox_ListaEmpleado_UsuarioNombre.MaxLength = 50
         Me.TextBox_ListaEmpleado_UsuarioNombre.Name = "TextBox_ListaEmpleado_UsuarioNombre"
         Me.TextBox_ListaEmpleado_UsuarioNombre.Size = New System.Drawing.Size(224, 23)
         Me.TextBox_ListaEmpleado_UsuarioNombre.TabIndex = 8
@@ -562,6 +569,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_NumDomicilio
         '
         Me.TextBox_ListaEmpleado_NumDomicilio.Location = New System.Drawing.Point(353, 82)
+        Me.TextBox_ListaEmpleado_NumDomicilio.MaxLength = 60
         Me.TextBox_ListaEmpleado_NumDomicilio.Name = "TextBox_ListaEmpleado_NumDomicilio"
         Me.TextBox_ListaEmpleado_NumDomicilio.Size = New System.Drawing.Size(178, 23)
         Me.TextBox_ListaEmpleado_NumDomicilio.TabIndex = 11
@@ -569,6 +577,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_DireccionCalle
         '
         Me.TextBox_ListaEmpleado_DireccionCalle.Location = New System.Drawing.Point(322, 46)
+        Me.TextBox_ListaEmpleado_DireccionCalle.MaxLength = 150
         Me.TextBox_ListaEmpleado_DireccionCalle.Name = "TextBox_ListaEmpleado_DireccionCalle"
         Me.TextBox_ListaEmpleado_DireccionCalle.Size = New System.Drawing.Size(209, 23)
         Me.TextBox_ListaEmpleado_DireccionCalle.TabIndex = 10
@@ -576,6 +585,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_DireccionCodigoPostal
         '
         Me.TextBox_ListaEmpleado_DireccionCodigoPostal.Location = New System.Drawing.Point(113, 161)
+        Me.TextBox_ListaEmpleado_DireccionCodigoPostal.MaxLength = 60
         Me.TextBox_ListaEmpleado_DireccionCodigoPostal.Name = "TextBox_ListaEmpleado_DireccionCodigoPostal"
         Me.TextBox_ListaEmpleado_DireccionCodigoPostal.Size = New System.Drawing.Size(154, 23)
         Me.TextBox_ListaEmpleado_DireccionCodigoPostal.TabIndex = 9
@@ -583,6 +593,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_DireccionColonia
         '
         Me.TextBox_ListaEmpleado_DireccionColonia.Location = New System.Drawing.Point(85, 121)
+        Me.TextBox_ListaEmpleado_DireccionColonia.MaxLength = 60
         Me.TextBox_ListaEmpleado_DireccionColonia.Name = "TextBox_ListaEmpleado_DireccionColonia"
         Me.TextBox_ListaEmpleado_DireccionColonia.Size = New System.Drawing.Size(182, 23)
         Me.TextBox_ListaEmpleado_DireccionColonia.TabIndex = 8
@@ -642,6 +653,7 @@ Partial Class FORM_LISTA_EMPLEADO
         'TextBox_ListaEmpleado_DireccionEstado
         '
         Me.TextBox_ListaEmpleado_DireccionEstado.Location = New System.Drawing.Point(84, 43)
+        Me.TextBox_ListaEmpleado_DireccionEstado.MaxLength = 60
         Me.TextBox_ListaEmpleado_DireccionEstado.Name = "TextBox_ListaEmpleado_DireccionEstado"
         Me.TextBox_ListaEmpleado_DireccionEstado.Size = New System.Drawing.Size(182, 23)
         Me.TextBox_ListaEmpleado_DireccionEstado.TabIndex = 1

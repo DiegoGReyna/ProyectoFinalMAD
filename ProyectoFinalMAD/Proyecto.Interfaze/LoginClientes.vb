@@ -48,6 +48,7 @@ Public Class LoginClientes
                         MsgBox("Iniciando sesion")
                         Me.Hide()
                         Dim ClienteLogiado As New Proyecto_Entidades.ClienteLogiado
+                        VariablesCliente.idCliente = LoginCliente.Id_Cliente
                         MenuPrincipalCliente.Id_Cliente1 = LoginCliente.Id_Cliente
                         MenuPrincipalCliente.Id_Usuario1 = LoginCliente.Id_Usuario
                         MenuPrincipalCliente.Id_Carrito1 = LoginCliente.Id_Carrito

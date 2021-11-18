@@ -186,8 +186,6 @@ CREATE TABLE ACCIONES_CLIENTE(
 	FOREIGN KEY(Id_Cliente) REFERENCES CLIENTE(Id_Cliente),
 	CONSTRAINT FK_ACCIONES_CLIENTE_Id_ClaseAcciones
 	FOREIGN KEY(Id_ClaseAcciones) REFERENCES CLASE_ACCIONES_CLIENTE(Id_Clase),
-
-
 );
 GO
 
@@ -200,8 +198,6 @@ CREATE TABLE CARRITO(
 	CONSTRAINT FK_CARRITO_Id_Cliente
 	FOREIGN KEY(Id_Cliente) REFERENCES CLIENTE(Id_Cliente),
 	
-
-
 );
 GO
 
@@ -212,7 +208,8 @@ CREATE TABLE CARRITO_PRODUCTOS(
 	CantidadProducto INT NOT NULL,
 	Id_Producto INT NOT NULL,
 	Precio  DEC(12,2)NOT NULL,
-	Descuento DEC(4,2)NOT NULL
+	Descuento DEC(4,2)NOT NULL,
+	PrecioConDescuento DEC(12,2)NOT NULL
 	CONSTRAINT FK_CARRITO_PRODUCTOS_Id_Carrito
 	FOREIGN KEY(Id_Carrito) REFERENCES CARRITO(Id_Carrito),
 
@@ -252,6 +249,7 @@ CREATE TABLE COMPRAS(																			----
 );																								----
 GO																								----
 ----------------------------------------------------------------------------------------------------
+
 CREATE TABLE COMPRAS_FORMA_DE_PAGOyENVIO(
 	Id_CodigoDeBarras INT PRIMARY KEY IDENTITY NOT NULL,													
 	Total DEC(12,2) NOT NULL,																	

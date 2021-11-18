@@ -1,4 +1,5 @@
-﻿Public Class Tienda
+﻿
+Public Class Tienda
     Private TablaCarrito As New DataTable
 
 
@@ -267,6 +268,41 @@
         ''CheckBox_Productos_Seleccionar.CheckState = False
         '' Label_Productos_TotalProductos.Text = "Total De Productos Registrados: " & DataGridView_Productos.DataSource.Rows.Count
     End Sub
+
+    Private Sub FormatoHistorialResivos()
+        DataGridView_HistorialRecivosCompras.Columns(0).Visible = False
+
+        DataGridView_HistorialRecivosCompras.Columns(0).Width = 80
+        DataGridView_HistorialRecivosCompras.Columns(1).Width = 100
+        DataGridView_HistorialRecivosCompras.Columns(2).Visible = False
+        DataGridView_HistorialRecivosCompras.Columns(2).Width = 100
+        DataGridView_HistorialRecivosCompras.Columns(3).Width = 120
+        DataGridView_HistorialRecivosCompras.Columns(4).Width = 200
+        DataGridView_HistorialRecivosCompras.Columns(5).Width = 100
+        DataGridView_HistorialRecivosCompras.Columns(6).Width = 100
+        DataGridView_HistorialRecivosCompras.Columns(7).Width = 80
+        ''DataGridView_HistorialRecivosCompras.Columns(8).Width = 80
+        ''DataGridView_HistorialRecivosCompras.Columns(9).Width = 80
+
+        '' DataGridView_Productos.Columns.Item("Seleccionar").Visible = False
+        ''Button_Productos_Eliminar.Visible = False
+        '' Button_Productos_Activar.Visible = False
+        '' Button_Productos_Desactivar.Visible = False
+        ''CheckBox_Productos_Seleccionar.CheckState = False
+        '' Label_Productos_TotalProductos.Text = "Total De Productos Registrados: " & DataGridView_Productos.DataSource.Rows.Count
+    End Sub
+
+    Private Sub BuscarCleinteHistorialResivoCompras()
+        Try
+            Dim Tienda As New Proyecto_Tienda.Tienda_Comprar
+            DataGridView_HistorialRecivosCompras.DataSource = Tienda.MostarHistorialCompras(VariablesCliente.idCliente)
+
+            Me.FormatoHistorialResivos()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     Private Sub Mostrar()
         Try
             Dim Tienda As New Proyecto_Tienda.Tienda_Producto
@@ -410,7 +446,7 @@
         End Try
     End Sub
     Private Sub Tienda_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.BuscarCleinteHistorialResivoCompras()
         Me.CargarComboBoxSucursal()
         Me.CargarComboBoxFormaEnvio()
         Me.CargarComboBoxFormaPago()
@@ -452,16 +488,19 @@
         Dim Precio As Decimal = RowProductos.Cells("Precio").Value
         Dim Descuento As Decimal = RowProductos.Cells("Descuento").Value
         Dim Cantidad As Integer = RowProductos.Cells("cantidad").Value
+        Dim Stock As Integer = RowProductos.Cells("stock").Value
+        Dim NombreProducto As String = RowProductos.Cells("Nombre").Value
         Dim TotalSinDescuento As Decimal
         Dim DescuentoFinal As Decimal
         Dim ResiduoDescuento As Decimal
         Dim Ahorrado As Decimal
         Dim PrecioConDescuento As Decimal
         Dim TotalConDescuento As Decimal
-
-        ''Dim ahorrado As Decimal = RowProductos.Cells("ahorrado").Value
-        ''Dim TatalSinDescuento As Decimal = RowProductos.Cells("TotalSinDescuento").Value
-        ''Dim TatalConDescuento As Decimal = RowProductos.Cells("TotalConDescuento").Value
+        If (Cantidad > Stock) Then
+            Cantidad = Stock
+            MsgBox("La catidad del producto: " & NombreProducto & " supera el stock dispoble que es de: " & Stock, vbOKOnly + vbCritical, "Stock de producto insuficiente")
+        End If
+        RowProductos.Cells("cantidad").Value = Cantidad
         DescuentoFinal = Math.Round((Descuento / 100), 2)
         TotalSinDescuento = Precio * Cantidad
         ResiduoDescuento = Math.Round((Precio * DescuentoFinal), 2)
@@ -587,46 +626,8 @@
                 If (NewTienda.Insertar(NewCompra, TablaCarrito)) Then
                     MsgBox("Se a realizado la compra", vbOKOnly + vbInformation, "Gracias por su compra")
                     Me.LimpiarPagarEnviar()
-                Else
-                    MsgBox("Error al realizar la compra", vbOKOnly + vbCritical, "Error al realizar la compra")
-                End If
-
-
-            Else
-
-
-                 MsgBox("Ingrese todos los datos", vbOKOnly + vbCritical, "Error al realizar la compra")
-
-
-
-
-            End If
-        Catch ex As Exception
-
-        End Try
-
-    End Sub
-
-    Private Sub Button_PagoEnvio_Pendiente_Click(sender As Object, e As EventArgs) Handles Button_PagoEnvio_Pendiente.Click
-        Try
-            If ComboBox_PagoEnvio_FormaEnvio.Text <> "" And TextBox_PagoEnvio_DireccionEntrega.Text <> "" And ComboBox_PagoEnvio_FormaPago.Text <> "" And TextBox_PagoEnvio_DireccionCliente.Text <> "" And TextBox_PagoEnvio_NombreCompleto.Text <> "" And TextBox_PagoEnvio_Celular.Text <> "" And TextBox_Tienda__IdCarrito.Text <> "" Then
-                Dim NewCompra As New Proyecto_Entidades.Compras_Y_ComprasFormaDepagoEnvio
-                Dim NewTienda As New Proyecto_Tienda.Tienda_Comprar
-
-                NewCompra.Id_Client = TextBox_Tienda_IdCliente.Text
-                NewCompra.Id_FormaDeEnvio = ComboBox_PagoEnvio_FormaEnvio.SelectedValue
-                NewCompra.Id_FormaDePago = ComboBox_PagoEnvio_FormaPago.SelectedValue
-                NewCompra.EstadoPago = False
-                NewCompra.DireccionEntrega = TextBox_PagoEnvio_DireccionEntrega.Text
-
-                NewCompra.TotalSinDescuento = TextBox_PagoEnvio_TotalSinDescuento.Text
-                NewCompra.TotalAhorrado = TextBox_PagoEnvio_ahorrar.Text
-                NewCompra.Total = TextBox_PagoEnvio_TotalApagar.Text
-
-
-                If (NewTienda.Insertar(NewCompra, TablaCarrito)) Then
-                    MsgBox("la compra se a registrado como pediente de pagar ", vbOKOnly + vbInformation, "Pendiente de pagar")
-                    Me.LimpiarPagarEnviar()
+                    Me.Mostrar()
+                    Me.BuscarCleinteHistorialResivoCompras()
                 Else
                     MsgBox("Error al realizar la compra", vbOKOnly + vbCritical, "Error al realizar la compra")
                 End If
@@ -644,5 +645,55 @@
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub Button_PagoEnvio_Pendiente_Click(sender As Object, e As EventArgs) Handles Button_PagoEnvio_Pendiente.Click
+        Try
+            If ComboBox_PagoEnvio_FormaEnvio.Text <> "" And TextBox_PagoEnvio_DireccionEntrega.Text <> "" And ComboBox_PagoEnvio_FormaPago.Text <> "" And TextBox_PagoEnvio_DireccionCliente.Text <> "" And TextBox_PagoEnvio_NombreCompleto.Text <> "" And TextBox_PagoEnvio_Celular.Text <> "" And TextBox_Tienda__IdCarrito.Text <> "" Then
+                Dim NewCompra As New Proyecto_Entidades.Compras_Y_ComprasFormaDepagoEnvio
+                Dim NewTienda As New Proyecto_Tienda.Tienda_Comprar
+                NewCompra.Id_Client = TextBox_Tienda_IdCliente.Text
+                NewCompra.Id_FormaDeEnvio = ComboBox_PagoEnvio_FormaEnvio.SelectedValue
+                NewCompra.Id_FormaDePago = ComboBox_PagoEnvio_FormaPago.SelectedValue
+                NewCompra.EstadoPago = False
+                NewCompra.DireccionEntrega = TextBox_PagoEnvio_DireccionEntrega.Text
+                NewCompra.TotalSinDescuento = TextBox_PagoEnvio_TotalSinDescuento.Text
+                NewCompra.TotalAhorrado = TextBox_PagoEnvio_ahorrar.Text
+                NewCompra.Total = TextBox_PagoEnvio_TotalApagar.Text
+                If (NewTienda.Insertar(NewCompra, TablaCarrito)) Then
+                    MsgBox("la compra se a registrado como pediente de pagar ", vbOKOnly + vbInformation, "Pendiente de pagar")
+                    Me.LimpiarPagarEnviar()
+                    Me.Mostrar()
+                    Me.BuscarCleinteHistorialResivoCompras()
+                Else
+                    MsgBox("Error al realizar la compra", vbOKOnly + vbCritical, "Error al realizar la compra")
+                End If
+            Else
+                MsgBox("Ingrese todos los datos", vbOKOnly + vbCritical, "Error al realizar la compra")
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Try
+            VariablesCompartidas.idCompra = "1"
+            FormReporteComprasFinal.ShowDialog()
+            ''FormReporteCompras.ShowDialog()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
+
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        VariablesCompartidas.idCompra = DataGridView_HistorialRecivosCompras.SelectedCells.Item(1).Value
+        FormReporteComprasFinal.ShowDialog()
     End Sub
 End Class
